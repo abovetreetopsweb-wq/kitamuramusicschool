@@ -1,0 +1,26 @@
+@use "../../foundation/variable" as *;
+
+.p-faq {
+    padding-block: 4rem;
+
+    &__contents {
+        margin-top: 3rem;
+    }
+
+    &__title {
+        text-align: center;
+    }
+    .accordion-area{
+        display: flex;
+        flex-direction: column;
+        dt{
+            display: flex;
+        }
+        dd{
+            display: flex;
+            p{
+                flex: 1;
+            }
+        }
+    }
+}

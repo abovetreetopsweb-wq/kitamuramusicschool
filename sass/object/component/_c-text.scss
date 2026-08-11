@@ -1,0 +1,8 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+.c-section-title {
+    @include font(3rem, calc(50/30), $font-weight-regular);
+}
+

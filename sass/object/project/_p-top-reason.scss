@@ -1,0 +1,57 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-reason {
+    padding: 7rem 0 9rem;
+
+    @include sp {
+        padding:0;
+    }
+&__title{
+    text-align: center;
+}
+    &__contents {
+        margin-top: 2.2rem;
+
+        @include sp {
+            margin-top: 0;
+        }
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5rem;
+    }
+    .p-reason-item{
+        display: flex;
+        column-gap: 4.5rem;
+
+
+       &__image{
+        width: 35rem;
+        aspect-ratio: 350/247;
+       }
+       &__desc{
+        flex: 1;
+        padding-block: 1.1rem;
+       }
+       &__title{
+        @include font(2.2rem,calc(33/22));
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 10;
+            width:700px;
+            height: 2px;
+            background: $color-main;
+            transform: translateY(-50%);
+        }
+       }
+       &__text{
+        margin-top: 5rem;
+        @include font(1.8rem,calc(33/18));
+       }
+    }
+}

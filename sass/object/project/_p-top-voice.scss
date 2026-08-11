@@ -1,0 +1,47 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+.p-voice {
+    padding: 5rem 0 8rem;
+
+    @include sp {
+        padding: 0;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__contents {
+        margin-top: 3rem;
+
+        @include sp {
+            margin-top: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        column-gap: 3.5rem;
+    }
+
+
+    .p-voice-item {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 1.8rem;
+
+        &__title {
+            @include font(2.2rem, calc(33/22), $font-weight-bold);
+            text-align: center;
+        }
+
+        &__text {
+            margin-top: 1rem;
+        }
+
+    }
+}

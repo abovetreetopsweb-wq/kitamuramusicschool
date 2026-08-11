@@ -1,0 +1,11 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-message {
+    padding-block: 6rem;
+ text-align: center;
+    &__contents{
+        margin-top: 3rem;
+        @include font(1.8rem,calc(30/18));
+    }
+}

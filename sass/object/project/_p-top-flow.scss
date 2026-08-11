@@ -1,0 +1,39 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-flow {
+    padding-block: 3.5rem;
+&__contents{
+    margin-top: 2rem;
+}
+    &__title {
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 6rem;
+        padding: 3rem 5rem;
+    }
+
+    .p-flow-item {
+        display: flex;
+        column-gap: 2rem;
+
+        span {
+            width: 5rem;
+
+        }
+
+        h3 {
+            width: 20rem;
+        }
+
+        p {
+            flex: 1;
+        }
+    }
+}

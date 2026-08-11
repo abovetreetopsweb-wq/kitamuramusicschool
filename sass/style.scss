@@ -1,0 +1,43 @@
+//foundation
+@use "foundation/reset";
+@use "foundation/base";
+@use "foundation/variable";
+
+//layout
+@use "layout/l-header";
+@use "layout/l-footer";
+
+//object
+@use "object/component/c-button";
+@use "object/component/c-inner";
+@use "object/component/c-text";
+
+//index
+@use "object/project/p-top-mv";
+@use "object/project/p-top-concept";
+@use "object/project/p-top-message";
+@use "object/project/p-top-reason";
+@use "object/project/p-top-voice";
+@use "object/project/p-top-flow";
+@use "object/project/p-top-faq";
+@use "object/project/p-top-blog";
+
+
+//plan
+@use "object/project/p-plan";
+//blog_list
+@use "object/project/p-blog-list";
+//blog_detail
+@use "object/project/p-blog-detail";
+//contact_form
+@use "object/project/p-contact-form";
+//contact_send
+@use "object/project/p-contact-send";
+//404
+@use "object/project/p-404";
+//serch
+@use "object/project/p-serch";
+//result_list
+@use "object/project/p-result-list";
+//resuit_detail
+@use "object/project/p-resuit-detail";

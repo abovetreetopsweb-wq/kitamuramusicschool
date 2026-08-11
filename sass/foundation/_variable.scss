@@ -1,0 +1,22 @@
+//font
+$font-serif: "Yu Gothic", sans-serif;
+
+// font-weight
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+//Color
+$color-main: #CB0000;
+$color-base: #000;
+$color-white: #fff;
+
+//vw関数
+@function vw($pixelSize, $baseWidth: 1080) {
+    @return calc($pixelSize/$baseWidth*100vw);
+}
+
+@function hvw($pixelSize) {
+    @return min(calc($pixelSize / 1080 * 100vw), $pixelSize * 1px);
+}
