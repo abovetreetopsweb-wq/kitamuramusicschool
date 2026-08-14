@@ -3,6 +3,9 @@
 
 
 .c-section-title {
-    @include font(3rem, calc(50/30), $font-weight-regular);
-}
+    @include font(2.5rem, calc(40/25), $font-weight-bold);
 
+    @include pc {
+        @include font(3rem, calc(50/30), $font-weight-regular);
+    }
+}

@@ -1,7 +1,31 @@
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
 
-.c-inner{
-    max-width: 94rem;
-    padding-inline: 3rem;
+.c-inner {
+    width: 100%;
+    padding-inline: 2rem;
     margin-inline: auto;
+
+
+    @include pc {
+        max-width: 94rem;
+        padding-inline: 3rem;
+
+    }
+}
+
+.c-page-visual {
+    position: relative;
+    width: 100%;
+
+    &__image {
+        position: absolute;
+    }
+
+    &__title {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
 }

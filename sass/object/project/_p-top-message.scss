@@ -2,10 +2,19 @@
 @use "../../foundation/mixin" as *;
 
 .p-message {
-    padding-block: 6rem;
- text-align: center;
-    &__contents{
-        margin-top: 3rem;
-        @include font(1.8rem,calc(30/18));
+    padding-block: 5rem 3.8rem;
+    text-align: center;
+
+    @include pc {
+        padding-block: 7rem 5.8rem;
+    }
+
+    &__contents {
+        margin-top: 1.5rem;
+        @include font(1.8rem, calc(30/18));
+
+        @include pc {
+            margin-top: 3rem;
+        }
     }
 }

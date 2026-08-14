@@ -2,33 +2,115 @@
 @use "../../foundation/mixin" as *;
 
 .p-concept {
-    padding-block: 6.5rem;
+    padding-block: 5rem 3.5rem;
     text-align: center;
-    
-    &__title {
-        @include font(3.5rem, calc(50/35));
+
+    @include pc {
+        padding-block: 6.5rem 5.7rem;
     }
-    &__contents{
-        margin-top:2rem ;
+
+    &__title {
+        @include font(2.5rem, calc(40/25), $font-weight-bold);
+
+        @include pc {
+            @include font(3.5rem, calc(50/35));
+        }
+    }
+
+    &__contents {
+        margin-top: 0.2rem;
         display: flex;
         flex-direction: column;
-        row-gap: 3.2rem;
-        p{
-            @include font(1.8rem,calc(30/18))
+        row-gap: 2.2rem;
+
+        @include pc {
+            margin-top: 1.8rem;
+            row-gap: 0;
         }
 
+        p {
+            @include font(1.8rem, calc(30/18), $font-weight-medium)
+        }
+
+        @include pc {
+            picture {
+                margin-top: 3.4rem;
+            }
+        }
     }
 
 }
 
-    .p-concept-step{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 4rem;
-        &__item{
-            display: flex;
-        }
-        
+.p-concept-step {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1.8rem;
+
+    @include pc {
+        margin-top: 2rem;
+        row-gap: 1.7rem;
     }
+
+    &__item {
+
+        display: flex;
+        column-gap: 2.954rem;
+
+        p {
+            width:15rem;
+            text-align: right;
+            color: $color-main;
+            @include font(2rem, calc(50/20), $font-weight-bold);
+            @include pc{
+                @include font(2.5rem, calc(50/25), $font-weight-regular);
+            }
+
+
+            &:nth-of-type(2) {
+                text-align: left;
+                color: $color-base;
+                @include font(2rem, calc(50/20), $font-weight-medium);
+                @include pc{
+                    @include font(2.3rem, calc(50/23), $font-weight-regular);
+                }
+            }
+        }
+
+        span {
+            position: relative;
+            margin: auto;
+            border-radius: 50%;
+            width: 2rem;
+            height: 2rem;
+            background: $color-main;
+
+
+        }
+
+        .bar::after {
+            content: '';
+            position: absolute;
+            height: 18rem;
+            top: -4rem;
+            left: 50%;
+            width: 0.3rem;
+            background: $color-main;
+            transform: translateX(-50%);
+        }
+
+        .bar::before {
+            content: '';
+            position: absolute;
+            width: 2.5rem;
+            height: 2.5rem;
+            top: -3.9rem;
+            left: -13%;
+            border-top: 0.3rem solid $color-main;
+            border-left: 0.3rem solid $color-main;
+            transform: rotate(45deg);
+        }
+    }
+}

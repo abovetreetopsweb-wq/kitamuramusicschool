@@ -7,7 +7,8 @@
     height: 27.4rem;
     display: grid;
     place-content: center;
-    &__contents{
+
+    &__contents {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -22,23 +23,24 @@
             column-gap: 2rem;
         }
     }
-    &__logo{
+
+    &__logo {
         width: 3.203rem;
     }
-}
 
-.l-footer__sns {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &__sns {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-    li {
-        a {
-            display: block;
-            padding-inline: 1rem;
+        li {
+            a {
+                display: block;
+                padding-inline: 1rem;
 
-            span {
-                width: 2.2rem;
+                span {
+                    width: 2.2rem;
+                }
             }
         }
     }
