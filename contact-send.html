@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きたむらミュージックスクール</title>
+    <!--ogp-->
+    <meta property="og:title" content="きたむらミュージックスクール">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="SNSシェア時に表示するサムネイル画像の絶対パス">
+    <meta property="og:url" content="サイトのURL">
+    <meta property="og:description" content="サイトのディスクリプション">
+    <meta property="og:site_name" content="きたむらミュージックスクール">
+    <meta property="og:locale" content="ja_JP">
+    <!--css-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- #region header -->
+        <header class="l-header">
+            <div class="l-header__inner">
+                <div class="l-header__logo">
+                    <h1>
+                        <a href="#">
+                            <div class="l-header__logo-image">
+                                <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
+                            </div>
+                            <div class="l-header__logo-title">
+                                <span>きたむら</span><span>ミュージックスクール</span>
+                            </div>
+                        </a>
+                    </h1>
+                </div>
+                <!--ハンバーガー-->
+                <div class="l-header__hb-btn">
+                    <div class="l-header__hb-inner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <nav class="l-header__nav">
+                    <ul>
+                        <li><a href="./plan.html">料金</a></li>
+                        <li><a href="./blog-list.html">ブログ</a></li>
+                        <li><a href="./result-list.html">卒業実績</a></li>
+                    </ul>
+                    <div class="l-header__button">
+                        <div class="c-button section-bg">
+                            <a href="./contact-form.html">
+                                お問い合わせ
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- #endregion header -->
+
+        <main>
+            <!--下層MV-->
+            <div class="c-page-visual">
+                <div class="c-page-visual__image">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="./img/blog_list/blog_sp.jpg">
+                        <img src="./img/blog_list/Blog.jpg" alt="">
+                    </picture>
+                </div>
+                <h2 class="c-page-visual__title">ブログ</h2>
+            </div>
+
+            <!--パンくず-->
+            <nav class="c-breadcrumb">
+                <div class="c-inner">
+                    <ul class="c-breadcrumb__list">
+                        <li class="c-breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                        <li class="c-breadcrumb__item">ブログ</li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="p-contact-thanks">
+                <div class="c-inner">
+                    <p class="p-contact-thanks__message">お問い合わせいただきありがとうございました。<br>
+                        内容確認後、担当者よりメールにてご連絡いたします。</p>
+                    <div class="p-contact-thanks__button"><a href="">ホームへ戻る</a></div>
+                    <!--中身
+これはお問い合わせ送信完了ページですね。お問い合わせフォームと同じ p-contact に無理に入れず、私は分けます。
+
+ページ全体：
+メッセージ部分：
+「ホームへ戻る」：p-contact-thanks__button
+
+共通部分はそのまま、
+
+上の画像付きタイトル：c-page-header
+パンくず：c-breadcrumb
+ボタンの基本デザイン：c-button
+ヘッダー：l-header
+フッター：l-footer
+
+でOK。
+
+このページはかなり単純なので、p-contact-thanks 系は3つ程度で十分だと思います。
+
+ちなみに404ページと構造がかなり似ていますが、p-error と p-contact-thanks は意味が違うので、Projectとしては分けておく方が後から見て分かりやすいです。
+-->
+
+                    <!-- #endregion blog -->
+                </div>
+            </div>
+        </main>
+
+        <!-- #region footer -->
+        <footer class="l-footer section-bg">
+            <div class="c-inner">
+                <div class="l-footer__contents">
+                    <nav class="l-footer__nav">
+                        <ul>
+                            <li>
+                                <a href="#">ホーム</a>
+                            </li>
+                            <li>
+                                <a href="#">料金</a>
+                            </li>
+                            <li>
+                                <a href="#">ブログ</a>
+                            </li>
+                            <li>
+                                <a href="#">卒業実績</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="l-footer__logo">
+                        <img src="./img/common/logo-white.svg" alt="">
+                    </div>
+                    <div class="l-footer__copyright">
+                        <small>Copyright © 0000 KITAMURA music school Inc. All Rights</small>
+                    </div>
+                    <ul class="l-footer__sns">
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-twitter.svg" alt=""></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-facebook.svg" alt=""></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-youtube.svg" alt=""></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-instagram.svg" alt=""></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- #endregion footer -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

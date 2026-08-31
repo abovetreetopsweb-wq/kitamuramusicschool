@@ -1,1 +1,95 @@
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-price {
+
+
+    &__summary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        row-gap: 2rem;
+
+        @include pc {
+            flex-direction: row;
+        }
+    }
+
+
+    &__admission {
+        width: 21rem;
+        height: 6rem;
+        display: grid;
+        place-content: center;
+        background: $color-main;
+        color: $color-white;
+        @include font(2rem, calc(33/20), $font-weight-bold);
+    }
+
+    &__plus {
+
+        &::before {
+            content: '';
+            display: block;
+            width: 1.9rem;
+            height: 1.9rem;
+
+            background: url(../../../img/plan/plus.svg) no-repeat center / contain;
+        }
+    }
+
+    &__monthly {
+        width: 21rem;
+        height: 6rem;
+        display: grid;
+        place-content: center;
+        background: $color-main;
+        color: $color-white;
+        @include font(2rem, calc(33/20), $font-weight-bold);
+    }
+
+    &__text {
+        margin-top: 4.5rem;
+        @include font(1.6rem, calc(30/16), $font-weight-medium);
+    }
+
+}
+
+.p-price-plans {
+    margin-top: 4rem;
+
+
+    &__table {
+        overflow-y: auto;
+        margin-top: 3.5rem;
+        border: 1px solid $color-base;
+
+        tr {
+            display: flex;
+            height: 8.5rem;
+            border: 1px solid $color-base;
+
+            &:first-of-type {
+                height: 6.6rem;
+            }
+
+            th {
+                padding: 1rem;
+                width: 16.9rem;
+                display: flex;
+                align-items: center;
+            }
+
+            td {
+                width: 16.9rem;
+                display: grid;
+                place-content: center;
+            }
+        }
+    }
+
+    .p-price-plans__note {
+        margin-top: 3rem;
+    }
+}

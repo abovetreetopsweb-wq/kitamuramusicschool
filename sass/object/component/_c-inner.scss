@@ -17,15 +17,28 @@
 .c-page-visual {
     position: relative;
     width: 100%;
+    aspect-ratio: 375/300;
+
+    @include pc {
+        aspect-ratio: 1080/200;
+    }
 
     &__image {
         position: absolute;
+        width: 100%;
     }
 
     &__title {
         position: absolute;
-        top: 0;
-        left: 0;
+        width: 100%;
+        height: 100%;
+        margin-top: 0.4rem;
+        display: grid;
+        place-content: center;
+        z-index: 99;
+        @include font(2.5rem,calc(60/25),$font-weight-bold);
+        @include pc{
+        @include font(2.5rem,calc(60/25),$font-weight-regular);
+        }
     }
-
 }

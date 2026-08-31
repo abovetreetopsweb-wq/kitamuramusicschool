@@ -1,0 +1,41 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.c-breadcrumb {
+    background: #E8E8E8;
+    height: 3.6rem;
+    display: flex;
+    align-items: center;
+
+    @include pc {
+        height: 5rem;
+    }
+
+    ul {
+        display: flex;
+        column-gap: 5rem;
+
+        @include pc {
+            column-gap: 5rem;
+        }
+
+        li {
+            position: relative;
+            @include font(1.6rem, calc(33/16), $font-weight-medium);
+
+            @include pc {
+                @include font(1.6rem, calc(33/16), $font-weight-regular);
+            }
+
+            &:not(:last-child)::after {
+                position: absolute;
+                content: '>';
+                top: 50%;
+                right: -3.2rem;
+                transform: translateY((-50%));
+                color: #000;
+            }
+        }
+
+    }
+}

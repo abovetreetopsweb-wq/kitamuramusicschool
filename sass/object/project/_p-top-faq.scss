@@ -1,4 +1,5 @@
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
 
 .p-faq {
     padding-block: 4rem;
@@ -10,17 +11,116 @@
     &__title {
         text-align: center;
     }
-    .accordion-area{
+
+    .accordion-area {
         display: flex;
         flex-direction: column;
-        dt{
-            display: flex;
+        border-top: 0.5px solid $color-base;
+    }
+
+    .qa-title {
+        border-bottom: 0.5px solid $color-base;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 2rem;
+            height: 2rem;
+            top: 50%;
+            right: 0;
+            border-top: 0.1rem solid $color-base;
+            border-left: 0.1rem solid $color-base;
+            transform: translateY(-50%) rotate(45deg);
+            transition: transform 0.3s;
         }
-        dd{
+
+        &.active {
+            &::before {
+                transform: translateY(-50%) rotate(225deg);
+            }
+        }
+
+
+        &__inner {
             display: flex;
-            p{
-                flex: 1;
+            align-items: center;
+            padding: 0.8rem;
+            column-gap: 3rem;
+
+            span {
+                position: relative;
+                flex-shrink: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 3.5rem;
+                height: 3.5rem;
+                background: $color-base;
+                border-radius: 50%;
+                color: $color-white;
+
+                &::after {
+                    content: 'Q';
+
+                }
+            }
+
+
+        }
+    }
+}
+
+
+.qa-text {
+    display: none;
+    border-bottom: 0.5px solid $color-base;
+
+    &.active {
+        display: flex;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        padding: 0.8rem;
+        column-gap: 3rem;
+        background: rgba(203, 0, 0, 0.102);
+
+        span {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: $color-main;
+            border-radius: 50%;
+            color: $color-white;
+
+            &::after {
+                content: 'A';
+
+            }
+        }
+
+        p {
+            width: 23.3rem;
+
+            color: $color-main;
+            @include font(1.6rem, calc(30/16), $font-weight-bold);
+
+            @include pc {
+                width: 73.3rem;
             }
         }
     }
+}
+
+
+
+
+
+.qa-title {
+    position: relative;
+    cursor: pointer;
 }

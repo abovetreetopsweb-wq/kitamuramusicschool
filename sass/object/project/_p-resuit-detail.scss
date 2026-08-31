@@ -1,1 +1,142 @@
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+
+.p-blog-detail__contents {
+    padding-block: 7rem;
+
+    @include pc {
+        display: flex;
+        column-gap: 3rem;
+    }
+
+    article {
+        flex: 1;
+    }
+}
+
+.p-blog-detail__thumbnail {
+    position: relative;
+}
+
+.p-blog-detail__image {
+    aspect-ratio: 600/350;
+}
+
+.p-blog-detail__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $color-main;
+    color: $color-white;
+}
+
+.p-blog-detail__title {
+    margin-top: 4.5rem;
+    @include font(2.5rem, calc(40/25), $font-weight-bold);
+}
+
+.p-blog-detail__date {
+    display: block;
+    margin-top: 0.5rem;
+    @include font(1.7rem, calc(30/17), $font-weight-medium);
+}
+
+.p-blog-detail__share {
+    margin-top: 2.1rem;
+    display: flex;
+    column-gap: 0.4rem;
+
+    &--facebook {
+        width: 10.5rem;
+    }
+
+    &--twitter {
+        width: 8.8rem;
+    }
+
+    &--hatena {
+        width: 9.3rem;
+    }
+
+    &--line {
+        width: 8.1rem;
+    }
+
+    &--pocket {
+        width: 9.1rem;
+    }
+}
+
+.p-blog-detail__body {
+    margin-top: 5rem;
+
+    h2 {
+        margin-top: 3.5rem;
+        @include font(2rem, calc(40/20), $font-weight-bold);
+    }
+
+    p {
+        margin-top: 1.2rem;
+    }
+}
+
+.p-blog-detail__listimage {
+    aspect-ratio: 335/200;
+}
+
+.p-sidebar {
+    width: 250px;
+}
+
+.c-detail-pagination {
+
+    margin-top: 3rem;
+
+    @include pc {
+        display: flex;
+    }
+
+    &__prev-contents {
+        width: 26rem;
+        display: flex;
+    }
+
+    &__prev-title {
+        background: $color-base;
+        color: $color-white;
+    }
+
+    &__prev-image {
+        width: 9.8rem;
+    }
+
+    &__prev-text {
+        flex: 1;
+    }
+
+    &__next {
+        width: 26rem;
+    }
+
+    &__next-title {
+        background: $color-base;
+        color: $color-white;
+    }
+}
+
+.c-related {
+    margin-top: 3rem;
+
+    &__title {
+        background: $color-base;
+        color: $color-white;
+    }
+}
+
+.c-related__item {
+    @include pc {
+        display: flex;
+    }
+}

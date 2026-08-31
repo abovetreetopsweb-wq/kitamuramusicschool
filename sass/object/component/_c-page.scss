@@ -1,0 +1,24 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+.c-page-section {
+    padding-block: 4.5rem;
+
+    @include pc {
+        padding-block: 6.8rem;
+    }
+
+    &__title {
+        text-align: center;
+        @include font(2.5rem, calc(40/25), $font-weight-bold);
+    }
+    &__contents{
+        margin-top: 4rem;
+        @include pc{
+            margin-top: 4rem;
+        }
+    }
+}
+
+//ここまでは整っています

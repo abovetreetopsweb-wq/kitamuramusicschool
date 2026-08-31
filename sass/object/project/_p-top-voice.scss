@@ -22,7 +22,13 @@
 
     &__items {
         display: flex;
-        column-gap: 3.5rem;
+        flex-direction: column;
+        row-gap: 2rem;
+        @include pc {
+            display: flex;
+            flex-direction: row;
+            column-gap: 3.5rem;
+        }
     }
 
 

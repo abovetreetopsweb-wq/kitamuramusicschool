@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>きたむらミュージックスクール</title>
+    <!--ogp-->
+    <meta property="og:title" content="きたむらミュージックスクール">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="SNSシェア時に表示するサムネイル画像の絶対パス">
+    <meta property="og:url" content="サイトのURL">
+    <meta property="og:description" content="サイトのディスクリプション">
+    <meta property="og:site_name" content="きたむらミュージックスクール">
+    <meta property="og:locale" content="ja_JP">
+    <!--css-->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <!-- #region header -->
+        <header class="l-header">
+            <div class="l-header__inner">
+                <div class="l-header__logo">
+                    <h1>
+                        <a href="./index.html">
+                            <div class="l-header__logo-image">
+                                <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
+                            </div>
+                            <div class="l-header__logo-title">
+                                <span>きたむら</span><span>ミュージックスクール</span>
+                            </div>
+                        </a>
+                    </h1>
+                </div>
+                <!--ハンバーガー-->
+                <div class="l-header__hb-btn">
+                    <div class="l-header__hb-inner">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <nav class="l-header__nav">
+                    <ul>
+                        <li><a href="./plan.html">料金</a></li>
+                        <li><a href="./blog-list.html">ブログ</a></li>
+                        <li><a href="./result-list.html">卒業実績</a></li>
+                    </ul>
+                    <div class="l-header__button">
+                        <div class="c-button section-bg">
+                            <a href="./contact-form.html">
+                                お問い合わせ
+                            </a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- #endregion header -->
+
+        <main>
+
+            <!--下層MV-->
+            <div class="c-page-visual">
+                <div class="c-page-visual__image">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="./img/plan/plan_sp.jpg">
+                        <img src="./img/plan/plan__pc.jpg" alt="プラン・料金">
+                    </picture>
+                </div>
+                <h2 class="c-page-visual__title">プラン・料金</h2>
+            </div>
+
+            <!--パンくず-->
+            <nav class="c-breadcrumb">
+                <div class="c-inner">
+                    <ul class="c-breadcrumb__list">
+                        <li class="c-breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                        <li class="c-breadcrumb__item">プラン・料金</li>
+                    </ul>
+                </div>
+            </nav>
+
+
+            <div class="p-price c-page-section">
+                <div class="c-inner">
+                    <div class="p-price__system">
+                        <h2 class="p-price__title c-page-section__title">料金体系</h2>
+                        <div class="c-page-section__contents">
+                            <div class="p-price__summary">
+                                <div class="p-price__admission">入会金 39,000円</div>
+                                <span class="p-price__plus"></span>
+                                <div class="p-price__monthly">月額料金</div>
+                            </div>
+                            <div class="p-price__text">
+                                きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-price-plans">
+                        <h2 class="p-price-plans-title c-page-section__title">プラン内容・月額料金</h2>
+                        <div class="c-page-section__contents">
+                            <table class="p-price-plans__table">
+                                <tr>
+                                    <th></th>
+                                    <th>ベーシックプラン</th>
+                                    <th class="p-price-plans__recommend"><span>おすすめ</span>スタンダードプラン</th>
+                                    <th>プレミアムプラン</th>
+                                </tr>
+                                <tr>
+                                    <th>月額料金</th>
+                                    <td>39,000円</td>
+                                    <td>59,000円</td>
+                                    <td>128,000円</td>
+                                </tr>
+                                <tr>
+                                    <th>マンツーマン授業</th>
+                                    <td><span class="p-price-plan--available"></span>週１回</td>
+                                    <td><span class="p-price-plan--available"></span>週２回</td>
+                                    <td><span class="p-price-plan--available"></span>無制限</td>
+                                </tr>
+                                <tr>
+                                    <th>ビジネス基本講座</th>
+                                    <td><span class="p-price-plan--available"></span></td>
+                                    <td><span class="p-price-plan--available"></span></td>
+                                    <td><span class="p-price-plan--available"></span></td>
+                                </tr>
+                                <tr>
+                                    <th>練習ROOM利用</th>
+                                    <td><span class="p-price-plan--available"></span>月10時間</td>
+                                    <td><span class="p-price-plan--available"></span>月20時間</td>
+                                    <td><span class="p-price-plan--available"></span>無制限</td>
+                                </tr>
+                                <tr>
+                                    <th>ビジネスコンサル</th>
+                                    <td><span class="p-price-plan--none"></span></td>
+                                    <td><span class="p-price-plan--available"></span>月２回</td>
+                                    <td><span class="p-price-plan--available"></span>月３回</td>
+                                </tr>
+                                <tr>
+                                    <th>コミュニティ
+                                        参加資格</th>
+                                    <td><span class="p-price-plan--none"></span></td>
+                                    <td><span class="p-price-plan--none"></span></td>
+                                    <td><span class="p-price-plan--available"></span></td>
+                                </tr>
+                            </table>
+                            <p class="p-price-plans__note">※各サービスは１回ごとのオプション追加が可能です。詳しくは事務局までお問い合わせください。</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- #endregion blog -->
+        </main>
+
+        <!-- #region footer -->
+        <footer class="l-footer section-bg">
+            <div class="c-inner">
+                <div class="l-footer__contents">
+                    <nav class="l-footer__nav">
+                        <ul>
+                            <li>
+                                <a href="#">ホーム</a>
+                            </li>
+                            <li>
+                                <a href="#">料金</a>
+                            </li>
+                            <li>
+                                <a href="#">ブログ</a>
+                            </li>
+                            <li>
+                                <a href="#">卒業実績</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="l-footer__logo">
+                        <img src="./img/common/logo-white.svg" alt="">
+                    </div>
+                    <div class="l-footer__copyright">
+                        <small>Copyright © 0000 KITAMURA music school Inc. All Rights</small>
+                    </div>
+                    <ul class="l-footer__sns">
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-twitter.svg" alt=""></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-facebook.svg" alt=""></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-youtube.svg" alt=""></span></a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <span><img src="./img/common/icon-instagram.svg" alt=""></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- #endregion footer -->
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

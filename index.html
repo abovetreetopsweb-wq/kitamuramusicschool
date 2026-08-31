@@ -13,6 +13,9 @@
     <meta property="og:description" content="サイトのディスクリプション">
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
+
+    <!--スライド-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <!--css-->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -24,7 +27,7 @@
             <div class="l-header__inner">
                 <div class="l-header__logo">
                     <h1>
-                        <a href="#">
+                        <a href="./index.html">
                             <div class="l-header__logo-image">
                                 <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
                             </div>
@@ -46,11 +49,11 @@
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
                         <li><a href="./blog-list.html">ブログ</a></li>
-                        <li><a href="#">卒業実績</a></li>
+                        <li><a href="./result-list.html">卒業実績</a></li>
                     </ul>
                     <div class="l-header__button">
                         <div class="c-button section-bg">
-                            <a href="./contact.html">
+                            <a href="./contact-form.html">
                                 お問い合わせ
                             </a>
                         </div>
@@ -182,58 +185,70 @@
             <!-- #endregion reason -->
 
             <!-- #region voice -->
-            <section class="p-voice section-bg">
+            <section class="p-voice section-bg slide-area">
                 <div class="c-inner">
 
                     <h2 class="p-voice__title c-section-title">生徒さんたちの声</h2>
 
-                    <div class="p-voice__contents">
-                        <div class="p-voice__items">
+                    <div class="p-voice__contents swiper">
+                        <div class="p-voice__items swiper-wrapper">
 
-                            <div class="p-voice-item">
-                                <div class="p-voice-item__image">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="./img/top/voice01.jpg">
-                                        <img src="./img/top/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
-                                    </picture>
-                                </div>
-                                <div class="p-voice-item__desc">
-                                    <h3 class="p-voice-item__title">証券会社勤務　丸山さん</h3>
-                                    <p class="p-voice-item__text">
-                                        昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+
+                            <div class="swiper-slide">
+                                <a href="./result-detail.html" class="p-voice-item">
+                                    <div class="p-voice-item__image">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="./img/top/voice01.jpg">
+                                            <img src="./img/top/voice01-sp.jpg" alt="証券会社勤務　丸山さん">
+                                        </picture>
+                                    </div>
+                                    <div class="p-voice-item__desc">
+                                        <h3 class="p-voice-item__title">証券会社勤務　丸山さん</h3>
+                                        <p class="p-voice-item__text">
+                                            昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="p-voice-item">
+                                    <div class="p-voice-item__image">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="./img/top/voice02.jpg">
+                                            <img src="./img/top/voice02.jpg" alt="IT会社勤務　S.Eさん">
+                                        </picture>
+                                    </div>
+                                    <div class="p-voice-item__desc">
+                                        <h3 class="p-voice-item__title">IT会社勤務　S.Eさん</h3>
+                                        <p class="p-voice-item__text">
+                                            プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="p-voice-item">
-                                <div class="p-voice-item__image">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="./img/top/voice02.jpg">
-                                        <img src="./img/top/voice02.jpg" alt="IT会社勤務　S.Eさん">
-                                    </picture>
-                                </div>
-                                <div class="p-voice-item__desc">
-                                    <h3 class="p-voice-item__title">IT会社勤務　S.Eさん</h3>
-                                    <p class="p-voice-item__text">
-                                        プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
+
+                            <div class="swiper-slide">
+                                <div class="p-voice-item">
+                                    <div class="p-voice-item__image">
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="./img/top/voice03.jpg">
+                                            <img src="./img/top/voice03.jpg" alt="証券会社勤務　丸山さん">
+                                        </picture>
+                                    </div>
+                                    <div class="p-voice-item__desc">
+                                        <h3 class="p-voice-item__title">都内大学生　田森さん</h3>
+                                        <p class="p-voice-item__text">
+                                            就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="p-voice-item">
-                                <div class="p-voice-item__image">
-                                    <picture>
-                                        <source media="(min-width: 768px)" srcset="./img/top/voice03.jpg">
-                                        <img src="./img/top/voice03.jpg" alt="証券会社勤務　丸山さん">
-                                    </picture>
-                                </div>
-                                <div class="p-voice-item__desc">
-                                    <h3 class="p-voice-item__title">都内大学生　田森さん</h3>
-                                    <p class="p-voice-item__text">
-                                        就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
-                                </div>
-                            </div>
 
                         </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
                     </div>
+                </div>
             </section>
             <!-- #endregion voice -->
 
@@ -282,23 +297,60 @@
                         <section class="accordion-area">
                             <dl class="qa-list">
                                 <dt class="qa-title">
-                                    <span></span>
-                                    <p>
-                                        どのような生徒さんがどれぐらいの期間で稼いでいますか？</p>
+                                    <div class="qa-title__inner">
+                                        <span></span>
+                                        <p>
+                                            どのような生徒さんがどれぐらいの期間で稼いでいますか？
+                                        </p>
+                                    </div>
                                 </dt>
-                                <dd class="qa-text"><span></span>
-                                    <p>未経験からスタートされる方も多く、早い方では3ヶ月ほどで収益化されています。習得状況や活動量によって個人差があります。</p>
+                                <dd class="qa-text">
+                                    <div class="qa-text__inner">
+                                        <span></span>
+                                        <p>
+                                            未経験からスタートされる方も多く、早い方では3ヶ月ほどで収益化されています。習得状況や活動量によって個人差があります。
+                                        </p>
+                                    </div>
                                 </dd>
 
-                                <dt class="qa-title">途中でプランを変更することは可能ですか？</dt>
-                                <dd class="qa-text">途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</dd>
+                                <dt class="qa-title">
+                                    <div class="qa-title__inner">
+                                        <span></span>
+                                        <p>途中でプランを変更することは可能ですか？</p>
+                                    </div>
+                                </dt>
+                                <dd class="qa-text">
+                                    <div class="qa-text__inner">
+                                        <span></span>
+                                        <p>途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。</p>
+                                    </div>
+                                </dd>
 
-                                <dt class="qa-title">入学金などの分割払いはできますか？</dt>
-                                <dd class="qa-text">はい、分割払いも可能です。お支払い回数や方法については、お申し込み時にご相談ください。</dd>
+                                <dt class="qa-title">
+                                    <div class="qa-title__inner">
+                                        <span></span>
+                                        <p>入学金などの分割払いはできますか？</p>
+                                    </div>
+                                </dt>
+                                <dd class="qa-text">
+                                    <div class="qa-text__inner">
+                                        <span></span>
+                                        <p>はい、分割払いも可能です。お支払い回数や方法については、お申し込み時にご相談ください。</p>
+                                    </div>
+                                </dd>
 
-                                <dt class="qa-title">休学することも可能ですか？</dt>
-                                <dd class="qa-text">はい、可能です。休学をご希望の場合は、事前にスタッフまでご相談ください。</dd>
-
+                                <dt class="qa-title">
+                                    <div class="qa-title__inner">
+                                        <span></span>
+                                        <p>休学することも可能ですか？</p>
+                                    </div>
+                                </dt>
+                                <dd class="qa-text">
+                                    <div class="qa-text__inner">
+                                        <span></span>
+                                        <p>はい、可能です。休学をご希望の場合は、事前にスタッフまでご相談ください。</p>
+                                    </div>
+                                </dd>
                             </dl>
                         </section>
                     </div>
@@ -313,7 +365,7 @@
                     <div class="p-blog__contents">
                         <div class="p-blog__items">
 
-                            <div class="p-blog-item">
+                            <a href="#" class="p-blog-item">
                                 <div class="p-blog-item__image">
                                     <picture>
                                         <source media="(min-width: 768px)" srcset="./img/top/blog01.jpg">
@@ -324,9 +376,9 @@
                                     <h3 class="p-blog-item__title">フォロワーではなくファンを増やせとは？</h3>
                                     <time datetime="" class="p-blog-item__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-blog-item">
+                            <a href="#" class="p-blog-item">
                                 <div class="p-blog-item__image">
                                     <picture>
                                         <source media="(min-width: 768px)" srcset="./img/top/blog02.jpg">
@@ -337,9 +389,9 @@
                                     <h3 class="p-blog-item__title">集客してる間は売れないという法則</h3>
                                     <time datetime="" class="p-blog-item__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-blog-item">
+                            <a href="#" class="p-blog-item">
                                 <div class="p-blog-item__image">
                                     <picture>
                                         <source media="(min-width: 768px)" srcset="./img/top/blog03.jpg">
@@ -350,7 +402,7 @@
                                     <h3 class="p-blog-item__title">アルペジオが劇的に向上する3つの習慣</h3>
                                     <time datetime="" class="p-blog-item__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
 
 
@@ -410,6 +462,9 @@
         </footer>
         <!-- #endregion footer -->
     </div>
+    <!--スライド-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

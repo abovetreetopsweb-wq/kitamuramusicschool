@@ -11,7 +11,7 @@
   background: #fff;
 
   @include pc {
-    height: 8rem;
+    height: 7.9rem;
   }
 
   &__inner {
@@ -159,7 +159,7 @@
       flex-direction: column;
 
       @include pc {
-        height: 8rem;
+        height: 7.9rem;
         flex-direction: row;
       }
 
@@ -176,7 +176,7 @@
           }
 
           @include pc{
-             height: 8rem;
+             height: 7.9rem;
              @include font(1.7rem, calc(33/17));
           }
         }
@@ -195,7 +195,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 8rem;
+      height: 7.9rem;
       padding-left: 1.65rem;
     }
   }

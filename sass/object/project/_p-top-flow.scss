@@ -3,9 +3,11 @@
 
 .p-flow {
     padding-block: 3.5rem;
-&__contents{
-    margin-top: 2rem;
-}
+
+    &__contents {
+        margin-top: 2rem;
+    }
+
     &__title {
         text-align: center;
     }
@@ -15,8 +17,11 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        row-gap: 6rem;
-        padding: 3rem 5rem;
+
+        @include pc {
+            row-gap: 6rem;
+            padding: 3rem 5rem;
+        }
     }
 
     .p-flow-item {
@@ -24,12 +29,18 @@
         column-gap: 2rem;
 
         span {
-            width: 5rem;
+            @include pc {
 
+                width: 5rem;
+            }
         }
 
         h3 {
-            width: 20rem;
+            text-wrap: nowrap;
+
+            @include pc {
+                width: 20rem;
+            }
         }
 
         p {

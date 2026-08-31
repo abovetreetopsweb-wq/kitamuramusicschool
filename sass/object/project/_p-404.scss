@@ -3,4 +3,16 @@
 
 
 
-
+.p-error{
+    &__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 2rem;
+    
+    &__text{
+        text-align: center;
+    }
+   
+}}
