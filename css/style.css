@@ -1714,10 +1714,36 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  row-gap: 2rem;
+  row-gap: 1rem;
 }
-.p-error__content__text {
-  text-align: center;
+@media (min-width: 768px) {
+  .p-error__content {
+    row-gap: 2rem;
+    text-align: center;
+  }
+}
+.p-error__button {
+  margin-block: 0.3rem;
+  width: 100%;
+  height: 5rem;
+}
+@media (min-width: 768px) {
+  .p-error__button {
+    margin-block: 2.1rem;
+    width: 25rem;
+  }
+}
+.p-error__button a {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+@media (min-width: 768px) {
+  .p-error__button a {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.32;
+  }
 }
 
 .p-result__items {

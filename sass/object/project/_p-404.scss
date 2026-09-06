@@ -3,16 +3,35 @@
 
 
 
-.p-error{
-    &__content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    row-gap: 2rem;
-    
-    &__text{
-        text-align: center;
+.p-error {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+
+        @include pc {
+            row-gap: 2rem;
+            text-align: center;
+        }
     }
-   
-}}
+
+    &__button {
+        margin-block: 0.3rem;
+        width: 100%;
+        height: 5rem;
+
+        @include pc {
+            margin-block: 2.1rem;
+            width: 25rem;
+        }
+
+        a {
+            @include font(2rem, calc(26/20), $font-weight-bold);
+            @include pc {
+                @include font(2.5rem, calc(33/25), $font-weight-bold);
+            }
+        }
+    }
+}
