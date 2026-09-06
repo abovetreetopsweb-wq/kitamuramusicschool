@@ -1,11 +1,44 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-
+//TOPページのセクションごとのタイトル
 .c-section-title {
     @include font(2.5rem, calc(40/25), $font-weight-bold);
 
     @include pc {
         @include font(3rem, calc(50/30), $font-weight-regular);
+    }
+}
+
+
+// 共通：一覧タイトル
+.c-archive-title {
+    @include font(2rem, calc(30/20), $font-weight-bold);
+
+    @include pc {
+        @include font(2rem, calc(25/20), $font-weight-bold);
+    }
+}
+
+// 共通：記事の日付
+.c-entry-date {
+    @include font(1.7rem, calc(30/17), $font-weight-medium);
+}
+
+// 共通：詳細ページのタイトル
+.c-detail-title {
+    @include font(2rem, calc(30/20), $font-weight-bold);
+
+    @include pc {
+        @include font(2.5rem, calc(40/25), $font-weight-bold);
+    }
+}
+
+// 共通：記事本文内の見出し
+.c-detail-heading {
+    @include font(2rem, calc(30/20), $font-weight-bold);
+
+    @include pc {
+        @include font(2rem, calc(40/20), $font-weight-bold);
     }
 }

@@ -2,10 +2,20 @@
 @use "../../foundation/mixin" as *;
 
 .p-flow {
-    padding-block: 3.5rem;
+    padding-block: 0rem;
+
+    @include pc {
+        padding-block: 3.5rem;
+    }
 
     &__contents {
-        margin-top: 2rem;
+        margin-top: 3.3rem;
+        max-width: 83.45;
+        margin-inline: auto;
+
+        @include pc {
+            margin-top: 2rem;
+        }
     }
 
     &__title {
@@ -15,36 +25,104 @@
     &__items {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        row-gap: 3rem;
 
         @include pc {
             row-gap: 6rem;
             padding: 3rem 5rem;
         }
     }
+}
 
-    .p-flow-item {
+.p-flow-item {
+    display: flex;
+    column-gap: 1rem;
+
+    @include pc {
+        column-gap: 5rem;
+    }
+
+    span {
+        display: block;
+        margin-top: 0.6rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: $color-main;
+        border-radius: 50%;
+        position: relative;
+        flex-shrink: 0;
+
+        @include pc {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &::after {
+            content: '';
+            width: 0.3rem;
+            height: 18rem;
+            background: $color-main;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+    }
+
+    .bar2::after {
+        content: '';
+        width: 0.3rem;
+        height:6.5rem;
+        background: $color-main;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bar2::before {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 2.5rem;
+        top: 3.8rem;
+        left: -0.2rem;
+        border-top: 0.3rem solid $color-main;
+        border-left: 0.3rem solid $color-main;
+        transform: rotate(225deg);
+    }
+
+    &__desc {
         display: flex;
-        column-gap: 2rem;
+        flex-direction: column;
+        column-gap: 4rem;
 
-        span {
-            @include pc {
+        @include pc {
+            flex-direction: row;
 
-                width: 5rem;
-            }
         }
 
         h3 {
             text-wrap: nowrap;
 
+            @include font(2.2rem, calc(33/22), $font-weight-bold);
+            color: $color-main;
+
             @include pc {
-                width: 20rem;
+                width: 15.5rem;
             }
+
         }
 
         p {
+            margin-top: 1rem;
             flex: 1;
+
+            @include pc {
+                margin-top: 0rem;
+            }
         }
     }
 }

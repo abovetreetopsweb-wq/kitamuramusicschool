@@ -4,8 +4,8 @@
 .p-voice {
     padding: 5rem 0 8rem;
 
-    @include sp {
-        padding: 0;
+    @include pc {
+        padding: 5rem 0 8rem;
     }
 
     &__title {
@@ -14,39 +14,67 @@
 
     &__contents {
         margin-top: 3rem;
+        position: relative;
+        z-index: 1;
 
-        @include sp {
-            margin-top: 0;
-        }
-    }
-
-    &__items {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2rem;
         @include pc {
-            display: flex;
-            flex-direction: row;
-            column-gap: 3.5rem;
+            margin-top: 3rem;
         }
     }
 
 
-    .p-voice-item {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        row-gap: 1.8rem;
 
-        &__title {
-            @include font(2.2rem, calc(33/22), $font-weight-bold);
-            text-align: center;
-        }
+}
 
-        &__text {
-            margin-top: 1rem;
+
+.p-voice-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1.8rem;
+
+    &__image {
+        width: 100%;
+        @include pc {
+            width: 270px;
+            aspect-ratio: 270/190;
         }
     }
+
+    &__title {
+        @include font(2.2rem, calc(33/22), $font-weight-bold);
+        text-align: center;
+    }
+
+    &__text {
+        margin-top: 1rem;
+    }
+}
+
+
+
+.swiper-wrap {
+    position: relative;
+    width: 100%;
+    padding-inline: 2rem;
+    margin-inline: auto;
+
+
+    @include pc {
+        max-width: 98.5rem;
+        padding-inline: 5rem;
+    }
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: -10rem;
+    z-index: 999;
+}
+
+.swiper-button-next {
+    position: absolute;
+    right: -2rem;
+    z-index: 99;
 }

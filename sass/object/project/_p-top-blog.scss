@@ -2,10 +2,11 @@
 @use "../../foundation/mixin" as *;
 
 .p-blog {
-    padding-block: 4rem;
+    padding-block: 3rem;
 
     &__contents {
         margin-top: 3rem;
+        
     }
 
     &__title {
