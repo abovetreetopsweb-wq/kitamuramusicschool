@@ -20,24 +20,31 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            column-gap: 2rem;
+            column-gap: 3rem;
         }
     }
 
     &__logo {
+        margin-top: 2.165rem;
+
         width: 3.203rem;
     }
 
+    &__copyright {
+        margin-top: 2.3rem;
+        @include font(1.5rem,calc(33/15),$font-weight-medium);
+    }
+
     &__sns {
+        margin-top: 0.1rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        column-gap: 1.2rem;
 
         li {
             a {
                 display: block;
-                padding-inline: 1rem;
-
                 span {
                     width: 2.2rem;
                 }

@@ -65,11 +65,11 @@
             <div class="c-page-visual">
                 <div class="c-page-visual__image">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="./img/blog_list/blog_sp.jpg">
-                        <img src="./img/blog_list/Blog.jpg" alt="">
+                        <source media="(max-width: 767px)" srcset="./img/contact_form/Contact_sp.jpg">
+                        <img src="./img/contact_form/Contact.jpg" alt="">
                     </picture>
                 </div>
-                <h2 class="c-page-visual__title">ブログ</h2>
+                <h2 class="c-page-visual__title">お問い合わせ</h2>
             </div>
 
             <!--パンくず-->
@@ -77,38 +77,22 @@
                 <div class="c-inner">
                     <ul class="c-breadcrumb__list">
                         <li class="c-breadcrumb__item"><a href="./index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item">ブログ</li>
+                        <li class="c-breadcrumb__item">送信完了</li>
                     </ul>
                 </div>
             </nav>
 
 
-            <div class="p-contact-thanks">
-                <div class="c-inner">
+            <div class="p-contact-thanks c-page-section">
+                <div class="c-inner p-contact-thanks__content">
                     <p class="p-contact-thanks__message">お問い合わせいただきありがとうございました。<br>
                         内容確認後、担当者よりメールにてご連絡いたします。</p>
-                    <div class="p-contact-thanks__button"><a href="">ホームへ戻る</a></div>
-                    <!--中身
-これはお問い合わせ送信完了ページですね。お問い合わせフォームと同じ p-contact に無理に入れず、私は分けます。
+                    <div class="c-button p-contact-thanks__button">
+                        <a href="./index.html">
+                            ホームへ戻る
+                        </a>
+                    </div>
 
-ページ全体：
-メッセージ部分：
-「ホームへ戻る」：p-contact-thanks__button
-
-共通部分はそのまま、
-
-上の画像付きタイトル：c-page-header
-パンくず：c-breadcrumb
-ボタンの基本デザイン：c-button
-ヘッダー：l-header
-フッター：l-footer
-
-でOK。
-
-このページはかなり単純なので、p-contact-thanks 系は3つ程度で十分だと思います。
-
-ちなみに404ページと構造がかなり似ていますが、p-error と p-contact-thanks は意味が違うので、Projectとしては分けておく方が後から見て分かりやすいです。
--->
 
                     <!-- #endregion blog -->
                 </div>

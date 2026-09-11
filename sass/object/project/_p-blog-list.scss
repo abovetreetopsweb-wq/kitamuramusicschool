@@ -42,12 +42,17 @@
         height: 100%;
 
         @include pc {
-            width: min(calc(260/1080*100vw), 260px);
+            flex: 0 0 260px;
         }
     }
 
     &__image {
-        width: 100%;
+        aspect-ratio: 260/184;
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__category {
@@ -64,5 +69,4 @@
     &__body {
         flex: 1;
     }
-
 }

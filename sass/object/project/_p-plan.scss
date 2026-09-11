@@ -58,10 +58,15 @@
 
 .p-price-plans {
     margin-top: 4rem;
-
+    
+&__contents{
+    overflow-x: scroll;
+    @include pc{
+        overflow-x: hidden;
+    }
+}
 
     &__table {
-        overflow-y: auto;
         margin-top: 3.5rem;
         border: 1px solid $color-base;
 

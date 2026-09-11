@@ -1,1 +1,221 @@
 @use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+
+.p-contact__intro {
+    @include pc {
+        text-align: center;
+    }
+}
+
+.p-contact__form {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include pc {
+        margin-top: 6.3rem;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+
+        @include pc {
+            row-gap: 2.7rem;
+        }
+
+        dl {
+            display: flex;
+            flex-direction: column;
+
+            @include pc {
+                flex-direction:row;
+                column-gap: 3rem;
+            }
+
+
+            dt {
+                width: 100%;
+
+                @include pc {
+                    width: 140px;
+                }
+
+                span {
+                    display: block;
+                    margin-top: 0.2rem;
+                    @include font(1.6rem, calc(33/16), $font-weight-medium);
+
+
+                    @include pc {
+                        @include font(2rem, calc(33/20), $font-weight-medium);
+                    }
+                }
+
+                label {
+                    @include font(1.6rem, calc(33/16), $font-weight-medium);
+
+
+                    @include pc {
+                        @include font(2rem, calc(33/20), $font-weight-medium);
+                    }
+                }
+            }
+
+            dd {
+                flex: 1;
+            }
+        }
+
+        .form-space {
+            margin-top: 0rem;
+
+            @include pc {
+                margin-top: 0.3rem;
+            }
+        }
+
+    }
+}
+
+.form-control {
+    margin-top: 0;
+    width: 100%;
+    @include font(1.5rem, calc(33/15), $font-weight-medium);
+
+    &::placeholder {
+        color: #B2B2B2;
+        @include font(1.5rem, calc(33/15), $font-weight-medium);
+    }
+}
+
+
+.p-contact__check {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+
+
+}
+
+
+
+.form__checkbox {
+    margin-top: 0;
+    display: flex;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    width: 140px;
+
+    label {
+        margin-top: 0.5rem;
+        @include font(2rem, calc(33/20), $font-weight-medium);
+    }
+}
+
+.flex-start {
+    display: block;
+    @include font(2rem, calc(33/20), $font-weight-medium);
+
+    @include pc {
+        margin-top: 0.5rem;
+    }
+}
+
+
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    padding-inline: 2rem;
+    width: 100%;
+    height: 4rem;
+    border: 1px solid $color-base;
+}
+
+input[type="checkbox"] {
+    display: block;
+
+    &+span {
+        display: block;
+        position: relative;
+        padding-left: 3rem;
+
+        @include pc {
+            padding-left: 4rem;
+        }
+
+        &::before {
+            content: "";
+            width: 2rem;
+            height: 2rem;
+            position: absolute;
+            border: 1px solid #000;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        &::after {
+            content: "";
+            width: 1.2rem;
+            height: 0.6rem;
+            border-left: 0.4rem solid $color-main;
+            border-bottom: 0.3rem solid $color-main;
+            position: absolute;
+            top: 45%;
+            left: 0.1rem;
+            transform: translateY(-50%) rotate(-55deg);
+            display: none;
+            ;
+        }
+    }
+
+    &:checked+span {
+        &::after {
+            display: block;
+        }
+    }
+}
+
+
+textarea {
+    padding: 1rem 2rem;
+    width: 100%;
+    height: 19rem;
+    border: 1px solid $color-base;
+    @include pc{
+       height: 30rem; 
+    }
+}
+
+
+.p-contact {
+    &__submit-btn {
+        margin-block: 4rem 6.3rem;
+        width: 100%;
+        height: 5rem;
+
+        @include pc {
+            margin: 4rem 0.2rem 3.2rem 0rem;
+            width: 25rem;
+        }
+
+        a {
+            @include font(2rem, calc(26/20), $font-weight-bold);
+
+            @include pc {
+                @include font(2.5rem, calc(33/25), $font-weight-bold);
+            }
+        }
+    }
+}
