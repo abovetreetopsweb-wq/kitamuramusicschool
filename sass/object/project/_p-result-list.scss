@@ -2,25 +2,65 @@
 @use "../../foundation/mixin" as *;
 
 .p-result {
+    padding-bottom: 21rem;
+    &__title {
+        text-align: center;
+        @include font(2.5rem, calc(40/25), $font-weight-bold);
+    }
+
     &__items {
         display: grid;
         grid-template-columns: 1fr;
+        row-gap: 6.3rem; // 縦方向
 
         @include pc {
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            column-gap: calc(105 / 880 * 100%); // 横方向10.5rem
         }
     }
 
     &__item {
-        width: 100%;
-
-        @include pc {
-            width: 387px;
+        &:nth-child(4n+5),
+        &:nth-child(4n+6),
+        &:nth-child(4n+7),
+        &:nth-child(4n+8),
+        &:nth-child(4n+9),
+        &:nth-child(4n+10){
+            margin-top: 0.65rem;
         }
     }
 
-    &__title {
-        text-align: center;
-        @include font(2.5rem, calc(40/25), $font-weight-bold);
+
+    &__thumbnail {
+        position: relative;
+        aspect-ratio: 387/273;
+    }
+
+    &__image {
+        position: absolute;
+    }
+
+    &__category {
+        position: absolute;
+        display: grid;
+        place-content: center;
+        width: 10rem;
+        height: 3rem;
+        top: 0;
+        background: $color-main;
+        color: $color-white;
+        @include font(1.5rem,calc(25/15),$font-weight-bold);
+    }
+
+    &__body {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    &__date {
+        @include font(1.8rem, calc(32/18), $font-weight-medium);
+        text-align: right;
     }
 }
