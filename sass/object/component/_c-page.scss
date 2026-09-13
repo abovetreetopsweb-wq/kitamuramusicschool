@@ -4,17 +4,20 @@
 //下層ページパンくずの設定
 .c-breadcrumb {
     background: #E8E8E8;
-    height: 3.6rem;
+    height: 100%;
     display: flex;
     align-items: center;
+    padding-block: 0.7rem;
 
     @include pc {
-        height: 5rem;
+        padding-block: 0.85rem;
     }
 
     ul {
+
         display: flex;
         column-gap: 5rem;
+        flex-wrap: wrap;
 
         @include pc {
             column-gap: 5rem;
@@ -22,7 +25,8 @@
 
         li {
             position: relative;
-            @include font(1.6rem, calc(33/16), $font-weight-medium);
+            text-wrap: nowrap;
+            @include font(1.6rem, calc(22/16), $font-weight-medium);
 
             @include pc {
                 @include font(1.6rem, calc(33/16), $font-weight-regular);
@@ -32,7 +36,7 @@
                 position: absolute;
                 content: '>';
                 top: 50%;
-                right: -3.2rem;
+                right: -3.3rem;
                 transform: translateY((-50%));
                 color: #000;
             }
@@ -135,5 +139,173 @@
         margin-inline: 1.5rem;
         display: grid;
         place-content: center;
+    }
+}
+
+//前の記事・次の記事
+.c-detail-pagination {
+    margin-top: 4.2rem;
+    display: flex;
+    column-gap: 2.3rem;
+
+
+    @include pc {
+        margin-top: 5.2rem;
+        width: 100%;
+        display: flex;
+        column-gap: 8rem;
+    }
+
+    &__prev-inner,
+    &__next-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    &__prev-contents,
+    &__next-contents {
+        display: flex;
+        column-gap: 1.5rem;
+    }
+
+    &__prev-title,
+    &__next-title {
+        display: flex;
+        align-items: center;
+        width: calc(260px / 600 * 100%);
+        height: 3.7rem;
+        padding-inline: 2rem;
+        @include font(1.7rem, calc(30/17), $font-weight-medium);
+        background: $color-base;
+        color: $color-white;
+    }
+
+    &__prev-title {
+        justify-content: flex-start;
+    }
+
+    &__next-title {
+        justify-content: flex-end;
+    }
+
+    &__prev-image,
+    &__next-image {
+        display: none;
+
+        @include pc {
+            display: block;
+            width: 9.8rem;
+            aspect-ratio: 98/68;
+        }
+    }
+
+    &__prev-text,
+    &__next-text {
+        flex: 1;
+        @include font(1.6rem, calc(25/16), $font-weight-bold);
+    }
+
+}
+
+//関連記事
+.c-related {
+    margin-top: 6.5rem;
+
+    @include pc {
+        margin-top: 9.4rem;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5rem;
+        padding-inline: 3rem;
+        background: $color-base;
+        color: $color-white;
+
+        @include pc {
+            justify-content: flex-start;
+        }
+    }
+
+    &__items {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.1rem;
+
+        @include pc {
+            margin-top: 3rem;
+            row-gap: 3rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 2rem;
+        align-items: center;
+
+        @include pc {
+            align-items: flex-start;
+            column-gap: 3rem;
+        }
+    }
+
+    &__thumbnail {
+        position: relative;
+        width: 16rem;
+
+        @include pc {
+            width: 20rem;
+        }
+
+    }
+
+    &__image {
+        aspect-ratio: 160/110;
+
+        @include pc {
+            aspect-ratio: 200/140;
+        }
+
+    }
+
+    &__category {
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8rem;
+        height: 3rem;
+        background: $color-main;
+        color: $color-white;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @include pc {
+            row-gap: 1rem;
+        }
+    }
+
+    &__blogtitle {
+        @include font(1.7rem, calc(28/17), $font-weight-bold);
+
+        @include pc {
+            @include font(2rem, calc(25/17), $font-weight-bold);
+        }
+    }
+
+    time {
+        @include pc {
+            padding-left: 0.5rem;
+        }
     }
 }
