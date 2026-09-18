@@ -2,7 +2,23 @@
 @use "../../foundation/mixin" as *;
 
 .p-price {
+    &__inner {
+        padding-bottom: 15.6rem;
+    }
 
+    &__system {
+        width: 100%;
+        padding-inline: 2rem;
+        margin-inline: auto;
+
+
+        @include pc {
+
+            max-width: 94.8rem;
+            padding-inline: 3rem;
+
+        }
+    }
 
     &__summary {
         display: flex;
@@ -13,6 +29,7 @@
 
         @include pc {
             flex-direction: row;
+            column-gap: 3rem;
         }
     }
 
@@ -28,13 +45,16 @@
     }
 
     &__plus {
+        position: relative;
 
         &::before {
             content: '';
-            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateX(-50%);
             width: 1.9rem;
             height: 1.9rem;
-
             background: url(../../../img/plan/plus.svg) no-repeat center / contain;
         }
     }
@@ -51,50 +71,151 @@
 
     &__text {
         margin-top: 4.5rem;
-        @include font(1.6rem, calc(30/16), $font-weight-medium);
+
+        @include pc {
+            margin-top: 4.8rem;
+            @include font(1.8rem, calc(30/18), $font-weight-regular);
+        }
     }
 
 }
 
 .p-price-plans {
     margin-top: 4rem;
-    
-&__contents{
-    overflow-x: scroll;
-    @include pc{
-        overflow-x: hidden;
+
+    @include pc {
+        margin-top: 5.8rem;
     }
-}
+
+   &__contents {
+        overflow-x: scroll;
+
+        @include pc {
+            overflow-x: hidden;
+        }
+    }
 
     &__table {
         margin-top: 3.5rem;
-        border: 1px solid $color-base;
+        overflow-x: scroll;
+
+
+        @include pc {
+            margin-top: 2.8rem;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
 
         tr {
             display: flex;
             height: 8.5rem;
-            border: 1px solid $color-base;
 
             &:first-of-type {
                 height: 6.6rem;
             }
 
+
             th {
-                padding: 1rem;
-                width: 16.9rem;
+                padding: 2rem;
+                flex: 0 0 50%;
                 display: flex;
                 align-items: center;
+
+                @include pc {
+                    flex: 0 0 25%;
+                    @include font(1.7rem, calc(30/17), $font-weight-regular);
+                }
             }
 
             td {
-                width: 16.9rem;
+                flex: 0 0 50%;
                 display: grid;
                 place-content: center;
+
+                @include pc {
+                    flex: 0 0 25%;
+                }
+            }
+
+            th,
+            td {
+                &:not(:first-child) {
+                    border-left: 0.05rem solid $color-base;
+                }
             }
         }
     }
 
-    .p-price-plans__note {
-        margin-top: 3rem;
+    &__recommend {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: $color-main;
+        color: $color-white;
+        z-index: 2;
+
+        span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            text-align: center;
+            height: 8rem;
+            bottom: 0;
+            width: 100%;
+            background: $color-main;
+            z-index: 1;
+        }
     }
+
+    &__plan-bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $color-base;
+        color: $color-white;
+    }
+}
+
+.p-price-plans__note {
+    margin-top: 3rem;
+
+    @include pc {
+        margin-top: 2.5rem;
+        @include font(1.7rem, calc(25/17), $font-weight-regular);
+    }
+}
+
+
+.table-head-empty {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.tr-bg {
+
+    th,
+    td {
+        background: rgba(80, 80, 80, 0.149);
+    }
+}
+
+.bottom-line {
+
+    th,
+    td {
+        border-bottom: 0.5px solid $color-base;
+    }
+}
+
+.p-price-plan--available {
+    text-align: center;
+}
+
+.p-price-plan--none {
+    width: 3rem;
+    border: 0;
+    border-top: 1px solid $color-base;
+
 }

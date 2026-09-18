@@ -1772,6 +1772,20 @@ img {
   text-align: right;
 }
 
+.p-price__inner {
+  padding-bottom: 15.6rem;
+}
+.p-price__system {
+  width: 100%;
+  padding-inline: 2rem;
+  margin-inline: auto;
+}
+@media (min-width: 768px) {
+  .p-price__system {
+    max-width: 94.8rem;
+    padding-inline: 3rem;
+  }
+}
 .p-price__summary {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1794,6 +1808,9 @@ img {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -webkit-column-gap: 3rem;
+       -moz-column-gap: 3rem;
+            column-gap: 3rem;
   }
 }
 .p-price__admission {
@@ -1807,9 +1824,16 @@ img {
   font-weight: 700;
   line-height: 1.65;
 }
+.p-price__plus {
+  position: relative;
+}
 .p-price__plus::before {
   content: "";
-  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 1.9rem;
   height: 1.9rem;
   background: url(../../../img/plan/plus.svg) no-repeat center/contain;
@@ -1827,13 +1851,23 @@ img {
 }
 .p-price__text {
   margin-top: 4.5rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  line-height: 1.875;
+}
+@media (min-width: 768px) {
+  .p-price__text {
+    margin-top: 4.8rem;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.6666666667;
+  }
 }
 
 .p-price-plans {
   margin-top: 4rem;
+}
+@media (min-width: 768px) {
+  .p-price-plans {
+    margin-top: 5.8rem;
+  }
 }
 .p-price-plans__contents {
   overflow-x: scroll;
@@ -1845,21 +1879,29 @@ img {
 }
 .p-price-plans__table {
   margin-top: 3.5rem;
-  border: 1px solid #000;
+  overflow-x: scroll;
+}
+@media (min-width: 768px) {
+  .p-price-plans__table {
+    margin-top: 2.8rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
 }
 .p-price-plans__table tr {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   height: 8.5rem;
-  border: 1px solid #000;
 }
 .p-price-plans__table tr:first-of-type {
   height: 6.6rem;
 }
 .p-price-plans__table tr th {
-  padding: 1rem;
-  width: 16.9rem;
+  padding: 2rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1867,13 +1909,116 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (min-width: 768px) {
+  .p-price-plans__table tr th {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.7647058824;
+  }
+}
 .p-price-plans__table tr td {
-  width: 16.9rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   display: grid;
   place-content: center;
 }
-.p-price-plans .p-price-plans__note {
+@media (min-width: 768px) {
+  .p-price-plans__table tr td {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 25%;
+            flex: 0 0 25%;
+  }
+}
+.p-price-plans__table tr th:not(:first-child),
+.p-price-plans__table tr td:not(:first-child) {
+  border-left: 0.05rem solid #000;
+}
+.p-price-plans__recommend {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background: #CB0000;
+  color: #fff;
+  z-index: 2;
+}
+.p-price-plans__recommend span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  text-align: center;
+  height: 8rem;
+  bottom: 0;
+  width: 100%;
+  background: #CB0000;
+  z-index: 1;
+}
+.p-price-plans__plan-bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #000;
+  color: #fff;
+}
+
+.p-price-plans__note {
   margin-top: 3rem;
+}
+@media (min-width: 768px) {
+  .p-price-plans__note {
+    margin-top: 2.5rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.4705882353;
+  }
+}
+
+.table-head-empty {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.tr-bg th,
+.tr-bg td {
+  background: rgba(80, 80, 80, 0.149);
+}
+
+.bottom-line th,
+.bottom-line td {
+  border-bottom: 0.5px solid #000;
+}
+
+.p-price-plan--available {
+  text-align: center;
+}
+
+.p-price-plan--none {
+  width: 3rem;
+  border: 0;
+  border-top: 1px solid #000;
 }
 
 .p-blog-list {
