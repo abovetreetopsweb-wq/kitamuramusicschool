@@ -2,7 +2,7 @@
 @use "../../foundation/mixin" as *;
 
 .p-blog {
-    padding-block: 3rem;
+    padding-block: 3rem 20rem;
 
     &__contents {
         margin-top: 3rem;
@@ -39,5 +39,11 @@
                 text-align: right;
             }
         }
+    }
+    &__link{
+        text-align: right;
+       text-decoration: underline;
+       text-underline-offset: 0.3rem;
+       text-decoration-thickness: 0.5px;
     }
 }

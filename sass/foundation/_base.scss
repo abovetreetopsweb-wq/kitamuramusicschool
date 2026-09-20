@@ -27,6 +27,16 @@ body {
 
 a {
     cursor: pointer;
+
+    @include pc {
+        transition: opacity 0.4s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
 }
 
 //pc,spの非表示

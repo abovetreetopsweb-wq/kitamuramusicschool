@@ -142,12 +142,17 @@
     display: flex;
     position: fixed;
     top: 5rem;
-    right: -120%;
-    @include sp{
-    width: 30rem;
-    height: 17.4rem;
-    background: $color-main;
-  }
+    right: 0;
+
+
+    @include sp {
+      width: 30rem;
+      height: 17.4rem;
+      transform: translateX(100%);
+
+      transition: transform 0.4s ease-in-out;
+      background: $color-main;
+    }
 
     @include pc {
       display: flex;
@@ -157,6 +162,7 @@
     ul {
       display: flex;
       flex-direction: column;
+      column-gap: 3rem;
 
       @include pc {
         height: 7.9rem;
@@ -166,18 +172,41 @@
       li {
         a {
           display: flex;
-          justify-content: center;
+          justify-content: flex-start;
           align-items: center;
-          height: 5.8rem;
-          padding-inline: 1.65rem;
-          @include sp{
-          @include font(1.8rem, calc(33/18),$font-weight-bold);
-          color: $color-white;
+          padding-block: 1.25rem;
+          padding-inline: 2rem;
+          position: relative;
+
+          @include sp {
+            @include font(1.8rem, calc(33/18), $font-weight-bold);
+            color: $color-white;
           }
 
-          @include pc{
-             height: 7.9rem;
-             @include font(1.7rem, calc(33/17));
+          @include pc {
+            padding-block: 2.3rem;
+            padding-inline: 0rem;
+            justify-content: center;
+            @include font(1.7rem, calc(33/17));
+          }
+
+          &::before {
+            content: "";
+            width: 100%;
+            height: 0.15rem;
+            position: absolute;
+            background: $color-main;
+            left: 0;
+            bottom: 2rem;
+            transform: scaleX(0);
+            transition: all 0.4s;
+            transform-origin: left center;
+          }
+
+          &:hover {
+            &::before {
+              transform: scaleX(1);
+            }
           }
         }
       }
@@ -185,7 +214,7 @@
   }
 
   &__nav.active {
-    right: 0;
+    transform: translateX(0);
   }
 
   &__button {
@@ -199,7 +228,8 @@
       padding-left: 1.65rem;
     }
   }
-  &__button-inner{
+
+  &__button-inner {
     width: 15rem;
     height: 4.5rem;
   }
