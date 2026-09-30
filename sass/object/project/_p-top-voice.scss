@@ -2,10 +2,10 @@
 @use "../../foundation/variable" as *;
 
 .p-voice {
-    padding: 5rem 0 8rem;
+    padding: 4.5rem 0 1.3rem;
 
     @include pc {
-        padding: 5rem 0 8rem;
+        padding: 4.5rem 0 8rem;
     }
 
     &__title {
@@ -13,13 +13,13 @@
     }
 
     &__contents {
-        margin-top: 3rem;
+        margin-top: 4rem;
         position: relative;
         z-index: 1;
         width: 100%;
 
         @include pc {
-            margin-top: 3rem;
+            margin-top: 3.5rem;
         }
     }
 }
@@ -28,6 +28,8 @@
 .p-voice-item {
     display: block;
     width: 100%;
+
+  
 
     &:hover {
         @include pc {
@@ -49,22 +51,33 @@
         width: 100%;
 
         @include pc {
-            width: calc(270px /880* 100%);
             aspect-ratio: 270/190;
             transition: transform 0.4s;
 
         }
     }
 
+
     &__title {
+        margin-top: 3rem;
         @include font(2.2rem, calc(33/22), $font-weight-bold);
         text-align: center;
         transition: opacity 0.4s;
+
+        @include pc {
+            margin-top: 1.5rem;
+        }
     }
 
     &__text {
-        margin-top: 1rem;
+        margin-top: 0.8rem;
         transition: opacity 0.4s;
+        @include font(1.8rem, calc(30/18), $font-weight-medium);
+
+        @include pc {
+            margin-top: 1rem;
+            @include font(1.8rem, calc(30/18), $font-weight-medium);
+        }
     }
 }
 
@@ -77,16 +90,14 @@
 
 
     @include pc {
-        max-width: 98.5rem;
+        max-width: 98rem;
         padding-inline: 5rem;
     }
 }
 
 .swiper-button-prev {
     position: absolute;
-    left: -10rem;
     z-index: 999;
-
     width: 2.984rem;
     background: url("../../../img/top/arrow-l.svg") center / contain no-repeat;
 
@@ -95,7 +106,6 @@
 
 .swiper-button-next {
     position: absolute;
-    right: -2rem;
     z-index: 99;
     width: 2.984rem;
     background: url("../../../img/top/arrow-r.svg") center / contain no-repeat;
@@ -108,5 +118,44 @@
 .swiper-button-next {
     .swiper-navigation-icon {
         display: none;
+    }
+}
+
+.swiper-horizontal {
+
+    .swiper-button-next,
+    .swiper-button-prev,
+    ~.swiper-button-next,
+    ~.swiper-button-prev {
+        margin-left: 0rem;
+        margin-top: 0;
+        top: 43%;
+
+        @include pc {
+            top: 49.2%;
+        }
+    }
+
+}
+
+@include sp {
+    .swiper-horizontal {
+
+        &.swiper-rtl .swiper-button-next,
+        &.swiper-rtl~.swiper-button-next,
+        &~.swiper-button-prev,
+        .swiper-button-prev {
+            left: 2rem;
+        }
+    }
+
+    .swiper-horizontal {
+
+        &.swiper-rtl .swiper-button-prev,
+        &.swiper-rtl~.swiper-button-prev,
+        &~.swiper-button-next,
+        .swiper-button-next {
+            right: 2rem;
+        }
     }
 }

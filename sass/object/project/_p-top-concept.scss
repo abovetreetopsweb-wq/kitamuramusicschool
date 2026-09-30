@@ -13,7 +13,7 @@
         @include font(2.5rem, calc(40/25), $font-weight-bold);
 
         @include pc {
-            @include font(3.5rem, calc(50/35));
+            @include font(3.5rem, calc(50/35),$font-weight-bold);
         }
     }
 
@@ -65,7 +65,7 @@
             color: $color-main;
             @include font(2rem, calc(50/20), $font-weight-bold);
             @include pc{
-                @include font(2.5rem, calc(50/25), $font-weight-regular);
+                @include font(2.5rem, calc(50/25), $font-weight-bold);
             }
 
 
@@ -74,7 +74,7 @@
                 color: $color-base;
                 @include font(2rem, calc(50/20), $font-weight-medium);
                 @include pc{
-                    @include font(2.3rem, calc(50/23), $font-weight-regular);
+                    @include font(2.3rem, calc(50/23), $font-weight-medium);
                 }
             }
         }

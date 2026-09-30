@@ -1,0 +1,78 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-footer {
+
+    &__contents {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__nav {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 3rem;
+
+            @include pc {
+                column-gap: 3.4rem;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                a {
+                    @include font(1.7rem, calc(33/17), $font-weight-bold);
+                }
+            }
+        }
+    }
+
+    &__logo {
+        margin-top: 1.874rem;
+        width: 3.203rem;
+
+        @include pc {
+            margin-top: 2.174rem;
+        }
+
+    }
+
+    &__copyright {
+        text-align: center;
+        margin-top: 2.891rem;
+        @include font(1.5rem, calc(20/15), $font-weight-medium);
+
+        @include pc {
+            margin-top: 2.3rem;
+            @include font(1.5rem, calc(33/15), $font-weight-medium);
+        }
+    }
+
+    &__sns {
+        margin-top: 1.6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 1.2rem;
+
+        @include pc {
+            margin-top: 0.1rem;
+        }
+
+        li {
+            a {
+                display: block;
+
+                span {
+                    width: 2.2rem;
+                }
+            }
+        }
+    }
+}

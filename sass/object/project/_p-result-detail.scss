@@ -1,0 +1,186 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+
+
+.p-result-detail {
+    &__container {
+        padding-block: 4.7rem 19.5rem;
+
+        @include pc {
+            padding-block: 7rem 15.6rem;
+        }
+    }
+
+    //サムネイル
+    &__thumbnail {
+        position: relative;
+    }
+
+    &__image {
+        aspect-ratio: 335/236;
+
+        @include pc {
+            aspect-ratio: 880/400;
+
+            img {
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__category {
+        display: grid;
+        place-content: center;
+        position: absolute;
+        width: 10rem;
+        height: 3rem;
+        top: 0;
+        left: 0;
+        background: $color-main;
+        color: $color-white;
+        @include font(1.5rem, calc(25/15), $font-weight-bold);
+
+    }
+
+    //タイトルと日付
+    &__title {
+        margin-top: 3rem;
+
+        @include pc {
+            margin-top: 5rem;
+        }
+    }
+
+    &__date {
+        width: 100%;
+        margin-top: 0.5rem;
+
+        @include pc {
+            margin-top: 1.5rem;
+        }
+    }
+
+    //コンテンツ
+    &__profile-wrap {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+
+        @include pc {
+            margin-top: 5.5rem;
+            flex-direction: row;
+            column-gap: 4rem;
+        }
+
+
+        p {
+            margin-top: 3rem;
+            flex: 1;
+
+            @include pc {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__table {
+        border-collapse: collapse;
+        border: 0.5px solid #707070;
+
+        tr {
+            th {
+                width: 14rem;
+                padding: 0.73rem 2rem 0.01rem 1rem;
+                background: #E5E5E5;
+                border: 0.5px solid #707070;
+
+                @include pc {
+                    padding: 0.73rem 2rem 0.01rem 2rem;
+                }
+            }
+
+            td {
+                width: 26rem;
+                padding: 0.73rem 2rem 0.01rem 1rem;
+                border: 0.5px solid #707070;
+
+                @include pc {
+                    padding: 0.73rem 2rem 0.01rem 2rem;
+                }
+            }
+        }
+    }
+
+    &__pagination {
+        padding-top: 4rem;
+        column-gap: calc(23/335*100%);
+
+        @include pc {
+            padding-top: 6rem;
+            column-gap: calc(200/880*100%);
+        }
+    }
+
+    &__text {
+        @include font(1.8rem, calc(30/18), $font-weight-medium);
+    }
+
+
+}
+
+.p-result-detail__related {
+    padding-top: 6.3rem;
+
+    @include pc {
+        padding-top: 10.2rem;
+    }
+
+    &-item {
+        display: flex;
+        column-gap: 2rem;
+        align-items: flex-start;
+
+        @include pc {
+            align-items: flex-start;
+            column-gap: 3rem;
+        }
+    }
+
+    &-image {
+        aspect-ratio: 160/113;
+
+        @include pc {
+            aspect-ratio: 260/183;
+        }
+    }
+
+    &-thumbnail {
+        position: relative;
+        width: 16rem;
+
+        @include pc {
+            width: 26rem;
+        }
+
+    }
+
+    &-category {
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8rem;
+        height: 3rem;
+        background: $color-main;
+        color: $color-white;
+
+        @include pc {
+            width: 10rem;
+            height: 3rem;
+        }
+    }
+
+
+}

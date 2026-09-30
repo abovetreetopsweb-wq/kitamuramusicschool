@@ -1,12 +1,12 @@
 "use strict"
 //ハンバーガー
-$(".l-header__hb-btn").click(function () {
-    $(".l-header__hb-btn").toggleClass('active');
-    $(".l-header__nav").toggleClass('active');
+$(".p-header__hb-btn").click(function () {
+    $(".p-header__hb-btn").toggleClass('active');
+    $(".p-header__nav").toggleClass('active');
 })
-$(".l-header__nav ul li a").click(function () {
-    $(".l-header__hb-btn").removeClass('active');
-    $(".l-header__nav").removeClass('active');
+$(".p-header__nav ul li a").click(function () {
+    $(".p-header__hb-btn").removeClass('active');
+    $(".p-header__nav").removeClass('active');
 });
 
 
@@ -36,7 +36,7 @@ $(".qa-title").on('click', function () {
 
 //topへ戻る
 
-var goTop = $(".c-fixed-bottons");//変数宣言と代入
+var goTop = $(".c-fixed-buttons");//変数宣言と代入
 var footer = $(".l-footer");
 
 goTop.hide();//サイト上部ではボタンを非表示
@@ -67,7 +67,80 @@ $(window).on("scroll", function () {
 });
 
 //ボタンがクリックされたら1秒でページトップへ戻る
-goTop.on("click",function () {
+$(".c-page-top").on("click",function () {
     $("body,html").animate({ scrollTop: 0 }, 1000);
     return false;
 })
+
+
+
+// 下層：plan スクロールバー
+const contents = document.querySelector(".p-price-plans__contents");
+const scrollbar = document.querySelector(".p-price-plans__scrollbar");
+const thumb = document.querySelector(".p-price-plans__scrollbar-thumb");
+
+// 料金表があるページだけ実行
+if (contents && scrollbar && thumb) {
+    // テーブルの位置に合わせてバーを動かす
+    const updateThumb = () => {
+        const maxScroll = contents.scrollWidth - contents.clientWidth;
+        const maxMove = scrollbar.clientWidth - thumb.clientWidth;
+
+        const ratio = maxScroll > 0
+            ? contents.scrollLeft / maxScroll
+            : 0;
+
+        thumb.style.transform =
+            `translateX(${Math.max(0, maxMove) * ratio}px)`;
+    };
+
+    contents.addEventListener("scroll", updateThumb);
+    window.addEventListener("resize", updateThumb);
+    updateThumb();
+
+    let dragId = null;
+    let startX = 0;
+    let startScroll = 0;
+
+    // バーをつかんだ瞬間の位置を覚える
+    thumb.addEventListener("pointerdown", (event) => {
+        if (dragId !== null || event.button !== 0) return;
+
+        dragId = event.pointerId;
+        startX = event.clientX;
+        startScroll = contents.scrollLeft;
+
+        // バーの外に指・マウスが出ても操作を続ける
+        thumb.setPointerCapture(event.pointerId);
+    });
+
+    // つかんだまま動かした分、テーブルをスクロール
+    thumb.addEventListener("pointermove", (event) => {
+        if (event.pointerId !== dragId) return;
+
+        const maxScroll = contents.scrollWidth - contents.clientWidth;
+        const maxMove = scrollbar.clientWidth - thumb.clientWidth;
+
+        if (maxScroll <= 0 || maxMove <= 0) return;
+
+        const distance = event.clientX - startX;
+
+        contents.scrollLeft =
+            startScroll + distance * (maxScroll / maxMove);
+    });
+
+    // 指・マウスを離したら終了
+    const stopDrag = (event) => {
+        if (event.pointerId !== dragId) return;
+
+        dragId = null;
+
+        if (thumb.hasPointerCapture(event.pointerId)) {
+            thumb.releasePointerCapture(event.pointerId);
+        }
+    };
+
+    thumb.addEventListener("pointerup", stopDrag);
+    thumb.addEventListener("pointercancel", stopDrag);
+    thumb.addEventListener("lostpointercapture", stopDrag);
+}

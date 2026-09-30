@@ -1,0 +1,104 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+//関連記事
+.p-related {
+   /* margin-top: 6.5rem;
+
+    @include pc {
+        margin-top: 9.4rem;
+    }*/
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 5rem;
+        padding-inline: 3rem;
+        background: $color-base;
+        color: $color-white;
+
+        @include pc {
+            justify-content: flex-start;
+        }
+    }
+
+    &__items {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.1rem;
+
+        @include pc {
+            margin-top: 3rem;
+            row-gap: 3rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 2rem;
+        align-items: center;
+
+        @include pc {
+            align-items: flex-start;
+            column-gap: 3rem;
+        }
+    }
+
+    &__thumbnail {
+        position: relative;
+        width: 16rem;
+
+        @include pc {
+            width: 20rem;
+        }
+
+    }
+
+    &__image {
+        aspect-ratio: 160/110;
+
+        @include pc {
+            aspect-ratio: 200/140;
+        }
+
+    }
+
+    &__category {
+        display: grid;
+        place-content: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 8rem;
+        height: 3rem;
+        background: $color-main;
+        color: $color-white;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+
+        @include pc {
+            row-gap: 1rem;
+        }
+    }
+
+    &__blogtitle {
+        @include font(1.7rem, calc(28/17), $font-weight-bold);
+
+        @include pc {
+            @include font(2rem, calc(25/20), $font-weight-bold);
+        }
+    }
+
+    time {
+        @include pc {
+            padding-left: 0.5rem;
+        }
+    }
+}

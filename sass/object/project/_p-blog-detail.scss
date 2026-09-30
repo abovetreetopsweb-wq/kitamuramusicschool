@@ -1,19 +1,21 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-blog-detail__contents {
-    padding-block: 0.6rem 15.5rem;
+.p-blog-detail{
+    &__container {
+        padding-block: 5.1rem 20rem;
 
-    @include pc {
-        padding-block: 0.1rem 12rem;
-        display: flex;
-        column-gap: 3rem;
+        @include pc {
+            padding-block: 6.9rem 18.8rem;
+            display: flex;
+            column-gap: 3rem;
+        }
+
+        article {
+            flex: 1;
+        }
+
     }
-
-    article {
-        flex: 1;
-    }
-
 }
 
 //メインコンテンツの中身
@@ -50,18 +52,15 @@
 
 .p-blog-detail__title {
     margin-top: 2.8rem;
-    @include font(2rem, calc(30/20), $font-weight-bold);
 
     @include pc {
         margin-top: 4.5rem;
-        @include font(2.5rem, calc(40/25), $font-weight-bold);
     }
 }
 
 .p-blog-detail__date {
     display: block;
     margin-top: 0.5rem;
-    @include font(1.7rem, calc(30/17), $font-weight-medium);
 }
 
 .p-blog-detail__share {
@@ -187,7 +186,7 @@
 
     @include pc {
         margin-top: 1.65rem;
-        width: 335px;
+        width: 33.5rem;
 
     }
 }
@@ -243,7 +242,6 @@
     }
 
     &-image {
-        margin-top: 0.5;
         width: 2.704rem;
     }
 
@@ -258,7 +256,25 @@
     }
 }
 
+//前の記事・次の記事
+.p-blog-detail__pagination {
+    margin-top: 4.2rem;
+    column-gap: calc(23/337*100%);
 
+    @include pc {
+        margin-top: 5.2rem;
+        column-gap: calc(80/600*100%);
+    }
+}
+
+//関連記事
+.p-blog-detail__related {
+    margin-top: 6.5rem;
+
+    @include pc {
+        margin-top: 9.5rem;
+    }
+}
 
 //サイドバー
 
@@ -271,7 +287,7 @@
 
     @include pc {
         margin-top: 0;
-        width: 250px;
+        width: calc(250/880*100%);
     }
 
     &__title {
@@ -383,6 +399,7 @@
     &__text {
         flex: 1;
         margin-top: 1rem;
+        @include font(1.7rem, calc(28/17), $font-weight-medium);
 
         @include pc {
             margin-top: 0;

@@ -6,10 +6,15 @@
     @include font(2.5rem, calc(40/25), $font-weight-bold);
 
     @include pc {
-        @include font(3rem, calc(50/30), $font-weight-regular);
+        @include font(3rem, calc(50/30), $font-weight-bold);
     }
 }
 
+//下層ごとのタイトル
+.c-page-section-title {
+    text-align: center;
+    @include font(2.5rem, calc(40/25), $font-weight-bold);
+}
 
 // 共通：一覧タイトル
 .c-archive-title {

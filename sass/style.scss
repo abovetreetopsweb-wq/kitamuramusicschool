@@ -11,7 +11,13 @@
 @use "object/component/c-button";
 @use "object/component/c-inner";
 @use "object/component/c-text";
-@use "object/component/c-page";
+@use "object/component/c-fixed-buttons";
+
+//header
+@use "object/project/p-header";
+//footer
+@use "object/project/p-footer";
+
 
 //index
 @use "object/project/p-top-mv";
@@ -22,6 +28,16 @@
 @use "object/project/p-top-flow";
 @use "object/project/p-top-faq";
 @use "object/project/p-top-blog";
+
+
+
+
+//下層の共通
+@use "object/project/p-breadcrumb";
+@use "object/project/p-page-visual";
+@use "object/project/p-pagination";
+@use "object/project/p-detail-pagination";
+@use "object/project/p-related";
 
 
 //plan
@@ -37,8 +53,8 @@
 //404
 @use "object/project/p-404";
 //serch
-@use "object/project/p-serch";
+@use "object/project/p-search";
 //result_list
 @use "object/project/p-result-list";
-//resuit_detail
-@use "object/project/p-resuit-detail";
+//result_detail
+@use "object/project/p-result-detail";

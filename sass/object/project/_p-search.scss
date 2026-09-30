@@ -1,0 +1,132 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+.p-search {
+    &__container {
+        padding-block: 3.5rem 20.5rem;
+
+        @include pc {
+            padding-block: 6.8rem 21rem;
+        }
+    }
+
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        text-align: center;
+
+        @include font(1.8rem, calc(30/18), $font-weight-medium);
+
+        span {
+            font-weight: $font-weight-bold
+        }
+    }
+
+    &__count {
+        @include font(1.8rem, calc(30/18), $font-weight-medium);
+    }
+
+    &__items {
+        margin-top: 4.3rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 3.8rem;
+
+        @include pc {
+            margin-top: 4rem;
+            row-gap: 6.98rem;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+
+        @include pc {
+            flex-direction: row;
+            column-gap: 5rem;
+        }
+    }
+
+    &__thumbnail {
+        position: relative;
+        width: 100%;
+        height: 100%;
+
+        @include pc {
+            flex: 0 0 26rem;
+        }
+    }
+
+    &__image {
+        aspect-ratio: 335/200;
+
+        @include pc {
+            aspect-ratio: 260/184;
+        }
+
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__category {
+        position: absolute;
+        width: 9rem;
+        height: 3rem;
+        display: grid;
+        place-content: center;
+        top: 0;
+        left: 0;
+        background: $color-main;
+        color: $color-white;
+        z-index: 1;
+        @include font(1.5rem, calc(25/15), $font-weight-bold);
+
+        @include pc {
+            width: 8rem;
+        }
+    }
+
+    &__body {
+        margin-top: 3rem;
+        flex: 1;
+
+        @include pc {
+            margin-top: 0;
+        }
+    }
+
+    &__date {
+        margin-top: 0.5rem;
+        text-align: right;
+
+        @include pc {
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        margin-top: 1rem;
+
+        @include pc {
+            margin-top: 1rem;
+        }
+    }
+
+    &__pagination {
+        margin-top: 5.5rem;
+
+        @include pc {
+            margin-top: 7rem;
+        }
+    }
+}

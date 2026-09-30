@@ -2,6 +2,14 @@
 @use "../../foundation/mixin" as *;
 
 .p-price {
+    &__container {
+        padding-block: 4.5rem;
+
+        @include pc {
+            padding-block: 6.8rem;
+        }
+    }
+
     &__inner {
         padding-bottom: 15.6rem;
     }
@@ -17,6 +25,14 @@
             max-width: 94.8rem;
             padding-inline: 3rem;
 
+        }
+    }
+
+    &__contents {
+        margin-top: 3.5rem;
+
+        @include pc {
+            margin-top: 3.5rem;
         }
     }
 
@@ -87,23 +103,29 @@
         margin-top: 5.8rem;
     }
 
-   &__contents {
+    &__contents {
+        margin-top: 3.5rem;
+        padding-bottom: 1rem;
         overflow-x: scroll;
 
+        // 標準スクロールバーを非表示
+        scrollbar-width: none;
+
         @include pc {
+            margin-top: 3.5rem;
             overflow-x: hidden;
         }
     }
 
     &__table {
         margin-top: 3.5rem;
-        overflow-x: scroll;
+
+
 
 
         @include pc {
             margin-top: 2.8rem;
             width: 100%;
-            overflow-x: hidden;
         }
 
 
@@ -174,8 +196,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: $color-base;
-        color: $color-white;
+        position: relative;
+        z-index: 2;
+
+        span {
+            position: absolute;
+            z-index: 2;
+            color: $color-white;
+        }
+
+
+        &::after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 100%;
+            height: 5rem;
+            background: $color-base;
+
+            z-index: 1;
+        }
+
     }
 }
 
@@ -218,4 +259,28 @@
     border: 0;
     border-top: 1px solid $color-base;
 
+}
+
+.p-price-plans__scrollbar {
+    width: 100%;
+    height: 3rem;
+    background: #E3E3E3;
+
+    @include pc {
+        display: none;
+    }
+
+    &-thumb {
+        width: 10rem;
+        height: 3rem;
+        background: #9B9B9B;
+
+        touch-action: none;
+        user-select: none;
+        cursor: grab;
+
+        &:active {
+            cursor: grabbing;
+        }
+    }
 }

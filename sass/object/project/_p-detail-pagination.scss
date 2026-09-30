@@ -1,0 +1,68 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+//前の記事・次の記事
+.p-detail-pagination {
+  /*  margin-top: 4.2rem;*/
+    display: flex;
+   /* column-gap: 2.3rem;*/
+
+
+    @include pc {
+      /*  margin-top: 5.2rem;*/
+        width: 100%;
+        display: flex;
+       /* column-gap: 8rem;*/
+    }
+
+    &__prev-inner,
+    &__next-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5rem;
+    }
+
+    &__prev-contents,
+    &__next-contents {
+        display: flex;
+        column-gap: 1.5rem;
+    }
+
+    &__prev-title,
+    &__next-title {
+        display: flex;
+        align-items: center;
+        width: calc(260 / 600 * 100%);
+        height: 3.7rem;
+        padding-inline: 2rem;
+        @include font(1.7rem, calc(30/17), $font-weight-medium);
+        background: $color-base;
+        color: $color-white;
+    }
+
+    &__prev-title {
+        justify-content: flex-start;
+    }
+
+    &__next-title {
+        justify-content: flex-end;
+    }
+
+    &__prev-image,
+    &__next-image {
+        display: none;
+
+        @include pc {
+            display: block;
+            width: 9.8rem;
+            aspect-ratio: 98/68;
+        }
+    }
+
+    &__prev-text,
+    &__next-text {
+        flex: 1;
+        @include font(1.6rem, calc(25/16), $font-weight-bold);
+    }
+
+}

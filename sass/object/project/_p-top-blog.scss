@@ -2,11 +2,19 @@
 @use "../../foundation/mixin" as *;
 
 .p-blog {
-    padding-block: 3rem 20rem;
+    padding-block: 2.45rem 19rem;
+
+    @include pc {
+        padding-block: 3rem 20.6rem;
+    }
 
     &__contents {
-        margin-top: 3rem;
-        
+        margin-top: 3.7rem;
+
+        @include pc {
+            margin-top: 3.1rem;
+        }
+
     }
 
     &__title {
@@ -16,10 +24,12 @@
     &__items {
         display: flex;
         flex-direction: column;
+        row-gap: 3.9rem;
+
         @include pc {
             display: flex;
             flex-direction: row;
-            column-gap: 1rem;
+            column-gap: 5rem;
         }
     }
 
@@ -30,20 +40,74 @@
         align-items: center;
 
         &__desc {
+            width: 100%;
             height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
 
             time {
+                margin-top: 1rem;
                 text-align: right;
             }
         }
+
+        &__title {
+            margin-top: 3.5rem;
+            @include font(2rem, calc(25/20), $font-weight-bold);
+
+            @include pc {
+                margin-top: 2rem;
+                @include font(2rem, calc(25/20), $font-weight-bold);
+
+            }
+        }
+
+        &__thumbnail {
+            position: relative;
+        }
+
+        &__image {
+            aspect-ratio: 335/200;
+
+            @include pc {
+                aspect-ratio: 260/200;
+            }
+        }
+
+        &__category {
+            width: 8rem;
+            height: 3rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $color-main;
+            display: grid;
+            place-content: center;
+            color: $color-white;
+            z-index: 1;
+            @include font(1.5rem,calc(25/15),$font-weight-bold);
+
+        }
     }
-    &__link{
-        text-align: right;
-       text-decoration: underline;
-       text-underline-offset: 0.3rem;
-       text-decoration-thickness: 0.5px;
+
+    &__link {
+        margin-top: 3.8rem;
+        text-align: center;
+        text-decoration: underline;
+        text-underline-offset: 0.2rem;
+        text-decoration-thickness: 0.5px;
+
+        @include pc {
+            text-align: right;
+        }
+
+        a {
+            @include font(1.8rem, calc(30/18), $font-weight-medium);
+
+            @include pc {
+                @include font(1.8rem, calc(30/18), $font-weight-medium);
+            }
+        }
     }
 }

@@ -11,7 +11,7 @@
 
     &__contents {
         margin-top: 1.5rem;
-        @include font(1.8rem, calc(30/18));
+        @include font(1.8rem, calc(30/18),$font-weight-medium);
 
         @include pc {
             margin-top: 3rem;

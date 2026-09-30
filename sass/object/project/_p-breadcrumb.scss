@@ -1,0 +1,46 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+//下層ページパンくずの設定
+.p-breadcrumb {
+    background: #E8E8E8;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-block: 0.7rem;
+
+    @include pc {
+        padding-block: 0.85rem;
+    }
+
+    ul {
+
+        display: flex;
+        column-gap: 5rem;
+        flex-wrap: wrap;
+
+        @include pc {
+            column-gap: 5rem;
+        }
+
+        li {
+            position: relative;
+            text-wrap: wrap;
+            @include font(1.6rem, calc(22/16), $font-weight-medium);
+
+            @include pc {
+                @include font(1.6rem, calc(33/16), $font-weight-regular);
+            }
+
+            &:not(:last-child)::after {
+                position: absolute;
+                content: '>';
+                top: 50%;
+                right: -3.3rem;
+                transform: translateY((-50%));
+                color: #000;
+            }
+        }
+
+    }
+}

@@ -5,7 +5,13 @@
 
 
 .p-blog-list {
-    padding-block: 8rem;
+    &__container {
+        padding-block: 4.5rem 20.1rem;
+
+        @include pc {
+            padding-block: 6.8rem 21.1rem;
+        }
+    }
 
     &__content {
         display: flex;
@@ -19,20 +25,26 @@
     }
 
     &__items {
-        margin-top: 5rem;
+        margin-top: 4rem;
         display: flex;
         flex-direction: column;
-        row-gap: 5rem;
+        row-gap: 3.78rem;
+
+        @include pc {
+            margin-top: 3.5rem;
+            row-gap: 7rem;
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
         width: 100%;
 
         @include pc {
             flex-direction: row;
-            column-gap: 3rem;
+            column-gap: 5rem;
         }
     }
 
@@ -42,12 +54,16 @@
         height: 100%;
 
         @include pc {
-            flex: 0 0 260px;
+            flex: 0 0 26rem;
         }
     }
 
     &__image {
-        aspect-ratio: 260/184;
+        aspect-ratio: 335/200;
+
+        @include pc {
+            aspect-ratio: 260/184;
+        }
 
         img {
             height: 100%;
@@ -57,16 +73,54 @@
 
     &__category {
         position: absolute;
+        width: 9rem;
+        height: 3rem;
+        display: grid;
+        place-content: center;
         top: 0;
         left: 0;
         background: $color-main;
-        padding: 0.5rem 1rem;
         color: $color-white;
         z-index: 1;
+        @include font(1.5rem, calc(25/15), $font-weight-bold);
 
+        @include pc {
+            width: 8rem;
+        }
     }
 
     &__body {
+        margin-top: 3rem;
         flex: 1;
+
+        @include pc {
+            margin-top: 0;
+        }
+    }
+
+    &__date {
+        margin-top: 0.5rem;
+        text-align: right;
+
+        @include pc {
+            margin-top: 0;
+            text-align: left;
+        }
+    }
+
+    &__text {
+        margin-top: 1rem;
+
+        @include pc {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.p-blog-list__pagination {
+    margin-top: 6rem;
+
+    @include pc {
+        margin-top: 7rem;
     }
 }

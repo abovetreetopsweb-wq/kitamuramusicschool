@@ -4,52 +4,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>きたむらミュージックスクール</title>
+    <title>卒業実績 | きたむらミュージックスクール</title>
+    <meta name="description" content="きたむらミュージックスクールは、音楽で生きることを目指す方のための音楽スクールです。充実したレッスンとサポートで、一人ひとりの夢や目標の実現を支えます。">
     <!--ogp-->
-    <meta property="og:title" content="きたむらミュージックスクール">
+    <meta property="og:title" content="卒業実績 | きたむらミュージックスクール">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="SNSシェア時に表示するサムネイル画像の絶対パス">
-    <meta property="og:url" content="サイトのURL">
-    <meta property="og:description" content="サイトのディスクリプション">
+    <meta property="og:image" content="https://test.abovetreetops.com/site-5/img/common/ogp.jpg">
+    <meta property="og:url" content="https://test.abovetreetops.com/site-5/result-list.html">
+    <meta property="og:description"
+        content="きたむらミュージックスクールは、音楽で生きることを目指す方のための音楽スクールです。充実したレッスンとサポートで、一人ひとりの夢や目標の実現を支えます。">
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=100">
+    <link rel="stylesheet" href="./css/style.css?v=300">
 </head>
 
 <body>
     <div id="container">
         <!-- #region header -->
-        <header class="l-header">
-            <div class="l-header__inner">
-                <div class="l-header__logo">
+        <header class="l-header p-header">
+            <div class="p-header__inner">
+                <div class="p-header__logo">
                     <h1>
                         <a href="./index.html">
-                            <div class="l-header__logo-image">
+                            <span class="p-header__logo-image">
                                 <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
-                            </div>
-                            <div class="l-header__logo-title">
+                            </span>
+                            <span class="p-header__logo-title">
                                 <span>きたむら</span><span>ミュージックスクール</span>
-                            </div>
+                            </span>
                         </a>
                     </h1>
                 </div>
                 <!--ハンバーガー-->
-                <div class="l-header__hb-btn">
-                    <div class="l-header__hb-inner">
+                <div class="p-header__hb-btn">
+                    <div class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </div>
-                <nav class="l-header__nav">
+                <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
                         <li><a href="./blog-list.html">ブログ</a></li>
                         <li><a href="./result-list.html">卒業実績</a></li>
                     </ul>
-                    <div class="l-header__button">
-                        <div class="c-button l-header__button-inner">
+                    <div class="p-header__button">
+                        <div class="c-button p-header__button-inner">
                             <a href="./contact-form.html">
                                 お問い合わせ
                             </a>
@@ -60,30 +62,31 @@
         </header>
         <!-- #endregion header -->
 
-        <main>
+        <main class="p-result">
             <!--下層MV-->
-            <div class="c-page-visual">
-                <div class="c-page-visual__image class="mask"">
+            <div class="p-page-visual">
+                <div class="p-page-visual__image mask">
                     <picture>
                         <source media="(max-width: 767px)" srcset="./img/result_list/result_list_sp.jpg">
+                        <!-- 見出しの背景として使う装飾画像なので、altは空 -->
                         <img src="./img/result_list/22749777_m.jpg" alt="">
                     </picture>
                 </div>
-                <h2 class="c-page-visual__title">卒業実績</h2>
+                <h2 class="p-page-visual__title">卒業実績</h2>
             </div>
 
             <!--パンくず-->
-            <nav class="c-breadcrumb">
+            <nav class="p-breadcrumb">
                 <div class="c-inner">
-                    <ul class="c-breadcrumb__list">
-                        <li class="c-breadcrumb__item"><a href="./index.html">ホーム</a></li>
-                        <li class="c-breadcrumb__item">卒業実績</li>
+                    <ul class="p-breadcrumb__list">
+                        <li class="p-breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                        <li class="p-breadcrumb__item">卒業実績</li>
                     </ul>
                 </div>
             </nav>
 
-
-            <div class="c-page-section p-result">
+            <!-- #region section result-list -->
+            <div class="p-result__container">
                 <div class="c-inner">
                     <div class="p-result__contents">
                         <h2 class="p-result__title">卒業実績一覧</h2>
@@ -98,11 +101,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
                             </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result02.jpg" alt="ピアノを演奏する女性">
@@ -111,11 +114,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result03.jpg" alt="アコースティックギターを演奏する男性">
@@ -124,11 +127,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result04.jpg" alt="アコースティックギターを演奏する女性">
@@ -137,11 +140,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result05.jpg" alt="マイクの前で歌う女性">
@@ -150,11 +153,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result06.jpg" alt="エレキギターを持つ女性">
@@ -163,11 +166,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result07.jpg" alt="ステージで歌う男性">
@@ -176,11 +179,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result08.jpg" alt="サックスを演奏する女性">
@@ -189,11 +192,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result09.jpg" alt="ヘッドホンをつけた女性">
@@ -202,11 +205,11 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div class="p-result__item">
+                            <a href="./result-detail.html" class="p-result__item">
                                 <div class="p-result__thumbnail">
                                     <div class="p-result__image">
                                         <img src="./img/result_list/result10.jpg" alt="フルートを演奏する女性">
@@ -215,77 +218,98 @@
                                 </div>
                                 <div class="p-result__body">
                                     <h3 class="p-result__item-title c-archive-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h3>
-                                    <time datetime="" class="p-result__date">0000.00.00</time>
+                                    <time datetime="2026-09-26" class="p-result__date">0000.00.00</time>
                                 </div>
-                            </div>
+                            </a>
 
                         </div>
                     </div>
 
-
-                    <!-- #endregion blog -->
                 </div>
-                <div class="c-pagination">
-                    <a href="#" class="c-pagination__item select">1</a>
-                    <a href="#" class="c-pagination__item">2</a>
-                    <a href="#" class="c-pagination__item">3</a>
-                    <span class="c-pagination__dots">…</span>
-                    <a href="#" class="c-pagination__item">9</a>
+                <!-- ページネーション -->
+                <div class="p-pagination p-result__pagination">
+                    <a href="#" class="p-pagination__item select">1</a>
+                    <a href="#" class="p-pagination__item">2</a>
+                    <a href="#" class="p-pagination__item">3</a>
+                    <span class="p-pagination__dots">…</span>
+                    <a href="#" class="p-pagination__item">9</a>
                 </div>
             </div>
+            <!-- #endregion section result-list -->
+
+            <!-- #region fixed-buttons -->
+            <div class="c-fixed-buttons">
+                <div class="c-fixed-buttons__inner">
+                    <button class="c-page-top">
+                        <img src="./img/common/arrow-top.svg" alt="ページの先頭へ戻る">
+                    </button>
+                    <div class="c-button c-fixed-buttons__contact">
+                        <a href="./contact-form.html">お問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+            <!-- #endregion fixed-buttons -->
+
+
         </main>
 
+
+
         <!-- #region footer -->
-        <footer class="l-footer section-bg">
+        <footer class="l-footer p-footer section-bg">
             <div class="c-inner">
-                <div class="l-footer__contents">
-                    <nav class="l-footer__nav">
+                <div class="p-footer__contents">
+                    <nav class="p-footer__nav">
                         <ul>
                             <li>
-                                <a href="#">ホーム</a>
+                                <a href="./index.html">ホーム</a>
                             </li>
                             <li>
-                                <a href="#">料金</a>
+                                <a href="./plan.html">料金</a>
                             </li>
                             <li>
-                                <a href="#">ブログ</a>
+                                <a href="./blog-list.html">ブログ</a>
                             </li>
                             <li>
-                                <a href="#">卒業実績</a>
+                                <a href="./result-list.html">卒業実績</a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="l-footer__logo">
-                        <img src="./img/common/logo-white.svg" alt="">
+                    <a href="./index.html" class="p-footer__logo">
+                        <img src="./img/common/logo-white.svg" alt="きたむらミュージックスクール">
+                    </a>
+                    <div class="p-footer__copyright">
+                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</small>
                     </div>
-                    <div class="l-footer__copyright">
-                        <small>Copyright © 0000 KITAMURA music school Inc. All Rights</small>
-                    </div>
-                    <ul class="l-footer__sns">
+                    <ul class="p-footer__sns">
                         <li>
                             <a href="#">
-                                <span><img src="./img/common/icon-twitter.svg" alt=""></span></a>
+                                <span><img src="./img/common/icon-twitter.svg" alt="x"></span></a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><img src="./img/common/icon-facebook.svg" alt=""></span></a>
+                                <span><img src="./img/common/icon-facebook.svg" alt="facebook"></span></a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><img src="./img/common/icon-youtube.svg" alt=""></span></a>
+                                <span><img src="./img/common/icon-youtube.svg" alt="youtube"></span></a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><img src="./img/common/icon-instagram.svg" alt=""></span></a>
+                                <span><img src="./img/common/icon-instagram.svg" alt="instagram"></span></a>
                         </li>
                     </ul>
                 </div>
             </div>
         </footer>
         <!-- #endregion footer -->
+
     </div>
+    <!--スライド-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js"></script>
+    <script src="./js/main.js?v=300"></script>
 </body>
 
 </html>

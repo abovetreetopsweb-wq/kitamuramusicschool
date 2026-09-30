@@ -1,0 +1,57 @@
+@use "../../foundation/variable" as *;
+@use "../../foundation/mixin" as *;
+
+//下層ページのMV設定
+.p-page-visual {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 375/300;
+
+    @include pc {
+        aspect-ratio: 1080/200;
+    }
+
+
+
+    &__image {
+        position: absolute;
+        z-index: 1;
+
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(80, 80, 80, 0.4863);
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+    }
+
+    &__title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding-top: 0.8rem;
+        display: grid;
+        place-content: center;
+        z-index: 99;
+        color: $color-white;
+        @include font(2.5rem, calc(60/25), $font-weight-bold);
+
+        @include pc {
+            @include font(2.5rem, calc(60/25), $font-weight-regular);
+        }
+    }
+}
+
+
+.mask {
+    opacity: 0.7;
+
+    &::after {
+        display: none;
+    }
+}

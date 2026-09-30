@@ -1,7 +1,15 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
+.p-contact {
+    &__container {
+        padding-block: 4.5rem 10.8rem;
 
+        @include pc {
+            padding-block: 6.8rem 10rem;
+        }
+    }
+}
 
 .p-contact__intro {
     @include pc {
@@ -24,6 +32,7 @@
         width: 100%;
         display: flex;
         flex-direction: column;
+        align-items: center;
         row-gap: 1rem;
 
         @include pc {
@@ -31,11 +40,12 @@
         }
 
         dl {
+            width: 100%;
             display: flex;
             flex-direction: column;
 
             @include pc {
-                flex-direction:row;
+                flex-direction: row;
                 column-gap: 3rem;
             }
 
@@ -44,7 +54,7 @@
                 width: 100%;
 
                 @include pc {
-                    width: 140px;
+                    width: 14rem;
                 }
 
                 span {
@@ -114,7 +124,7 @@
 .flex-center {
     display: flex;
     align-items: center;
-    width: 140px;
+    width: 14rem;
 
     label {
         margin-top: 0.5rem;
@@ -193,29 +203,49 @@ textarea {
     width: 100%;
     height: 19rem;
     border: 1px solid $color-base;
-    @include pc{
-       height: 30rem; 
+
+    @include pc {
+        height: 30rem;
     }
 }
 
 
 .p-contact {
     &__submit-btn {
-        margin-block: 4rem 6.3rem;
+        margin-top: 3rem;
+        /*margin-block: 4rem 6.3rem;*/
         width: 100%;
         height: 5rem;
 
         @include pc {
-            margin: 4rem 0.2rem 3.2rem 0rem;
+            margin-top: 1.3rem;
+            /* margin: 4rem 0.2rem 3.2rem 0rem;*/
             width: 25rem;
         }
 
-        a {
+
+        button {
             @include font(2rem, calc(26/20), $font-weight-bold);
 
             @include pc {
                 @include font(2.5rem, calc(33/25), $font-weight-bold);
             }
+        }
+    }
+}
+
+
+.p-contact__fixed-buttons {
+    &-inner {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+
+        @include pc {
+            padding-bottom: 3rem;
+            padding-right: 0rem;
         }
     }
 }

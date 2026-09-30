@@ -1,9 +1,15 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-
-
 .p-error {
+    &__container {
+        padding-block: 4.5rem 4.7rem;
+
+        @include pc {
+            padding-block: 6.8rem;
+        }
+    }
+
     &__content {
         display: flex;
         flex-direction: column;
@@ -18,17 +24,18 @@
     }
 
     &__button {
-        margin-block: 0.3rem;
+        margin-block: 0.1rem 0.3rem;
         width: 100%;
         height: 5rem;
 
         @include pc {
-            margin-block: 2.1rem;
+            margin-block: 2rem 2.1rem;
             width: 25rem;
         }
 
         a {
             @include font(2rem, calc(26/20), $font-weight-bold);
+
             @include pc {
                 @include font(2.5rem, calc(33/25), $font-weight-bold);
             }
