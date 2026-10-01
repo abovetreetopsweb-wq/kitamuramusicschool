@@ -50,6 +50,10 @@
     &__image {
         aspect-ratio: 335/200;
 
+        img {
+            object-fit: cover;
+        }
+
         @include pc {
             aspect-ratio: 270/190;
             transition: transform 0.4s;
@@ -100,7 +104,7 @@
     position: absolute;
     z-index: 999;
     width: 2.984rem;
-    background: url("../../../img/top/arrow-l.svg") center / contain no-repeat;
+    background: url("../img/top/arrow-l.png") center / contain no-repeat;
 
 }
 
@@ -109,7 +113,7 @@
     position: absolute;
     z-index: 99;
     width: 2.984rem;
-    background: url("../../../img/top/arrow-r.svg") center / contain no-repeat;
+    background: url("../img/top/arrow-r.png") center / contain no-repeat;
 
 
 }

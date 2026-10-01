@@ -1173,6 +1173,10 @@ img {
 .p-voice-item__image {
   aspect-ratio: 335/200;
 }
+.p-voice-item__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media (min-width: 768px) {
   .p-voice-item__image {
     aspect-ratio: 270/190;
@@ -1233,14 +1237,14 @@ img {
   position: absolute;
   z-index: 999;
   width: 2.984rem;
-  background: url("../../../img/top/arrow-l.svg") center/contain no-repeat;
+  background: url("../img/top/arrow-l.png") center/contain no-repeat;
 }
 
 .swiper-button-next {
   position: absolute;
   z-index: 99;
   width: 2.984rem;
-  background: url("../../../img/top/arrow-r.svg") center/contain no-repeat;
+  background: url("../img/top/arrow-r.png") center/contain no-repeat;
 }
 
 .swiper-button-prev .swiper-navigation-icon,
@@ -2237,7 +2241,7 @@ img {
           transform: translate(-50%, -50%);
   width: 1.9rem;
   height: 1.9rem;
-  background: url(../../../img/plan/plus.svg) no-repeat center/contain;
+  background: url("../img/plan/plus.png") no-repeat center/contain;
 }
 @media (min-width: 768px) {
   .p-price__plus::before {
@@ -2349,7 +2353,13 @@ img {
 }
 .p-price-plans__table tr th:not(:first-child),
 .p-price-plans__table tr td:not(:first-child) {
-  border-left: 0.05rem solid #000;
+  border-left: 0.1rem solid #000;
+}
+@media (min-width: 768px) {
+  .p-price-plans__table tr th:not(:first-child),
+  .p-price-plans__table tr td:not(:first-child) {
+    border-left: 0.05rem solid #000;
+  }
 }
 .p-price-plans__recommend {
   position: relative;
@@ -3964,27 +3974,34 @@ textarea {
 }
 .p-result-detail__table {
   border-collapse: collapse;
-  border: 0.5px solid #707070;
+  border: 1px solid #707070;
+}
+@media (min-width: 768px) {
+  .p-result-detail__table {
+    border: 0.5px solid #707070;
+  }
 }
 .p-result-detail__table tr th {
   width: 14rem;
   padding: 0.73rem 2rem 0.01rem 1rem;
   background: #E5E5E5;
-  border: 0.5px solid #707070;
+  border: 1px solid #707070;
 }
 @media (min-width: 768px) {
   .p-result-detail__table tr th {
     padding: 0.73rem 2rem 0.01rem 2rem;
+    border: 0.5px solid #707070;
   }
 }
 .p-result-detail__table tr td {
   width: 26rem;
   padding: 0.73rem 2rem 0.01rem 1rem;
-  border: 0.5px solid #707070;
+  border: 1px solid #707070;
 }
 @media (min-width: 768px) {
   .p-result-detail__table tr td {
     padding: 0.73rem 2rem 0.01rem 2rem;
+    border: 0.5px solid #707070;
   }
 }
 .p-result-detail__pagination {
