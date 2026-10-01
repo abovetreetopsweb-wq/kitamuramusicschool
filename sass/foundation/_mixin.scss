@@ -13,11 +13,6 @@
     }
 }
 
-@mixin tb {
-    @media (min-width: 768px) and (max-width: 919px) {
-        @content;
-    }
-}
 
 
 @mixin font($size, $line-height: 1.7, $weight: $font-weight-medium) {
