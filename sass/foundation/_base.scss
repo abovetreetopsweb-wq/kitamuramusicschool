@@ -57,6 +57,18 @@ a {
     }
 }
 
+.tb {
+    display: none;
+}
+
+@include tb {
+    //中間サイズのみ表示
+    .tb {
+        display:block !important;
+    }
+}
+
+
 img {
     width: 100%;
     height: auto;

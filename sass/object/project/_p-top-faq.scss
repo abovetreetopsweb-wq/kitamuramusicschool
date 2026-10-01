@@ -2,7 +2,9 @@
 @use "../../foundation/mixin" as *;
 
 .p-faq {
-    padding-block: 2.75rem /*2.45rem*/2rem;
+    padding-block: 2.75rem 2rem;
+        /*2.45rem*/
+        
 
     @include pc {
         padding-block: 4rem;
@@ -12,7 +14,7 @@
         margin-top: 3.8rem;
 
         @include pc {
-            margin-top: 3.3rem;
+            margin-top: 3.6rem;
         }
     }
 
@@ -32,19 +34,24 @@
         &::before {
             content: '';
             position: absolute;
-            width: 2rem;
-            height: 2rem;
+            width: 1rem;
+            height: 1rem;
             top: 50%;
-            right: 0;
+            right: 1.5rem;
             border-top: 0.1rem solid $color-base;
             border-left: 0.1rem solid $color-base;
-            transform: translateY(-50%) rotate(45deg);
+
+            transform: translateY(-50%) rotate(225deg);
             transition: transform 0.3s;
+
+            @include pc {
+                right: 3rem;
+            }
         }
 
         &.active {
             &::before {
-                transform: translateY(-50%) rotate(225deg);
+                transform: translateY(-50%) rotate(45deg);
             }
         }
 
@@ -53,13 +60,14 @@
             width: 100%;
             display: flex;
             align-items: center;
-            padding-block: 1.3rem;
+            padding-block: 1.1rem 0.8rem;
             padding-right: 5rem;
             column-gap: 2rem;
 
             @include pc {
-                padding: 1.5rem 2rem;
-                column-gap: 3rem;
+                padding-block: 1.6rem 1.3rem;
+                padding-inline: 2rem;
+                column-gap: 1rem;
             }
 
             span {
@@ -79,14 +87,16 @@
 
                 }
             }
-            p {
-            width: 23.3rem;
-            @include font(1.6rem, calc(30/16), $font-weight-medium);
 
-            @include pc {
-                width: 73.3rem;
+            p {
+                margin-top: 0.6rem;
+                @include font(1.6rem, calc(30/16), $font-weight-medium);
+
+                @include pc {
+                    margin-top: 0.3rem;
+                    @include font(1.7rem, calc(30/17), $font-weight-medium);
+                }
             }
-        }
         }
     }
 }
@@ -104,14 +114,15 @@
         width: 100%;
         display: flex;
         align-items: center;
-        padding-block: 1.3rem;
+        padding-block: 1.1rem 0.8rem;
         padding-right: 5rem;
         column-gap: 2rem;
         background: rgba(203, 0, 0, 0.102);
 
         @include pc {
-            padding: 1.5rem 2rem;
-            column-gap: 3rem;
+            padding-block: 1.6rem 1.5rem;
+            padding-inline: 2rem;
+            column-gap: 1rem;
         }
 
         span {
@@ -132,13 +143,15 @@
         }
 
         p {
-            width: 23.3rem;
+            margin-top: 0.6rem;
+
 
             color: $color-main;
             @include font(1.6rem, calc(30/16), $font-weight-bold);
 
             @include pc {
-                width: 73.3rem;
+                margin-top: 0.3rem;
+                @include font(1.7rem, calc(30/17), $font-weight-bold);
             }
         }
     }

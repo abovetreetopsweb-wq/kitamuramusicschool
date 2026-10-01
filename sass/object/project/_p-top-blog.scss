@@ -2,17 +2,17 @@
 @use "../../foundation/mixin" as *;
 
 .p-blog {
-    padding-block: 2.45rem 19rem;
+    padding-block: 3.4rem 19.1rem;
 
     @include pc {
-        padding-block: 3rem 20.6rem;
+        padding-block: 3rem 20.4rem;
     }
 
     &__contents {
         margin-top: 3.7rem;
 
         @include pc {
-            margin-top: 3.1rem;
+            margin-top: 3.3rem;
         }
 
     }
@@ -24,12 +24,12 @@
     &__items {
         display: flex;
         flex-direction: column;
-        row-gap: 3.9rem;
+        row-gap: 4rem;
 
         @include pc {
             display: flex;
             flex-direction: row;
-            column-gap: 5rem;
+            column-gap: calc(50 / 880 * 100%);
         }
     }
 
@@ -47,14 +47,18 @@
             justify-content: space-between;
 
             time {
-                margin-top: 1rem;
+                margin-top: 0.5rem;
                 text-align: right;
+
+                @include pc {
+                    margin-top: 1rem;
+                }
             }
         }
 
         &__title {
-            margin-top: 3.5rem;
-            @include font(2rem, calc(25/20), $font-weight-bold);
+            margin-top: 3.1rem;
+            @include font(2rem, calc(30/20), $font-weight-bold);
 
             @include pc {
                 margin-top: 2rem;
@@ -76,7 +80,7 @@
         }
 
         &__category {
-            width: 8rem;
+            width: 9rem;
             height: 3rem;
             position: absolute;
             top: 0;
@@ -86,8 +90,12 @@
             place-content: center;
             color: $color-white;
             z-index: 1;
-            @include font(1.5rem,calc(25/15),$font-weight-bold);
+            @include font(1.5rem, calc(25/15), $font-weight-bold);
 
+            @include pc {
+                width: 8rem;
+                height: 3rem;
+            }
         }
     }
 

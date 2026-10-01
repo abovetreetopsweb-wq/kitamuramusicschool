@@ -2,7 +2,7 @@
 @use "../../foundation/variable" as *;
 
 .p-voice {
-    padding: 4.5rem 0 1.3rem;
+    padding: 4.5rem 0 4.8rem;
 
     @include pc {
         padding: 4.5rem 0 8rem;
@@ -29,7 +29,7 @@
     display: block;
     width: 100%;
 
-  
+
 
     &:hover {
         @include pc {
@@ -48,7 +48,7 @@
 
 
     &__image {
-        width: 100%;
+        aspect-ratio: 335/200;
 
         @include pc {
             aspect-ratio: 270/190;
@@ -66,6 +66,7 @@
 
         @include pc {
             margin-top: 1.5rem;
+            @include font(2.2rem, calc(33/22), $font-weight-bold);
         }
     }
 

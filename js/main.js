@@ -67,7 +67,7 @@ $(window).on("scroll", function () {
 });
 
 //ボタンがクリックされたら1秒でページトップへ戻る
-$(".c-page-top").on("click",function () {
+$(".c-page-top").on("click", function () {
     $("body,html").animate({ scrollTop: 0 }, 1000);
     return false;
 })

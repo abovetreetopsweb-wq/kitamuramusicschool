@@ -1,14 +1,20 @@
 @use "../../foundation/variable" as *;
 @use "../../foundation/mixin" as *;
 
-.p-blog-detail{
+.p-blog-detail {
     &__container {
         padding-block: 5.1rem 20rem;
 
         @include pc {
             padding-block: 6.9rem 18.8rem;
-            display: flex;
-            column-gap: 3rem;
+
+        }
+
+        .c-inner {
+            @include pc {
+                display: flex;
+                column-gap: 3rem;
+            }
         }
 
         article {

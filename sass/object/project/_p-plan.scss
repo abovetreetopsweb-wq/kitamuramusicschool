@@ -3,15 +3,11 @@
 
 .p-price {
     &__container {
-        padding-block: 4.5rem;
+        padding-block: 4.5rem 18.6rem;
 
         @include pc {
-            padding-block: 6.8rem;
+            padding-block: 6.8rem 22rem;
         }
-    }
-
-    &__inner {
-        padding-bottom: 15.6rem;
     }
 
     &__system {
@@ -29,7 +25,7 @@
     }
 
     &__contents {
-        margin-top: 3.5rem;
+        margin-top: 4rem;
 
         @include pc {
             margin-top: 3.5rem;
@@ -41,11 +37,11 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        row-gap: 2rem;
+        row-gap: 2.9rem;
 
         @include pc {
             flex-direction: row;
-            column-gap: 3rem;
+            column-gap: 4rem;
         }
     }
 
@@ -64,14 +60,19 @@
         position: relative;
 
         &::before {
+
             content: '';
             position: absolute;
             top: 50%;
             left: 0;
-            transform: translateX(-50%);
+            transform: translate(-50%, -50%);
             width: 1.9rem;
             height: 1.9rem;
             background: url(../../../img/plan/plus.svg) no-repeat center / contain;
+
+            @include pc {
+                margin-top: 0.5rem;
+            }
         }
     }
 
@@ -93,7 +94,6 @@
             @include font(1.8rem, calc(30/18), $font-weight-regular);
         }
     }
-
 }
 
 .p-price-plans {
@@ -104,8 +104,7 @@
     }
 
     &__contents {
-        margin-top: 3.5rem;
-        padding-bottom: 1rem;
+        padding-bottom: 2rem;
         overflow-x: scroll;
 
         // 標準スクロールバーを非表示
@@ -113,6 +112,7 @@
 
         @include pc {
             margin-top: 3.5rem;
+            padding-bottom: 1rem;
             overflow-x: hidden;
         }
     }
@@ -139,7 +139,7 @@
 
 
             th {
-                padding: 2rem;
+
                 flex: 0 0 50%;
                 display: flex;
                 align-items: center;
@@ -147,6 +147,10 @@
                 @include pc {
                     flex: 0 0 25%;
                     @include font(1.7rem, calc(30/17), $font-weight-regular);
+                }
+
+                @include tb {
+                    @include font(1.5rem, calc(30/15), $font-weight-regular);
                 }
             }
 
@@ -171,60 +175,81 @@
 
     &__recommend {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        background: $color-main;
-        color: $color-white;
         z-index: 2;
 
         span {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
             position: absolute;
             text-align: center;
-            height: 8rem;
-            bottom: 0;
             width: 100%;
+            padding-block: 0.75rem;
             background: $color-main;
-            z-index: 1;
+            bottom: 0;
+            z-index: 2;
+            color: $color-white;
+            @include font(2rem, calc(25/20), $font-weight-bold);
+
+            @include pc {
+                padding-block: 0.7rem;
+                @include font(2rem, calc(33/20), $font-weight-bold);
+            }
+
+            @include tb {
+                padding-block: 0.7rem;
+                @include font(1.8rem, calc(33/18), $font-weight-bold);
+            }
         }
     }
+
 
     &__plan-bg {
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
         position: relative;
         z-index: 2;
 
+
         span {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             position: absolute;
-            z-index: 2;
-            color: $color-white;
-        }
-
-
-        &::after {
-            position: absolute;
-            content: "";
-            bottom: 0;
             width: 100%;
-            height: 5rem;
+            height: 100%;
+            z-index: 2;
+            text-align: center;
+            color: $color-white;
             background: $color-base;
+            @include font(2rem, calc(25/20), $font-weight-bold);
 
-            z-index: 1;
+
+
+            @include pc {
+                padding-block: 0.85rem;
+                height: auto;
+                @include font(2rem, calc(33/20), $font-weight-bold);
+            }
+
+            @include tb {
+                padding-block: 0.85rem;
+                height: auto;
+                @include font(1.5rem, calc(33/15), $font-weight-bold);
+            }
+
         }
-
     }
 }
 
+
+
 .p-price-plans__note {
-    margin-top: 3rem;
+    margin-top: 1.5rem;
 
     @include pc {
-        margin-top: 2.5rem;
+        margin-top: 2rem;
         @include font(1.7rem, calc(25/17), $font-weight-regular);
     }
 }
@@ -261,9 +286,33 @@
 
 }
 
+.plan__list {
+    padding: 1rem;
+
+    @include pc {
+        padding: 2rem;
+    }
+
+    @include tb {
+        padding: 2rem 1rem;
+    }
+}
+
+.text__red {
+    color: $color-main;
+}
+
+.text__price {
+    @include font(2.2rem, calc(33/22), $font-weight-bold);
+}
+
+.plan__variety {
+    @include font(2rem, calc(33/20), $font-weight-bold);
+}
+
 .p-price-plans__scrollbar {
     width: 100%;
-    height: 3rem;
+    height: 2.5rem;
     background: #E3E3E3;
 
     @include pc {
@@ -272,7 +321,7 @@
 
     &-thumb {
         width: 10rem;
-        height: 3rem;
+        height: 2.3rem;
         background: #9B9B9B;
 
         touch-action: none;
