@@ -7,7 +7,7 @@
     position: fixed;
     bottom: 0;
     right: 50%;
-    z-index: 9999;
+    z-index: 999;
     transform: translateX(50%);
 
     @include pc {
@@ -50,4 +50,15 @@
 
 .c-page-top {
     width: 6.8rem;
+    cursor: pointer;
+
+    @include pc {
+        transition: opacity 0.4s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
 }

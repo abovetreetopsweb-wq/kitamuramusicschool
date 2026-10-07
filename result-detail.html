@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1400">
+    <link rel="stylesheet" href="./css/style.css?v=1500">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <header class="l-header p-header">
             <div class="p-header__inner">
                 <div class="p-header__logo">
-                    <h1>
+                    <div class="p-header__logo-content">
                         <a href="./index.html">
                             <span class="p-header__logo-image">
                                 <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
@@ -35,7 +35,7 @@
                                 <span>きたむら</span><span>ミュージックスクール</span>
                             </span>
                         </a>
-                    </h1>
+                    </div>
                 </div>
                 <!--ハンバーガー-->
                 <div class="p-header__hb-btn">
@@ -65,13 +65,13 @@
 
         <main class="p-result-detail">
             <!--パンくず-->
-            <nav class="p-breadcrumb">
+            <nav class="p-breadcrumb p-fixarea">
                 <div class="c-inner">
                     <ul class="p-breadcrumb__list">
                         <li class="p-breadcrumb__item"><a href="./index.html">ホーム</a></li>
                         <li class="p-breadcrumb__item"><a href="./result-list.html">卒業実績</a></li>
                         <li class="p-breadcrumb__item"><a href="#">ポップス</a></li>
-                        <li class="p-breadcrumb__item">タイトルが入ります。タイトルが入ります。タイトルが入ります。</li>
+                        <li class="p-breadcrumb__item"><span>タイトルが入ります。タイトルが入ります。タイトルが入ります。</span></li>
                     </ul>
                 </div>
             </nav>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="p-result-detail__category">ポップス</div>
                         </div>
-                        <h2 class="p-result-detail__title c-detail-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h2>
+                        <h1 class="p-result-detail__title c-detail-title">タイトルが入ります。タイトルが入ります。タイトルが入ります。</h1>
                         <div class="p-result-detail__date">
                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                         </div>
@@ -153,9 +153,9 @@
                     </div><!--//前の記事・次の記事-->
 
                     <!--関連記事-->
-                    <div class="p-result-detail__related">
+                    <section class="p-result-detail__related">
                         <div class="p-related">
-                            <h3 class="p-related__title">関連記事</h3>
+                            <h2 class="p-related__title">関連記事</h2>
                             <div class="p-related__items">
 
                                 <a href="#" class="p-result-detail__related-item">
@@ -170,8 +170,8 @@
                                         <div class="p-result-detail__related-category">ギター</div>
                                     </div>
                                     <div class="p-related__body">
-                                        <h4 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                class="pc">が入ります。タイトルが入ります。</span></h4>
+                                        <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
+                                                class="pc">が入ります。タイトルが入ります。</span></h3>
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
                                 </a>
@@ -188,8 +188,8 @@
                                         <div class="p-result-detail__related-category">ギター</div>
                                     </div>
                                     <div class="p-related__body">
-                                        <h4 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                class="pc">が入ります。タイトルが入ります。</span></h4>
+                                        <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
+                                                class="pc">が入ります。タイトルが入ります。</span></h3>
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
                                 </a>
@@ -199,22 +199,22 @@
                                         <div class="p-result-detail__related-image">
                                             <picture>
                                                 <source media="(max-width: 767px)"
-                                                    srcset="./img/result_details/4861328_m_sp.jpg">
-                                                <img src="./img/result_details/4861328_m.jpg" alt="アコースティックギターを演奏する女性">
+                                                    srcset="./img/result_details/voice04_sp.jpg">
+                                                <img src="./img/result_details/voice04.jpg" alt="アコースティックギターを演奏する女性">
                                             </picture>
                                         </div>
                                         <div class="p-result-detail__related-category">ギター</div>
                                     </div>
                                     <div class="p-related__body">
-                                        <h4 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                class="pc">が入ります。タイトルが入ります。</span></h4>
+                                        <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
+                                                class="pc">が入ります。タイトルが入ります。</span></h3>
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
                                 </a>
 
                             </div>
                         </div><!--//関連記事-->
-                    </div>
+                    </section>
                 </div>
             </div>
             <!-- #endregion section result-detail -->
@@ -291,7 +291,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=400"></script>
+    <script src="./js/main.js?v=1600"></script>
 </body>
 
 </html>

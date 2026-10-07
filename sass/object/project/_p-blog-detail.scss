@@ -319,7 +319,7 @@
             padding: 1.5rem;
         }
 
-        p {
+        a {
             display: grid;
             place-content: center;
             background: #E8E8E8;
@@ -345,6 +345,7 @@
             flex: 1;
             min-width: 0; //padding分縮ませる
             background: #E8E8E8;
+            padding-inline: 2rem;
         }
 
         button {
@@ -353,10 +354,19 @@
             flex: 0 0 5.4rem;
             height: 5.4rem;
             background: $color-base;
+            cursor: pointer;
 
             @include pc {
                 flex: 0 0 4rem;
                 height: 4rem;
+                transition: opacity 0.4s;
+
+                @media (any-hover: hover) {
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+
             }
         }
     }
@@ -421,8 +431,22 @@
         justify-content: center;
 
         li {
-            padding-block: 0.8rem;
             border-bottom: 1px solid $color-base;
+
+            a {
+                padding-block: 0.8rem;
+                display: block;
+
+                @include pc {
+                    transition: opacity 0.4s;
+
+                    @media (any-hover: hover) {
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
         }
     }
 }

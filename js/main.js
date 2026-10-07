@@ -2,6 +2,7 @@
 //ハンバーガー
 $(".p-header__hb-btn").click(function () {
     $(".p-header__hb-btn").toggleClass('active');
+    $(".p-header__nav").addClass("is-animated");
     $(".p-header__nav").toggleClass('active');
 })
 $(".p-header__nav ul li a").click(function () {
@@ -9,6 +10,9 @@ $(".p-header__nav ul li a").click(function () {
     $(".p-header__nav").removeClass('active');
 });
 
+$(".p-header__nav").on("transitionend", function () {
+    $(this).removeClass("is-animated");
+});
 
 
 //スライド
@@ -34,36 +38,44 @@ $(".qa-title").on('click', function () {
     $(this).next().slideToggle();
 });
 
+//解答欄もクリックしたらしまう
+$(".qa-text").on('click', function () {
+    $(this).prev(".qa-title").toggleClass("active");
+    $(this).slideToggle();
+});
+
+
 //topへ戻る
 
 var goTop = $(".c-fixed-buttons");//変数宣言と代入
 var footer = $(".l-footer");
+var fixarea = $(".p-fixarea");
 
 goTop.hide();//サイト上部ではボタンを非表示
 
-//100pxスクロールしたらボタン表示・100px以下ならボタン非表示
+//fixareaを超えたらボタン表示・fixarea内ではボタン非表示
 $(window).on("scroll", function () {
     var scroll = $(this).scrollTop();
+    var fixareaHeight = fixarea.outerHeight();
 
-    if (scroll > 100) {
+    if (scroll > fixareaHeight) {
         goTop.fadeIn(300);
     } else {
         goTop.fadeOut(300)
     }
 
 
-    //フッターとの衝突判定
-    var windowBottom = scroll + $(window).height();
-    var footerTop = footer.offset().top;
+    // フッターとの衝突判定
+    goTop.css("bottom", "0px");
 
-    if (windowBottom > footerTop) {
-        goTop.css(
-            "bottom",
-            (windowBottom - footerTop) + "px"
-        );
-    } else {
-        goTop.css("bottom", "");
-    }
+    // 実際に表示されている位置を取得
+    var buttonBottom = goTop[0].getBoundingClientRect().bottom;
+    var footerTop = footer[0].getBoundingClientRect().top;
+
+    // フッターに重なる分だけ持ち上げる
+    var overlap = Math.max(0, buttonBottom - footerTop);
+
+    goTop.css("bottom", overlap + "px");
 });
 
 //ボタンがクリックされたら1秒でページトップへ戻る

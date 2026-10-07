@@ -7,14 +7,8 @@
     height: 100%;
     display: flex;
     align-items: center;
-    padding-block: 0.7rem;
-
-    @include pc {
-        padding-block: 0.85rem;
-    }
 
     ul {
-
         display: flex;
         column-gap: 5rem;
         flex-wrap: wrap;
@@ -28,10 +22,6 @@
             text-wrap: wrap;
             @include font(1.6rem, calc(22/16), $font-weight-medium);
 
-            @include pc {
-                @include font(1.6rem, calc(33/16), $font-weight-regular);
-            }
-
             &:not(:last-child)::after {
                 position: absolute;
                 content: '>';
@@ -39,6 +29,34 @@
                 right: -3.3rem;
                 transform: translateY((-50%));
                 color: #000;
+                padding-block: 0.7rem;
+
+                @include pc {
+                    padding-block: 0.85rem;
+                }
+            }
+
+            @include pc {
+                @include font(1.6rem, calc(33/16), $font-weight-regular);
+            }
+
+            a {
+                display: block;
+                padding-block: 0.7rem;
+
+                @include pc {
+                    padding-top: 0.85rem;
+                }
+            }
+
+            span {
+                display: block;
+                padding-block: 0.7rem;
+
+                @include pc {
+                    padding-block: 0.85rem;
+                }
+
             }
         }
 

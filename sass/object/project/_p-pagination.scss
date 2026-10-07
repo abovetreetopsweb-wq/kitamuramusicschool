@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
 
-   /* @include pc {
+    /* @include pc {
         margin-top: 7.3rem;
     }*/
 
@@ -18,7 +18,7 @@
         width: 4.4rem;
         height: 4.4rem;
         border: 1px solid $color-base;
-        margin-inline:0.2rem;
+        margin-inline: 0.2rem;
 
         @include font(1.6rem, calc(28/16), $font-weight-bold);
 
@@ -27,6 +27,15 @@
             width: 5rem;
             height: 5rem;
             @include font(1.8rem, calc(30/18), $font-weight-bold);
+            transition: background-color 0.4s, color 0.4s;
+
+            @media(any-hover: hover) {
+                &:hover {
+                    opacity: 1;
+                    background: $color-base;
+                    color: $color-white;
+                }
+            }
         }
     }
 
@@ -39,7 +48,8 @@
         margin-inline: 1rem;
         display: grid;
         place-content: center;
-        @include pc{
+
+        @include pc {
             margin-inline: 1.5rem;
         }
     }

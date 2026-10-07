@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1400">
+    <link rel="stylesheet" href="./css/style.css?v=1500">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <header class="l-header p-header">
             <div class="p-header__inner">
                 <div class="p-header__logo">
-                    <h1>
+                    <div class="p-header__logo-content">
                         <a href="./index.html">
                             <span class="p-header__logo-image">
                                 <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
@@ -35,7 +35,7 @@
                                 <span>きたむら</span><span>ミュージックスクール</span>
                             </span>
                         </a>
-                    </h1>
+                    </div>
                 </div>
                 <!--ハンバーガー-->
                 <div class="p-header__hb-btn">
@@ -66,13 +66,13 @@
         <main class="p-blog-detail">
 
             <!--パンくず-->
-            <nav class="p-breadcrumb">
+            <nav class="p-breadcrumb p-fixarea">
                 <div class="c-inner">
                     <ul class="p-breadcrumb__list">
                         <li class="p-breadcrumb__item"><a href="./index.html">ホーム</a></li>
                         <li class="p-breadcrumb__item"><a href="./blog-list.html">ブログ</a></li>
                         <li class="p-breadcrumb__item"><a href="#">ギター</a></li>
-                        <li class="p-breadcrumb__item">アルペジオが劇的に向上する３つの習慣</li>
+                        <li class="p-breadcrumb__item"><span>アルペジオが劇的に向上する３つの習慣</span></li>
                     </ul>
                 </div>
             </nav>
@@ -97,7 +97,7 @@
                             </div>
 
                             <!--メイン記事のタイトル-->
-                            <h2 class="p-blog-detail__title c-detail-title">アルペジオが劇的に向上する3つの習慣</h2>
+                            <h1 class="p-blog-detail__title c-detail-title">アルペジオが劇的に向上する3つの習慣</h1>
                             <time datetime="2026-09-26" class="p-blog-detail__date c-entry-date">0000.00.00</time>
 
                             <!--シェアアイコン-->
@@ -105,36 +105,36 @@
                                 <a href="#" class="p-blog-detail__share--facebook">
                                     <picture>
                                         <source media="(max-width: 767px)"
-                                            srcset="./img/blog_details/icon-share-facebook-sp.png">
-                                        <img src="./img/blog_details/icon-share-facebook.png" alt="facebook">
+                                            srcset="./img/blog_details/icon-share-facebook-sp.svg">
+                                        <img src="./img/blog_details/icon-share-facebook.svg" alt="facebook">
                                     </picture>
                                 </a>
                                 <a href="#" class="p-blog-detail__share--twitter">
                                     <picture>
                                         <source media="(max-width: 767px)"
-                                            srcset="./img/blog_details/icon-share-twitter-sp.png">
-                                        <img src="./img/blog_details/icon-share-twitter.png" alt="x">
+                                            srcset="./img/blog_details/icon-share-twitter-sp.svg">
+                                        <img src="./img/blog_details/icon-share-twitter.svg" alt="x">
                                     </picture>
                                 </a>
                                 <a href="#" class="p-blog-detail__share--hatena">
                                     <picture>
                                         <source media="(max-width: 767px)"
-                                            srcset="./img/blog_details/icon-share-hatena-sp.png">
-                                        <img src="./img/blog_details/icon-share-hatena.png" alt="hatena">
+                                            srcset="./img/blog_details/icon-share-hatena-sp.svg">
+                                        <img src="./img/blog_details/icon-share-hatena.svg" alt="hatena">
                                     </picture>
                                 </a>
                                 <a href="#" class="p-blog-detail__share--line">
                                     <picture>
                                         <source media="(max-width: 767px)"
-                                            srcset="./img/blog_details/icon-share-line-sp.png">
-                                        <img src="./img/blog_details/icon-share-line.png" alt="line">
+                                            srcset="./img/blog_details/icon-share-line-sp.svg">
+                                        <img src="./img/blog_details/icon-share-line.svg" alt="line">
                                     </picture>
                                 </a>
                                 <a href="#" class="p-blog-detail__share--pocket">
                                     <picture>
                                         <source media="(max-width: 767px)"
-                                            srcset="./img/blog_details/icon-share-pocket-sp.png">
-                                        <img src="./img/blog_details/icon-share-pocket.png" alt="pocket">
+                                            srcset="./img/blog_details/icon-share-pocket-sp.svg">
+                                        <img src="./img/blog_details/icon-share-pocket.svg" alt="pocket">
                                     </picture>
                                 </a>
                             </div>
@@ -152,8 +152,8 @@
                                         class="sp">本文が入ります。本文が入ります。</span></p>
                                 <div class="p-blog-detail__listimage">
                                     <picture>
-                                        <source media="(max-width: 767px)" srcset="./img/blog_details/Choice01_sp.jpg">
-                                        <img src="./img/blog_details/Choice01.jpg" alt="犬を抱きながらピアノを弾く男性">
+                                        <source media="(max-width: 767px)" srcset="./img/blog_details/choice01_sp.jpg">
+                                        <img src="./img/blog_details/choice01.jpg" alt="犬を抱きながらピアノを弾く男性">
                                     </picture>
                                 </div>
                                 <div class="p-blog-detail__list">
@@ -207,9 +207,9 @@
                         </div><!--//前の記事・次の記事-->
 
                         <!--関連記事-->
-                        <div class="p-blog-detail__related">
+                        <section class="p-blog-detail__related">
                             <div class="p-related">
-                                <h3 class="p-related__title">関連記事</h3>
+                                <h2 class="p-related__title">関連記事</h2>
                                 <div class="p-related__items">
                                     <a href="#" class="p-related__item">
                                         <div class="p-related__thumbnail">
@@ -223,8 +223,8 @@
                                             <div class="p-related__category">ギター</div>
                                         </div>
                                         <div class="p-related__body">
-                                            <h4 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                    class="pc">が入ります。タイトルが入ります。</span></h4>
+                                            <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
+                                                    class="pc">が入ります。タイトルが入ります。</span></h3>
                                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                         </div>
                                     </a>
@@ -241,8 +241,8 @@
                                             <div class="p-related__category">ギター</div>
                                         </div>
                                         <div class="p-related__body">
-                                            <h4 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                    class="pc">が入ります。タイトルが入ります。</span></h4>
+                                            <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
+                                                    class="pc">が入ります。タイトルが入ります。</span></h3>
                                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                         </div>
                                     </a>
@@ -259,15 +259,15 @@
                                             <div class="p-related__category">ギター</div>
                                         </div>
                                         <div class="p-related__body">
-                                            <h4 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                    class="pc">が入ります。タイトルが入ります。</span></h4>
+                                            <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
+                                                    class="pc">が入ります。タイトルが入ります。</span></h3>
                                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                         </div>
                                     </a>
 
                                 </div>
                             </div>
-                        </div><!--//関連記事-->
+                        </section><!--//関連記事-->
 
                     </article>
                     <!-- #endregion メイン側 -->
@@ -278,15 +278,15 @@
 
                         <!--メルマガ-->
                         <div class="p-sidebar-magazine">
-                            <h3 class="p-sidebar__title">無料メールマガジン</h3>
+                            <h2 class="p-sidebar__title">無料メールマガジン</h2>
                             <div class="p-sidebar-magazine__banner">
-                                <p>バナー広告</p>
+                                <a href="#">バナー広告</a>
                             </div>
                         </div>
 
                         <!--検索-->
                         <div class="p-sidebar-search">
-                            <h3 class="p-sidebar__title">ブログ内を検索</h3>
+                            <h2 class="p-sidebar__title">ブログ内を検索</h2>
                             <form class="p-sidebar-search__form" action="./search.html" method="get">
                                 <input type="search" name="search">
                                 <button type="submit">
@@ -297,23 +297,23 @@
 
                         <!--おすすめ記事-->
                         <div class="p-sidebar-recommend">
-                            <h3 class="p-sidebar__title">おすすめの記事</h3>
+                            <h2 class="p-sidebar__title">おすすめの記事</h2>
                             <div class="p-sidebar-recommend__items">
                                 <a href="#" class="p-sidebar-recommend__item">
                                     <div class="p-sidebar-recommend__image">
-                                        <img src="./img/blog_details/" alt="おすすめの記事1">
+                                        <!--<img src="./img/blog_details/" alt="おすすめの記事1">-->
                                     </div>
                                     <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                 </a>
                                 <a href="#" class="p-sidebar-recommend__item">
                                     <div class="p-sidebar-recommend__image">
-                                        <img src="./img/blog_details/" alt="おすすめの記事2">
+                                        <!--<img src="./img/blog_details/" alt="おすすめの記事2">-->
                                     </div>
                                     <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                 </a>
                                 <a href="#" class="p-sidebar-recommend__item">
                                     <div class="p-sidebar-recommend__image">
-                                        <img src="./img/blog_details/" alt="おすすめの記事3">
+                                        <!--<img src="./img/blog_details/" alt="おすすめの記事3">-->
                                     </div>
                                     <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                 </a>
@@ -321,7 +321,7 @@
                         </div>
                         <!--カテゴリー-->
                         <div class="p-sidebar-category">
-                            <h3 class="p-sidebar__title">カテゴリー</h3>
+                            <h2 class="p-sidebar__title">カテゴリー</h2>
                             <ul class="p-sidebar-category__list">
                                 <li><a href="#">カテゴリー</a></li>
                                 <li><a href="#">カテゴリー</a></li>
@@ -411,7 +411,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=400"></script>
+    <script src="./js/main.js?v=1600"></script>
 </body>
 
 </html>

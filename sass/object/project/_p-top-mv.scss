@@ -38,6 +38,7 @@
         h2 {
             margin-top: 2rem;
             text-align: center;
+            text-wrap: nowrap;
             @include font(3rem, calc(50/30),$font-weight-bold);
             @include pc { 
                 @include font(4rem, calc(60/40),$font-weight-bold);

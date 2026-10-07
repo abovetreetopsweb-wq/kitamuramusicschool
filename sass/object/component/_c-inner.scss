@@ -7,10 +7,8 @@
     padding-inline: 2rem;
     margin-inline: auto;
 
-
     @include pc {
         max-width: 94rem;
         padding-inline: 3rem;
-
     }
 }

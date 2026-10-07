@@ -203,6 +203,7 @@ textarea {
     width: 100%;
     height: 19rem;
     border: 1px solid $color-base;
+    resize: none;
 
     @include pc {
         height: 30rem;
@@ -211,6 +212,10 @@ textarea {
 
 
 .p-contact {
+    &__check-item {
+        cursor: pointer;
+    }
+
     &__submit-btn {
         margin-top: 3rem;
         /*margin-block: 4rem 6.3rem;*/

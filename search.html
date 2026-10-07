@@ -17,7 +17,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1400">
+    <link rel="stylesheet" href="./css/style.css?v=1500">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <header class="l-header p-header">
             <div class="p-header__inner">
                 <div class="p-header__logo">
-                    <h1>
+                    <h1 class="p-header__logo-content">
                         <a href="./index.html">
                             <span class="p-header__logo-image">
                                 <img src="./img/common/logo.svg" alt="きたむらミュージックスクール">
@@ -66,17 +66,17 @@
         <main class="p-search">
 
             <!--パンくず-->
-            <nav class="p-breadcrumb">
+            <nav class="p-breadcrumb p-fixarea">
                 <div class="c-inner">
                     <ul class="p-breadcrumb__list">
                         <li class="p-breadcrumb__item"><a href="./index.html">ホーム</a></li>
-                        <li class="p-breadcrumb__item">検索</li>
+                        <li class="p-breadcrumb__item"><span>検索</span></li>
                     </ul>
                 </div>
             </nav>
 
             <!-- #region section p-search -->
-            <div class="p-search__container">
+            <section class="p-search__container">
                 <div class="c-inner">
                     <div class="p-search__header">
                         <h2 class="p-search__title">「<span>キーワード</span>」の検索結果</h2>
@@ -299,13 +299,13 @@
 
                     <!-- ページネーション -->
                     <div class="p-pagination p-search__pagination">
-                        <a href="#" class="p-pagination__item select">1</a>
+                        <span class="p-pagination__item select">1</span>
                         <a href="#" class="p-pagination__item">2</a>
                         <a href="#" class="p-pagination__item">3</a>
                     </div>
                 </div>
 
-            </div>
+            </section>
             <!-- #endregion section p-search -->
 
 
@@ -381,7 +381,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=400"></script>
+    <script src="./js/main.js?v=1600"></script>
 </body>
 
 </html>
