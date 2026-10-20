@@ -99,6 +99,8 @@
                 padding: 0.73rem 2rem 0.01rem 1rem;
                 background: #E5E5E5;
                 border: 1px solid #707070;
+                vertical-align: middle;
+                //vertical-alignは、inline、または、table-cellにのみ指定することができる垂直方向の配置を設定できるプロパティ（display:blockの要素には指定することができない。）。
 
                 @include pc {
                     padding: 0.73rem 2rem 0.01rem 2rem;
@@ -110,6 +112,8 @@
                 width: 26rem;
                 padding: 0.73rem 2rem 0.01rem 1rem;
                 border: 1px solid #707070;
+                vertical-align: middle;
+                
 
                 @include pc {
                     padding: 0.73rem 2rem 0.01rem 2rem;

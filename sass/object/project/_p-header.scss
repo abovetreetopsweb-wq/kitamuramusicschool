@@ -7,7 +7,7 @@
   background: #fff;
 
   @include pc {
-    height: 7.9rem;
+    height: 8rem;
   }
 
   &__inner {
@@ -152,8 +152,7 @@
     }
 
     @include pc {
-      display: flex;
-      position: inherit;
+      position: static; 
     }
 
     ul {
@@ -194,9 +193,6 @@
               left: 0;
               bottom: 2rem;
 
-              /*transform: scaleX(0);
-              transform-origin: left center;
-              transition: transform 0.4s;*/
               clip-path: inset(0 100% 0 0);
               transition: clip-path 0.4s;
             }
@@ -206,7 +202,6 @@
                 opacity: 1;
 
                 &::before {
-                 /* transform: scaleX(1);*/
                   clip-path: inset(0 0 0 0);
                 }
               }
@@ -235,7 +230,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 7.9rem;
+      height: 8rem;
       padding-left: 3.5rem;
       @include font(1.5rem, calc(33/15), $font-weight-bold);
     }

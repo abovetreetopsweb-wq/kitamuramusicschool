@@ -33,71 +33,6 @@
         }
     }
 
-    .p-blog-item {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        &__desc {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-
-            time {
-                margin-top: 0.5rem;
-                text-align: right;
-
-                @include pc {
-                    margin-top: 1rem;
-                }
-            }
-        }
-
-        &__title {
-            margin-top: 3.1rem;
-            @include font(2rem, calc(30/20), $font-weight-bold);
-
-            @include pc {
-                margin-top: 2rem;
-                @include font(2rem, calc(25/20), $font-weight-bold);
-
-            }
-        }
-
-        &__thumbnail {
-            position: relative;
-        }
-
-        &__image {
-            aspect-ratio: 335/200;
-
-            @include pc {
-                aspect-ratio: 260/200;
-            }
-        }
-
-        &__category {
-            width: 9rem;
-            height: 3rem;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: $color-main;
-            display: grid;
-            place-content: center;
-            color: $color-white;
-            z-index: 1;
-            @include font(1.5rem, calc(25/15), $font-weight-bold);
-
-            @include pc {
-                width: 8rem;
-                height: 3rem;
-            }
-        }
-    }
 
     &__link {
         margin-top: 3.8rem;
@@ -116,6 +51,76 @@
             @include pc {
                 @include font(1.8rem, calc(30/18), $font-weight-medium);
             }
+        }
+    }
+}
+
+.p-blog-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include pc {
+        flex: 0 0 calc((100% - (50 / 880 * 100%)*2)/3);
+        min-width: 0;
+    }
+
+    &__desc {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        time {
+            margin-top: 0.5rem;
+            text-align: right;
+
+            @include pc {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__title {
+        margin-top: 3.1rem;
+        @include font(2rem, calc(30/20), $font-weight-bold);
+
+        @include pc {
+            margin-top: 2rem;
+            @include font(2rem, calc(25/20), $font-weight-bold);
+
+        }
+    }
+
+    &__thumbnail {
+        position: relative;
+    }
+
+    &__image {
+        aspect-ratio: 335/200;
+
+        @include pc {
+            aspect-ratio: 260/200;
+        }
+    }
+
+    &__category {
+        width: 9rem;
+        height: 3rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: $color-main;
+        display: grid;
+        place-content: center;
+        color: $color-white;
+        z-index: 1;
+        @include font(1.5rem, calc(25/15), $font-weight-bold);
+
+        @include pc {
+            width: 8rem;
+            height: 3rem;
         }
     }
 }

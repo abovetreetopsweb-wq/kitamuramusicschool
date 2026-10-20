@@ -7,6 +7,10 @@
     <link rel="icon" href="./img/common/logo.svg" type="image/svg+xml">
     <title>お問い合わせ送信完了 | きたむらミュージックスクール</title>
     <meta name="description" content="きたむらミュージックスクールは、音楽で生きることを目指す方のための音楽スクールです。充実したレッスンとサポートで、一人ひとりの夢や目標の実現を支えます。">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!--ogp-->
     <meta property="og:title" content="お問い合わせ送信完了 | きたむらミュージックスクール">
     <meta property="og:type" content="website">
@@ -17,7 +21,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1500">
+    <link rel="stylesheet" href="./css/style.css?v=2000">
 </head>
 
 <body>
@@ -38,13 +42,13 @@
                     </div>
                 </div>
                 <!--ハンバーガー-->
-                <div class="p-header__hb-btn">
+                <button type="button" class="p-header__hb-btn">
                     <div class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                </div>
+                </button>
                 <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
@@ -68,9 +72,9 @@
             <div class="p-page-visual p-fixarea">
                 <div class="p-page-visual__image">
                     <picture>
-                        <source media="(max-width: 767px)" srcset="./img/contact_form/contact_sp.jpg">
+                        <source media="(max-width: 767px)" srcset="./img/contact_send/contact_sp.jpg">
                         <!-- 見出しの背景として使う装飾画像なので、altは空 -->
-                        <img src="./img/contact_form/contact.jpg" alt="">
+                        <img src="./img/contact_send/contact.jpg" alt="">
                     </picture>
                 </div>
                 <h1 class="p-page-visual__title">お問い合わせ</h1>
@@ -104,7 +108,7 @@
         </main>
 
         <!-- #region footer -->
-        <footer class="l-footer p-footer section-bg">
+        <footer class="l-footer p-footer u-bg-main">
             <div class="c-inner">
                 <div class="p-footer__contents">
                     <nav class="p-footer__nav">
@@ -127,7 +131,7 @@
                         <img src="./img/common/logo-white.svg" alt="きたむらミュージックスクール">
                     </a>
                     <div class="p-footer__copyright">
-                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</small>
+                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="u-sp-only">All Rights</small>
                     </div>
                     <ul class="p-footer__sns">
                         <li>
@@ -154,7 +158,7 @@
 
     </div>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=1600"></script>
+    <script src="./js/main.js?v=2000"></script>
 </body>
 
 </html>

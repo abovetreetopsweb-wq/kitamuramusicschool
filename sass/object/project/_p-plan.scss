@@ -10,20 +10,6 @@
         }
     }
 
-    &__system {
-        width: 100%;
-        padding-inline: 2rem;
-        margin-inline: auto;
-
-
-        @include pc {
-
-            max-width: 94.8rem;
-            padding-inline: 3rem;
-
-        }
-    }
-
     &__contents {
         margin-top: 4rem;
 
@@ -105,7 +91,7 @@
 
     &__contents {
         padding-bottom: 2rem;
-        overflow-x: scroll;
+        overflow-x: auto;
 
         // 標準スクロールバーを非表示
         scrollbar-width: none;
@@ -119,13 +105,11 @@
 
     &__table {
         margin-top: 3.5rem;
-
-
-
+        width: 100%;
+        min-width: 67rem;
 
         @include pc {
             margin-top: 2.8rem;
-            width: 100%;
         }
 
 
@@ -137,41 +121,60 @@
                 height: 6.6rem;
             }
 
+            &:nth-of-type(2) {
+                th {
+                    flex: 1;
+                    display: flex;
+                    align-items: center;
+
+                    @include pc {
+                        @include font(1.7rem, calc(30/17), $font-weight-bold);
+                    }
+                }
+            }
 
             th {
-
-                flex: 0 0 50%;
+                flex: 1;
                 display: flex;
                 align-items: center;
+                padding-inline: 1rem;
+
 
                 @include pc {
-                    flex: 0 0 25%;
                     @include font(1.7rem, calc(30/17), $font-weight-regular);
+                    padding-inline: 2rem;
                 }
-
-   
             }
 
             td {
-                flex: 0 0 50%;
+                flex: 1;
                 display: grid;
                 place-content: center;
+                padding-inline: 1rem;
+
 
                 @include pc {
-                    flex: 0 0 25%;
+                    padding-inline: 2rem;
                 }
+
             }
 
-            th,
-            td {
-                &:not(:first-child) {
-                    border-left: 0.1rem solid $color-base;
-                    @include pc{
-                        border-left: 0.05rem solid $color-base;
+            &:not(:first-of-type) {
+
+                th,
+                td {
+                    &:not(:first-child) {
+                        border-left: 0.1rem solid $color-base;
+
+                        @include pc {
+                            border-left: 0.05rem solid $color-base;
+                        }
                     }
                 }
             }
         }
+
+
     }
 
     &__recommend {
@@ -183,6 +186,7 @@
             flex-direction: column;
             justify-content: center;
             position: absolute;
+            left: 0;
             text-align: center;
             width: 100%;
             padding-block: 0.75rem;
@@ -197,7 +201,7 @@
                 @include font(2rem, calc(33/20), $font-weight-bold);
             }
 
- 
+
         }
     }
 
@@ -237,8 +241,6 @@
     }
 }
 
-
-
 .p-price-plans__note {
     margin-top: 1.5rem;
 
@@ -248,21 +250,18 @@
     }
 }
 
-
-.table-head-empty {
+.p-price-plans__empty-heading {
     border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
-.tr-bg {
-
+.p-price-plans__row--shaded {
     th,
     td {
         background: rgba(80, 80, 80, 0.149);
     }
 }
 
-.bottom-line {
-
+.p-price-plans__row--bordered {
     th,
     td {
         border-bottom: 0.5px solid $color-base;
@@ -280,26 +279,33 @@
 
 }
 
-.plan__list {
+.p-price-plans__cell {
     padding: 1rem;
 
     @include pc {
         padding: 2rem;
     }
 
+    &--bold {
+        font-weight: $font-weight-bold;
+        padding: 1rem;
+
+        @include pc {
+            padding: 2rem;
+        }
+    }
+
 }
 
-.text__red {
+.p-price-plans__text--accent {
     color: $color-main;
 }
 
-.text__price {
+.p-price-plans__price {
     @include font(2.2rem, calc(33/22), $font-weight-bold);
 }
 
-.plan__variety {
-    @include font(2rem, calc(33/20), $font-weight-bold);
-}
+
 
 .p-price-plans__scrollbar {
     width: 100%;

@@ -28,19 +28,6 @@
         }
     }
 
-    &__item {
-
-        &:nth-child(4n+5),
-        &:nth-child(4n+6),
-        &:nth-child(4n+7),
-        &:nth-child(4n+8),
-        &:nth-child(4n+9),
-        &:nth-child(4n+10) {
-            margin-top: 0.65rem;
-        }
-    }
-
-
     &__thumbnail {
         position: relative;
         aspect-ratio: 387/273;
