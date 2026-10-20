@@ -7,6 +7,10 @@
     <link rel="icon" href="./img/common/logo.svg" type="image/svg+xml">
     <title>ブログ | きたむらミュージックスクール</title>
     <meta name="description" content="きたむらミュージックスクールは、音楽で生きることを目指す方のための音楽スクールです。充実したレッスンとサポートで、一人ひとりの夢や目標の実現を支えます。">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!--ogp-->
     <meta property="og:title" content="ブログ | きたむらミュージックスクール">
     <meta property="og:type" content="website">
@@ -17,7 +21,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1500">
+    <link rel="stylesheet" href="./css/style.css?v=2000">
 </head>
 
 <body>
@@ -38,13 +42,13 @@
                     </div>
                 </div>
                 <!--ハンバーガー-->
-                <div class="p-header__hb-btn">
+                <button type="button" class="p-header__hb-btn">
                     <div class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                </div>
+                </button>
                 <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
@@ -94,220 +98,220 @@
                         <div class="p-blog-list__items">
 
                             <!-- ブログ記事1 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail c-page__thumbnail">
-                                    <div class="p-blog-list__image c-page__thumbnail-image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog01_sp.jpg">
                                             <img src="./img/blog_list/blog01.jpg" alt="アコースティックギターを弾く人">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category c-page__thumbnail-category">ギター</div>
+                                    <div class="c-blog-card__category">ギター</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事2 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog02_sp.jpg">
                                             <img src="./img/blog_list/blog02.jpg" alt="頭に手を当てて悩む男性">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">集客方法</div>
+                                    <div class="c-blog-card__category">集客方法</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">集客してる間は売れないという法則</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">集客してる間は売れないという法則</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事3 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog03_sp.jpg">
                                             <img src="./img/blog_list/blog03.jpg" alt="マイクを持って歌う女性">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">SNS</div>
+                                    <div class="c-blog-card__category">SNS</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">フォロワーではなくファンを増やせとは？</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">フォロワーではなくファンを増やせとは？</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事4 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog01_sp.jpg">
                                             <img src="./img/blog_list/blog01.jpg" alt="アコースティックギターを弾く人">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">ギター</div>
+                                    <div class="c-blog-card__category">ギター</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事5 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog02_sp.jpg">
                                             <img src="./img/blog_list/blog02.jpg" alt="頭に手を当てて悩む男性">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">集客方法</div>
+                                    <div class="c-blog-card__category">集客方法</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">集客してる間は売れないという法則</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">集客してる間は売れないという法則</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事6 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog03_sp.jpg">
                                             <img src="./img/blog_list/blog03.jpg" alt="マイクを持って歌う女性">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">SNS</div>
+                                    <div class="c-blog-card__category">SNS</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">フォロワーではなくファンを増やせとは？</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">フォロワーではなくファンを増やせとは？</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事7 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog01_sp.jpg">
                                             <img src="./img/blog_list/blog01.jpg" alt="アコースティックギターを弾く人">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">ギター</div>
+                                    <div class="c-blog-card__category">ギター</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事8 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog02_sp.jpg">
                                             <img src="./img/blog_list/blog02.jpg" alt="頭に手を当てて悩む男性">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">集客方法</div>
+                                    <div class="c-blog-card__category">集客方法</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">集客してる間は売れないという法則</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">集客してる間は売れないという法則</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事9 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail">
-                                    <div class="p-blog-list__image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog03_sp.jpg">
                                             <img src="./img/blog_list/blog03.jpg" alt="マイクを持って歌う女性">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category">SNS</div>
+                                    <div class="c-blog-card__category">SNS</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">フォロワーではなくファンを増やせとは？</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">フォロワーではなくファンを増やせとは？</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
                             </a>
 
                             <!-- ブログ記事10 -->
-                            <a href="./blog-detail.html" class="p-blog-list__item">
-                                <div class="p-blog-list__thumbnail c-page__thumbnail">
-                                    <div class="p-blog-list__image c-page__thumbnail-image">
+                            <a href="./blog-detail.html" class="c-blog-card">
+                                <div class="c-blog-card__thumbnail">
+                                    <div class="c-blog-card__image">
                                         <picture>
                                             <source media="(max-width: 767px)" srcset="./img/blog_list/blog01_sp.jpg">
                                             <img src="./img/blog_list/blog01.jpg" alt="アコースティックギターを弾く人">
                                         </picture>
                                     </div>
-                                    <div class="p-blog-list__category c-page__thumbnail-category">ギター</div>
+                                    <div class="c-blog-card__category">ギター</div>
                                 </div>
-                                <div class="p-blog-list__body">
-                                    <h3 class="p-blog-list__item-title c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
-                                    <div class="p-blog-list__date">
+                                <div class="c-blog-card__body">
+                                    <h3 class="c-archive-title">アルペジオが劇的に向上する3つの習慣</h3>
+                                    <div class="c-blog-card__date">
                                         <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                     </div>
-                                    <p class="p-blog-list__text">
+                                    <p class="c-blog-card__text">
                                         本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </div>
@@ -349,7 +353,7 @@
 
 
         <!-- #region footer -->
-        <footer class="l-footer p-footer section-bg">
+        <footer class="l-footer p-footer u-bg-main">
             <div class="c-inner">
                 <div class="p-footer__contents">
                     <nav class="p-footer__nav">
@@ -372,7 +376,7 @@
                         <img src="./img/common/logo-white.svg" alt="きたむらミュージックスクール">
                     </a>
                     <div class="p-footer__copyright">
-                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</small>
+                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="u-sp-only">All Rights</small>
                     </div>
                     <ul class="p-footer__sns">
                         <li>
@@ -402,7 +406,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=1600"></script>
+    <script src="./js/main.js?v=2000"></script>
 </body>
 
 </html>

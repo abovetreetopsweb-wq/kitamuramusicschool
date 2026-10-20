@@ -7,6 +7,10 @@
     <link rel="icon" href="./img/common/logo.svg" type="image/svg+xml">
     <title>アルペジオが劇的に向上する３つの習慣 | きたむらミュージックスクール</title>
     <meta name="description" content="きたむらミュージックスクールは、音楽で生きることを目指す方のための音楽スクールです。充実したレッスンとサポートで、一人ひとりの夢や目標の実現を支えます。">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!--ogp-->
     <meta property="og:title" content="アルペジオが劇的に向上する３つの習慣 | きたむらミュージックスクール">
     <meta property="og:type" content="website">
@@ -17,7 +21,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1500">
+    <link rel="stylesheet" href="./css/style.css?v=2000">
 </head>
 
 <body>
@@ -38,13 +42,13 @@
                     </div>
                 </div>
                 <!--ハンバーガー-->
-                <div class="p-header__hb-btn">
+                <button type="button" class="p-header__hb-btn">
                     <div class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                </div>
+                </button>
                 <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
@@ -89,8 +93,8 @@
                             <div class="p-blog-detail__thumbnail">
                                 <div class="p-blog-detail__image">
                                     <picture>
-                                        <source media="(max-width: 767px)" srcset="./img/blog_list/blog01_sp.jpg">
-                                        <img src="./img/blog_list/blog01_sp.jpg" alt="アコースティックギターを弾く人">
+                                        <source media="(max-width: 767px)" srcset="./img/blog_details/blog01_sp.jpg">
+                                        <img src="./img/blog_details/blog01.jpg" alt="アコースティックギターを弾く人">
                                     </picture>
                                 </div>
                                 <div class="p-blog-detail__category">ギター</div>
@@ -143,13 +147,13 @@
                             <div class="p-blog-detail__body">
 
                                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。<span
-                                        class="sp">本文が入ります。</span>
+                                        class="u-sp-only">本文が入ります。</span>
                                 </p>
 
                                 <!-- サブ記事 -->
                                 <h2>H2見出しが入ります。H2見出しが入ります。</h2>
                                 <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。<span
-                                        class="sp">本文が入ります。本文が入ります。</span></p>
+                                        class="u-sp-only">本文が入ります。本文が入ります。</span></p>
                                 <div class="p-blog-detail__listimage">
                                     <picture>
                                         <source media="(max-width: 767px)" srcset="./img/blog_details/choice01_sp.jpg">
@@ -167,12 +171,12 @@
                                 <h3>H3見出しが入ります。H3見出しが入ります。</h3>
                                 <blockquote class="p-blog-detail__quote">
                                     <div class="p-blog-detail__quote-image">
-                                        <img src="./img/blog_details/icon-blockquote.png" alt="引用">
+                                        <img src="./img/blog_details/icon-blockquote.svg" alt="引用">
                                     </div>
                                     <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。
                                     </p>
                                 </blockquote>
-                                <a href="#">テキストリンク</a>
+                                <a href="#" class="p-blog-detail__text-link">テキストリンク</a>
                             </div>
                         </div><!-- //p-blog-detail__main -->
 
@@ -224,7 +228,7 @@
                                         </div>
                                         <div class="p-related__body">
                                             <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                    class="pc">が入ります。タイトルが入ります。</span></h3>
+                                                    class="u-pc-only">が入ります。タイトルが入ります。</span></h3>
                                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                         </div>
                                     </a>
@@ -242,7 +246,7 @@
                                         </div>
                                         <div class="p-related__body">
                                             <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                    class="pc">が入ります。タイトルが入ります。</span></h3>
+                                                    class="u-pc-only">が入ります。タイトルが入ります。</span></h3>
                                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                         </div>
                                     </a>
@@ -260,7 +264,7 @@
                                         </div>
                                         <div class="p-related__body">
                                             <h3 class="p-related__blogtitle">タイトルが入ります。タイトル<span
-                                                    class="pc">が入ります。タイトルが入ります。</span></h3>
+                                                    class="u-pc-only">が入ります。タイトルが入ります。</span></h3>
                                             <time datetime="2026-09-26" class="c-entry-date">0000.00.00</time>
                                         </div>
                                     </a>
@@ -278,7 +282,7 @@
 
                         <!--メルマガ-->
                         <div class="p-sidebar-magazine">
-                            <h2 class="p-sidebar__title">無料メールマガジン</h2>
+                            <p class="p-sidebar__title">無料メールマガジン</p>
                             <div class="p-sidebar-magazine__banner">
                                 <a href="#">バナー広告</a>
                             </div>
@@ -286,7 +290,7 @@
 
                         <!--検索-->
                         <div class="p-sidebar-search">
-                            <h2 class="p-sidebar__title">ブログ内を検索</h2>
+                            <p class="p-sidebar__title">ブログ内を検索</p>
                             <form class="p-sidebar-search__form" action="./search.html" method="get">
                                 <input type="search" name="search">
                                 <button type="submit">
@@ -297,31 +301,25 @@
 
                         <!--おすすめ記事-->
                         <div class="p-sidebar-recommend">
-                            <h2 class="p-sidebar__title">おすすめの記事</h2>
+                            <p class="p-sidebar__title">おすすめの記事</p>
                             <div class="p-sidebar-recommend__items">
                                 <a href="#" class="p-sidebar-recommend__item">
-                                    <div class="p-sidebar-recommend__image">
-                                        <!--<img src="./img/blog_details/" alt="おすすめの記事1">-->
-                                    </div>
+                                    <div class="p-sidebar-recommend__image"></div>
                                     <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                 </a>
                                 <a href="#" class="p-sidebar-recommend__item">
-                                    <div class="p-sidebar-recommend__image">
-                                        <!--<img src="./img/blog_details/" alt="おすすめの記事2">-->
-                                    </div>
+                                    <div class="p-sidebar-recommend__image"></div>
                                     <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                 </a>
                                 <a href="#" class="p-sidebar-recommend__item">
-                                    <div class="p-sidebar-recommend__image">
-                                        <!--<img src="./img/blog_details/" alt="おすすめの記事3">-->
-                                    </div>
+                                    <div class="p-sidebar-recommend__image"></div>
                                     <p class="p-sidebar-recommend__text">タイトルが入ります。タイトル</p>
                                 </a>
                             </div>
                         </div>
                         <!--カテゴリー-->
                         <div class="p-sidebar-category">
-                            <h2 class="p-sidebar__title">カテゴリー</h2>
+                            <p class="p-sidebar__title">カテゴリー</p>
                             <ul class="p-sidebar-category__list">
                                 <li><a href="#">カテゴリー</a></li>
                                 <li><a href="#">カテゴリー</a></li>
@@ -358,7 +356,7 @@
 
 
         <!-- #region footer -->
-        <footer class="l-footer p-footer section-bg">
+        <footer class="l-footer p-footer u-bg-main">
             <div class="c-inner">
                 <div class="p-footer__contents">
                     <nav class="p-footer__nav">
@@ -381,7 +379,7 @@
                         <img src="./img/common/logo-white.svg" alt="きたむらミュージックスクール">
                     </a>
                     <div class="p-footer__copyright">
-                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</small>
+                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="u-sp-only">All Rights</small>
                     </div>
                     <ul class="p-footer__sns">
                         <li>
@@ -411,7 +409,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=1600"></script>
+    <script src="./js/main.js?v=2000"></script>
 </body>
 
 </html>

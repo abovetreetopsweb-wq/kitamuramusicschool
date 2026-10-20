@@ -7,6 +7,10 @@
     <link rel="icon" href="./img/common/logo.svg" type="image/svg+xml">
     <title>料金プラン | きたむらミュージックスクール</title>
     <meta name="description" content="きたむらミュージックスクールは、音楽で生きることを目指す方のための音楽スクールです。充実したレッスンとサポートで、一人ひとりの夢や目標の実現を支えます。">
+    <!--google font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
     <!--ogp-->
     <meta property="og:title" content="料金プラン | きたむらミュージックスクール">
     <meta property="og:type" content="website">
@@ -17,7 +21,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=1500">
+    <link rel="stylesheet" href="./css/style.css?v=2000">
 </head>
 
 <body>
@@ -38,13 +42,13 @@
                     </div>
                 </div>
                 <!--ハンバーガー-->
-                <div class="p-header__hb-btn">
+                <button type="button" class="p-header__hb-btn">
                     <div class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
-                </div>
+                </button>
                 <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
@@ -91,15 +95,17 @@
                 <div class="p-price__inner">
 
                     <section class="p-price__system">
-                        <h2 class="p-price__title c-page-section-title">料金体系</h2>
-                        <div class="p-price__contents">
-                            <div class="p-price__summary">
-                                <div class="p-price__admission">入会金 39,000円</div>
-                                <span class="p-price__plus"></span>
-                                <div class="p-price__monthly">月額料金</div>
-                            </div>
-                            <div class="p-price__text">
-                                きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
+                        <div class="c-inner">
+                            <h2 class="p-price__title c-page-section-title">料金体系</h2>
+                            <div class="p-price__contents">
+                                <div class="p-price__summary">
+                                    <div class="p-price__admission">入会金 39,000円</div>
+                                    <span class="p-price__plus"></span>
+                                    <div class="p-price__monthly">月額料金</div>
+                                </div>
+                                <div class="p-price__text">
+                                    きたむらミュージックスクールでは、個人に合わせたサポートを行う完全オーダーメイドのプランを用意しており、サポート内容により月額料金が異なります。担当者があなたに最適なプランを提案いたしますので、お気軽にお問い合わせください。※すべての料金は税込価格となります。
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -112,43 +118,44 @@
                             <div class="p-price-plans__contents">
                                 <table class="p-price-plans__table">
                                     <tr>
-                                        <th class="table-head-empty"></th>
-                                        <th class="p-price-plans__plan-bg"><span>ベーシック<br class="sp">プラン</span></th>
-                                        <th class="p-price-plans__recommend"><span>おすすめ<br>スタンダード<br class="sp">プラン</span></th>
-                                        <th class="p-price-plans__plan-bg"><span>プレミアム<br class="sp">プラン</span></th>
+                                        <th class="p-price-plans__empty-heading"></th>
+                                        <th class="p-price-plans__plan-bg"><span>ベーシック<br class="u-sp-only">プラン</span></th>
+                                        <th class="p-price-plans__recommend"><span>おすすめ<br>スタンダード<br
+                                                    class="u-sp-only">プラン</span></th>
+                                        <th class="p-price-plans__plan-bg"><span>プレミアム<br class="u-sp-only">プラン</span></th>
                                     </tr>
                                     <tr>
-                                        <th class="plan__list">月額料金</th>
-                                        <td class="text__price">39,000円</td>
-                                        <td class="text__red text__price">59,000円</td>
-                                        <td class="text__price">128,000円</td>
+                                        <th class="p-price-plans__cell--bold">月額料金</th>
+                                        <td class="p-price-plans__price">39,000円</td>
+                                        <td class="p-price-plans__text--accent p-price-plans__price">59,000円</td>
+                                        <td class="p-price-plans__price">128,000円</td>
                                     </tr>
-                                    <tr class="tr-bg">
-                                        <th class="plan__list">マンツーマン授業</th>
+                                    <tr class="p-price-plans__row--shaded">
+                                        <th class="p-price-plans__cell">マンツーマン授業</th>
                                         <td><span class="p-price-plan--available">●</span>週１回</td>
-                                        <td><span class="p-price-plan--available text__red">●</span>週２回</td>
+                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>週２回</td>
                                         <td><span class="p-price-plan--available">●</span>無制限</td>
                                     </tr>
                                     <tr>
-                                        <th class="plan__list">ビジネス基本講座</th>
+                                        <th class="p-price-plans__cell">ビジネス基本講座</th>
                                         <td><span class="p-price-plan--available">●</span></td>
-                                        <td><span class="p-price-plan--available text__red">●</span></td>
+                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span></td>
                                         <td><span class="p-price-plan--available">●</span></td>
                                     </tr>
-                                    <tr class="tr-bg">
-                                        <th class="plan__list">練習ROOM利用</th>
+                                    <tr class="p-price-plans__row--shaded">
+                                        <th class="p-price-plans__cell">練習ROOM利用</th>
                                         <td><span class="p-price-plan--available">●</span>月10時間</td>
-                                        <td><span class="p-price-plan--available text__red">●</span>月20時間</td>
+                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>月20時間</td>
                                         <td><span class="p-price-plan--available">●</span>無制限</td>
                                     </tr>
                                     <tr>
-                                        <th class="plan__list">ビジネスコンサル</th>
+                                        <th class="p-price-plans__cell">ビジネスコンサル</th>
                                         <td><span class="p-price-plan--none"></span></td>
-                                        <td><span class="p-price-plan--available text__red">●</span>月２回</td>
+                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>月２回</td>
                                         <td><span class="p-price-plan--available">●</span>月３回</td>
                                     </tr>
-                                    <tr class="tr-bg bottom-line">
-                                        <th class="plan__list">コミュニティ<br class="sp">参加資格</th>
+                                    <tr class="p-price-plans__row--shaded p-price-plans__row--bordered">
+                                        <th class="p-price-plans__cell">コミュニティ<br class="u-sp-only">参加資格</th>
                                         <td><span class="p-price-plan--none"></span></td>
                                         <td><span class="p-price-plan--none"></span></td>
                                         <td><span class="p-price-plan--available">●</span></td>
@@ -189,7 +196,7 @@
 
 
         <!-- #region footer -->
-        <footer class="l-footer p-footer section-bg">
+        <footer class="l-footer p-footer u-bg-main">
             <div class="c-inner">
                 <div class="p-footer__contents">
                     <nav class="p-footer__nav">
@@ -212,7 +219,7 @@
                         <img src="./img/common/logo-white.svg" alt="きたむらミュージックスクール">
                     </a>
                     <div class="p-footer__copyright">
-                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</small>
+                        <small>Copyright © 0000 KITAMURA music school Inc. <br class="u-sp-only">All Rights</small>
                     </div>
                     <ul class="p-footer__sns">
                         <li>
@@ -242,7 +249,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=1600"></script>
+    <script src="./js/main.js?v=2000"></script>
 </body>
 
 </html>

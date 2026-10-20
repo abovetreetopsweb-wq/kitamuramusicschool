@@ -9,20 +9,20 @@
             padding-block: 6.9rem 18.8rem;
 
         }
-
-        .c-inner {
-            @include pc {
-                display: flex;
-                column-gap: 3rem;
-            }
-        }
-
         article {
             flex: 1;
         }
 
     }
+
+    &__wrap {
+        @include pc {
+            display: flex;
+            column-gap: 3rem;
+        }
+    }
 }
+
 
 //メインコンテンツの中身
 .p-blog-detail__thumbnail {
@@ -173,16 +173,15 @@
             }
         }
     }
+}
 
-    a {
-        display: block;
-        margin-top: 3rem;
-        text-decoration: underline;
-        color: #CB0000;
+.p-blog-detail__text-link {
+    display: block;
+    margin-top: 3rem;
+    text-decoration: underline;
+    color: #CB0000;
 
-        @include font(2rem, calc(33/20), $font-weight-bold);
-
-    }
+    @include font(2rem, calc(33/20), $font-weight-bold);
 }
 
 .p-blog-detail__listimage {
@@ -239,7 +238,7 @@
 
     margin-top: 2rem;
     background: #E8E8E8;
-    padding: 2.2rem 2rem 1.1rem 2.5rem;
+    padding: 1.7rem 2rem 1.1rem 2.5rem;
 
     @include pc {
         column-gap: 1rem;
@@ -249,16 +248,16 @@
 
     &-image {
         width: 2.704rem;
+        margin-top: 0.5rem;
+
+        @include pc {
+            margin-top: 0rem;
+        }
     }
 
     p {
         flex: 1;
-        margin-top: -0.5rem;
-
-        @include pc {
-            margin-top: 0;
-        }
-
+        margin-top: 0;
     }
 }
 

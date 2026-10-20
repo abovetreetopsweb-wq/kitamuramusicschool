@@ -14,7 +14,7 @@
         color: $color-main;
 
         @include pc {
-            @include font(3.5rem, calc(50/35),$font-weight-bold);
+            @include font(3.5rem, calc(50/35), $font-weight-bold);
         }
     }
 
@@ -33,13 +33,14 @@
             @include font(1.8rem, calc(30/18), $font-weight-medium)
         }
 
-        @include pc {
-            picture {
-                margin-top: 3.4rem;
-            }
-        }
+
     }
 
+    &__image {
+        @include pc {
+            margin-top: 3.4rem;
+        }
+    }
 }
 
 .p-concept-step {
@@ -61,11 +62,12 @@
         column-gap: 2.954rem;
 
         p {
-            width:15rem;
+            width: 15rem;
             text-align: right;
             color: $color-main;
             @include font(2rem, calc(50/20), $font-weight-bold);
-            @include pc{
+
+            @include pc {
                 @include font(2.5rem, calc(50/25), $font-weight-bold);
             }
 
@@ -74,7 +76,8 @@
                 text-align: left;
                 color: $color-base;
                 @include font(2rem, calc(50/20), $font-weight-medium);
-                @include pc{
+
+                @include pc {
                     @include font(2.3rem, calc(50/23), $font-weight-medium);
                 }
             }
@@ -91,27 +94,30 @@
 
         }
 
-        .bar::after {
-            content: '';
-            position: absolute;
-            height: 18rem;
-            top: -4rem;
-            left: 50%;
-            width: 0.3rem;
-            background: $color-main;
-            transform: translateX(-50%);
-        }
 
-        .bar::before {
-            content: '';
-            position: absolute;
-            width: 2.5rem;
-            height: 2.5rem;
-            top: -3.9rem;
-            left: -13%;
-            border-top: 0.3rem solid $color-main;
-            border-left: 0.3rem solid $color-main;
-            transform: rotate(45deg);
-        }
+    }
+
+    /*.bar
+        p-concept-step__arrow*/
+    &__arrow::after {
+        content: '';
+        position: absolute;
+        height: 18rem;
+        top: -4rem;
+        left: 50%;
+        width: 0.3rem;
+        background: $color-main;
+        transform: translateX(-50%);
+    }
+
+    &__arrow::before {
+        content: '';
+        position: absolute;
+        top: -3.4rem;
+        left: 50%;
+        width: 3.162rem;
+        height: 2.5rem;
+        background: url("../img/top/vector.svg") center / contain no-repeat;
+        transform: translate(-50%, -50%);
     }
 }

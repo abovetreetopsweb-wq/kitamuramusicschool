@@ -56,6 +56,7 @@
                 aspect-ratio: 270/190;
             }
         }
+
         @include pc {
             transition: transform 0.4s;
         }
@@ -87,7 +88,7 @@
 }
 
 
-.swiper-wrap {
+.p-voice__inner {
     position: relative;
     width: 100%;
     padding-inline: 2rem;
@@ -102,7 +103,7 @@
 
 .swiper-button-prev {
     position: absolute;
-    z-index: 999;
+    z-index: 99;
     width: 2.984rem;
     background: url("../img/top/arrow-l.svg") center / contain no-repeat;
 

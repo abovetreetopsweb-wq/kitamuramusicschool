@@ -40,7 +40,7 @@
 
     @include pc {
         flex-direction: row;
-        column-gap: calc(50/1080*100vw);
+        column-gap: 5rem;
     }
 
     &__image {
@@ -61,20 +61,19 @@
             flex: 1;
         }
 
+    }
 
-        span {
-            display: block;
-            margin-top: 0.8rem;
-            width: calc(100%);
-            height: 0.2rem;
-            background: $color-main;
+    &__line {
+        display: block;
+        margin-top: 0.8rem;
+        width: 100%;
+        height: 0.2rem;
+        background: $color-main;
 
-            @include pc {
-                margin-top: 0.7rem;
-                margin-left: -50%;
-                width: calc(100% + 50%);
-                z-index: 99;
-            }
+        @include pc {
+            margin-top: 0.7rem;
+            margin-left: -5rem;
+            width: calc(100% + 5rem);
         }
     }
 
@@ -82,7 +81,7 @@
         @include font(2rem, calc(30/20), $font-weight-bold);
 
         @include pc {
-            @include font(2.2rem, calc(33/22),$font-weight-bold);
+            @include font(2.2rem, calc(33/22), $font-weight-bold);
         }
     }
 
@@ -92,18 +91,8 @@
 
         @include pc {
             margin-top: 3.5rem;
-            @include font(1.8rem, calc(33/18),$font-weight-medium);
+            @include font(1.8rem, calc(33/18), $font-weight-medium);
         }
     }
 
-    &:nth-of-type(1) {
-        .p-reason-item__title {
-            @include font(2rem, calc(30/20), $font-weight-bold);
-
-            @include pc {
-                margin-top: 1rem;
-                @include font(2.2rem, calc(33/22));
-            }
-        }
-    }
 }
