@@ -179,7 +179,7 @@
           }
 
           @include pc {
-            padding-block: 2.5rem 2.1rem;
+            height: 100%;
             padding-inline: 0rem;
             justify-content: center;
             @include font(1.7rem, calc(33/17), $font-weight-bold);

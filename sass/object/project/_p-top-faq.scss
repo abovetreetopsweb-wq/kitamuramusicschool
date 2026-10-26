@@ -64,12 +64,12 @@
             width: 100%;
             display: flex;
             align-items: center;
-            padding-block: 1.1rem 0.8rem;
+            padding-block: 1.23rem 1.23rem;
             padding-right: 5rem;
             column-gap: 2rem;
 
             @include pc {
-                padding-block: 1.6rem 1.3rem;
+                padding-block: 1.49rem 1.49rem;
                 padding-inline: 2rem;
                 column-gap: 1rem;
             }
@@ -93,11 +93,9 @@
             }
 
             p {
-                margin-top: 0.6rem;
                 @include font(1.6rem, calc(30/16), $font-weight-medium);
 
                 @include pc {
-                    margin-top: 0.3rem;
                     @include font(1.7rem, calc(30/17), $font-weight-medium);
                 }
             }
@@ -121,13 +119,13 @@ p-faq__answer*/
             width: 100%;
             display: flex;
             align-items: center;
-            padding-block: 1.1rem 0.8rem;
+            padding-block: 1.23rem 1.23rem;
             padding-right: 5rem;
             column-gap: 2rem;
             background: rgba(203, 0, 0, 0.102);
 
             @include pc {
-                padding-block: 1.6rem 1.5rem;
+                padding-block: 1.49rem 1.49rem;
                 padding-inline: 2rem;
                 column-gap: 1rem;
             }
@@ -150,14 +148,11 @@ p-faq__answer*/
             }
 
             p {
-                margin-top: 0.6rem;
-
 
                 color: $color-main;
                 @include font(1.6rem, calc(30/16), $font-weight-bold);
 
                 @include pc {
-                    margin-top: 0.3rem;
                     @include font(1.7rem, calc(30/17), $font-weight-bold);
                 }
             }

@@ -5,10 +5,10 @@
 
 .p-result-detail {
     &__container {
-        padding-block: 4.7rem 19.5rem;
+        padding-block: 4.7rem 4.7rem;
 
         @include pc {
-            padding-block: 7rem 15.6rem;
+            padding-block: 7rem 0rem;
         }
 
     }
@@ -96,27 +96,27 @@
         tr {
             th {
                 width: 14rem;
-                padding: 0.73rem 2rem 0.01rem 1rem;
+                padding: 0.37rem 2rem 0.37rem 1rem;
                 background: #E5E5E5;
                 border: 1px solid #707070;
                 vertical-align: middle;
                 //vertical-alignは、inline、または、table-cellにのみ指定することができる垂直方向の配置を設定できるプロパティ（display:blockの要素には指定することができない。）。
 
                 @include pc {
-                    padding: 0.73rem 2rem 0.01rem 2rem;
+                    padding: 0.37rem 2rem 0.37rem 2rem;
                     border: 0.5px solid #707070;
                 }
             }
 
             td {
                 width: 26rem;
-                padding: 0.73rem 2rem 0.01rem 1rem;
+                padding: 0.37rem 2rem 0.37rem 1rem;
                 border: 1px solid #707070;
                 vertical-align: middle;
                 
 
                 @include pc {
-                    padding: 0.73rem 2rem 0.01rem 2rem;
+                    padding: 0.37rem 2rem 0.37rem 2rem;
                     border: 0.5px solid #707070;
                 }
             }

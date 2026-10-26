@@ -62,12 +62,13 @@
         column-gap: 2.954rem;
 
         p {
-            width: 15rem;
+            width: 11.5rem;
             text-align: right;
             color: $color-main;
             @include font(2rem, calc(50/20), $font-weight-bold);
 
             @include pc {
+                width: 15rem;
                 @include font(2.5rem, calc(50/25), $font-weight-bold);
             }
 

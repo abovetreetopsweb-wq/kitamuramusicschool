@@ -3,10 +3,10 @@
 
 .p-price {
     &__container {
-        padding-block: 4.5rem 18.6rem;
+        padding-block: 4.5rem 3.8rem;
 
         @include pc {
-            padding-block: 6.8rem 22rem;
+            padding-block: 6.8rem 6rem;
         }
     }
 
@@ -56,9 +56,6 @@
             height: 1.9rem;
             background: url("../img/plan/plus.svg") no-repeat center / contain;
 
-            @include pc {
-                margin-top: 0.5rem;
-            }
         }
     }
 
@@ -319,7 +316,7 @@
     &-thumb {
         width: 10rem;
         height: 2.3rem;
-        background: #9B9B9B;
+        background:  rgba(80, 80, 80, 0.251);
 
         touch-action: none;
         user-select: none;

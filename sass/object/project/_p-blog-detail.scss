@@ -3,10 +3,10 @@
 
 .p-blog-detail {
     &__container {
-        padding-block: 5.1rem 20rem;
+        padding-block: 5.1rem 5.1rem;
 
         @include pc {
-            padding-block: 6.9rem 18.8rem;
+            padding-block: 6.9rem 3rem;
 
         }
         article {

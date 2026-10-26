@@ -3,10 +3,10 @@
 
 .p-contact {
     &__container {
-        padding-block: 4.5rem 10.8rem;
+        padding-block: 4.5rem 2rem;
 
         @include pc {
-            padding-block: 6.8rem 10rem;
+            padding-block: 6.8rem 0rem;
         }
     }
 }
@@ -243,13 +243,10 @@
 
 .p-contact__fixed-buttons {
     bottom: 3rem;
-    right: 3rem;
     z-index: 9999;
-    transform: translateX(0);
 
     @include pc {
         bottom: 0;
-        right: calc(100/1080 *100vw);
     }
 
     &-inner {

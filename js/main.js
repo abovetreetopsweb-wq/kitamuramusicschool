@@ -51,14 +51,12 @@ $(".p-faq__answer").on('click', function () {
 //topへ戻る
 
 var goTop = $(".c-fixed-buttons");//変数宣言と代入
-var footer = $(".l-footer");
 var fixarea = $(".p-fixarea");
 
 goTop.hide();//サイト上部ではボタンを非表示
 
 //fixareaを超えたらボタン表示・fixarea内ではボタン非表示
 $(window).on("scroll", function () {
-    if (!goTop.length || !footer.length) return;
 
     var scroll = $(this).scrollTop();
     var fixareaHeight = fixarea.outerHeight();
@@ -69,22 +67,6 @@ $(window).on("scroll", function () {
         goTop.fadeOut(300)
     }
 
-
-    // フッターとの衝突判定
-    goTop.css("bottom", "");
-
-    // CSSのbottomの値を覚える
-    var baseBottom = parseFloat(goTop.css("bottom"));
-
-    // 実際に表示されている位置を取得
-    var buttonBottom = goTop[0].getBoundingClientRect().bottom;
-    var footerTop = footer[0].getBoundingClientRect().top;
-
-    // フッターに重なる分だけ持ち上げる
-    var overlap = Math.max(0, buttonBottom - footerTop);
-
-
-    goTop.css("bottom", baseBottom + overlap + "px");
 });
 
 //ボタンがクリックされたら1秒でページトップへ戻る

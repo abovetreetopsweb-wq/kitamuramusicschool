@@ -4,16 +4,15 @@
 
 //TOPへ戻るボタンとお問い合わせの塊をまとめた
 .c-fixed-buttons {
-    position: fixed;
+    position: sticky;
     bottom: 0;
-    right: 50%;
     z-index: 999;
-    transform: translateX(50%);
+    width: 33.5rem;
+    margin-inline: auto;
 
     @include pc {
-        bottom: 0;
-        right: 0;
-        transform: translateX(0);
+        width: 30rem;
+        margin-inline: auto 0;
     }
 
     &__inner {
