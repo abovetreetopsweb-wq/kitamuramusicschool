@@ -94,14 +94,15 @@
         scrollbar-width: none;
 
         @include pc {
-            margin-top: 3.5rem;
+            margin-top: 2.2rem;
             padding-bottom: 1rem;
             overflow-x: hidden;
         }
     }
 
     &__table {
-        margin-top: 3.5rem;
+        margin-top: 1rem;
+        table-layout: fixed;
         width: 100%;
         min-width: 67rem;
 
@@ -109,20 +110,19 @@
             margin-top: 2.8rem;
         }
 
-
         tr {
-            display: flex;
-            height: 8.5rem;
-
-            &:first-of-type {
-                height: 6.6rem;
+            &:nth-of-type(n + 3) {
+                    height: 8.5rem;
+               
+                th {
+                    @include pc {
+                        @include font(1.7rem, calc(30/17), $font-weight-regular);
+                    }
+                }
             }
 
-            &:nth-of-type(2) {
+            &:nth-of-type(3) {
                 th {
-                    flex: 1;
-                    display: flex;
-                    align-items: center;
 
                     @include pc {
                         @include font(1.7rem, calc(30/17), $font-weight-bold);
@@ -130,25 +130,10 @@
                 }
             }
 
-            th {
-                flex: 1;
-                display: flex;
-                align-items: center;
-                padding-inline: 1rem;
-
-
-                @include pc {
-                    @include font(1.7rem, calc(30/17), $font-weight-regular);
-                    padding-inline: 2rem;
-                }
-            }
-
             td {
-                flex: 1;
-                display: grid;
-                place-content: center;
+                vertical-align: middle;
+                text-align: center;
                 padding-inline: 1rem;
-
 
                 @include pc {
                     padding-inline: 2rem;
@@ -175,65 +160,29 @@
     }
 
     &__recommend {
-        position: relative;
-        z-index: 2;
+        text-align: center;
+        padding-block: 0.75rem;
+        background: $color-main;
+        color: $color-white;
+        @include font(2rem, calc(25/20), $font-weight-bold);
 
-        span {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: absolute;
-            left: 0;
-            text-align: center;
-            width: 100%;
-            padding-block: 0.75rem;
-            background: $color-main;
-            bottom: 0;
-            z-index: 2;
-            color: $color-white;
-            @include font(2rem, calc(25/20), $font-weight-bold);
-
-            @include pc {
-                padding-block: 0.7rem;
-                @include font(2rem, calc(33/20), $font-weight-bold);
-            }
-
-
+        @include pc {
+            padding-block: 0.7rem;
+            @include font(2rem, calc(33/20), $font-weight-bold);
         }
     }
 
 
     &__plan-bg {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        position: relative;
-        z-index: 2;
+        text-align: center;
+        background: $color-base;
+        color: $color-white;
+        padding-block: 0.8rem;
+        @include font(2rem, calc(25/20), $font-weight-bold);
 
-
-        span {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: 2;
-            text-align: center;
-            color: $color-white;
-            background: $color-base;
-            @include font(2rem, calc(25/20), $font-weight-bold);
-
-
-
-            @include pc {
-                padding-block: 0.85rem;
-                height: auto;
-                @include font(2rem, calc(33/20), $font-weight-bold);
-            }
-
-
-
+        @include pc {
+            padding-block: 0.85rem;
+            @include font(2rem, calc(33/20), $font-weight-bold);
         }
     }
 }
@@ -252,6 +201,7 @@
 }
 
 .p-price-plans__row--shaded {
+
     th,
     td {
         background: rgba(80, 80, 80, 0.149);
@@ -259,6 +209,7 @@
 }
 
 .p-price-plans__row--bordered {
+
     th,
     td {
         border-bottom: 0.5px solid $color-base;
@@ -266,10 +217,13 @@
 }
 
 .p-price-plan--available {
+    display: block;
     text-align: center;
 }
 
 .p-price-plan--none {
+    display: block;
+    margin-inline: auto;
     width: 3rem;
     border: 0;
     border-top: 1px solid $color-base;
@@ -277,18 +231,20 @@
 }
 
 .p-price-plans__cell {
-    padding: 1rem;
+    vertical-align: middle;
+    padding-inline: 1rem;
 
     @include pc {
-        padding: 2rem;
+        padding-inline: 2rem;
     }
 
     &--bold {
+        vertical-align: middle;
         font-weight: $font-weight-bold;
-        padding: 1rem;
+        padding-inline: 1rem;
 
         @include pc {
-            padding: 2rem;
+            padding-inline: 2rem;
         }
     }
 
@@ -299,6 +255,7 @@
 }
 
 .p-price-plans__price {
+    vertical-align: middle;
     @include font(2.2rem, calc(33/22), $font-weight-bold);
 }
 
@@ -316,7 +273,7 @@
     &-thumb {
         width: 10rem;
         height: 2.3rem;
-        background:  rgba(80, 80, 80, 0.251);
+        background: rgba(80, 80, 80, 0.251);
 
         touch-action: none;
         user-select: none;

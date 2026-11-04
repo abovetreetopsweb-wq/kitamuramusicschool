@@ -30,36 +30,38 @@
     width: 100%;
 
 
+    @media (any-hover: hover) {
+        &:hover {
+            @include pc {
+                opacity: 1;
 
-    &:hover {
-        @include pc {
-            opacity: 1;
+                .p-voice-item__image img{
+                    transform: scale(1.1);
+                }
 
-            .p-voice-item__image {
-                transform: scale(1.1);
-            }
-
-            .p-voice-item__title,
-            .p-voice-item__text {
-                opacity: 0.7;
+                .p-voice-item__title,
+                .p-voice-item__text {
+                    opacity: 0.7;
+                }
             }
         }
     }
 
 
     &__image {
+        overflow: hidden;
+
         img {
             aspect-ratio: 335/200;
             object-fit: cover;
 
             @include pc {
                 aspect-ratio: 270/190;
+                transition: transform 0.4s;
             }
         }
 
-        @include pc {
-            transition: transform 0.4s;
-        }
+
     }
 
 

@@ -87,22 +87,23 @@
 
     }
 
-    &__row--spaced {
-        margin-top: 0rem;
-
-        @include pc {
-            margin-top: 3rem;
-        }
-    }
 }
 
 .p-contact__control {
     width: 100%;
-    @include font(1.5rem, calc(33/15), $font-weight-medium);
+    @include font(1.6rem, calc(33/16), $font-weight-medium);
+
+    @include pc {
+        @include font(1.7rem, calc(33/17), $font-weight-medium);
+    }
 
     &::placeholder {
         color: #B2B2B2;
-        @include font(1.5rem, calc(33/15), $font-weight-medium);
+        @include font(1.6rem, calc(33/16), $font-weight-medium);
+
+        @include pc {
+            @include font(1.7rem, calc(33/17), $font-weight-medium);
+        }
     }
 }
 

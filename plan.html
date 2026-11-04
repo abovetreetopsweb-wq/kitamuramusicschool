@@ -21,7 +21,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=2500">
+    <link rel="stylesheet" href="./css/style.css?v=3000">
 </head>
 
 <body>
@@ -43,25 +43,27 @@
                 </div>
                 <!--ハンバーガー-->
                 <button type="button" class="p-header__hb-btn">
-                    <div class="p-header__hb-inner">
+                    <span class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </span>
                 </button>
                 <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
                         <li><a href="./blog-list.html">ブログ</a></li>
                         <li><a href="./result-list.html">卒業実績</a></li>
+                        <li>
+                            <div class="p-header__button">
+                                <div class="c-button p-header__button-inner">
+                                    <a href="./contact-form.html">
+                                        お問い合わせ
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="p-header__button">
-                        <div class="c-button p-header__button-inner">
-                            <a href="./contact-form.html">
-                                お問い合わせ
-                            </a>
-                        </div>
-                    </div>
                 </nav>
             </div>
         </header>
@@ -118,11 +120,17 @@
                             <div class="p-price-plans__contents">
                                 <table class="p-price-plans__table">
                                     <tr>
+                                        <th></th>
+                                        <th></th>
+                                        <th class="p-price-plans__recommend" rowspan="2">おすすめ<br>スタンダード<br class="u-sp-only">プラン</th>
+                                        <th></th>
+                                    </tr>
+                                    <tr>
                                         <th class="p-price-plans__empty-heading"></th>
-                                        <th class="p-price-plans__plan-bg"><span>ベーシック<br class="u-sp-only">プラン</span></th>
-                                        <th class="p-price-plans__recommend"><span>おすすめ<br>スタンダード<br
-                                                    class="u-sp-only">プラン</span></th>
-                                        <th class="p-price-plans__plan-bg"><span>プレミアム<br class="u-sp-only">プラン</span></th>
+                                        <th class="p-price-plans__plan-bg">ベーシック<br class="u-sp-only">プラン
+                                        </th>
+                                        <th class="p-price-plans__plan-bg">プレミアム<br class="u-sp-only">プラン
+                                        </th>
                                     </tr>
                                     <tr>
                                         <th class="p-price-plans__cell--bold">月額料金</th>
@@ -133,25 +141,32 @@
                                     <tr class="p-price-plans__row--shaded">
                                         <th class="p-price-plans__cell">マンツーマン授業</th>
                                         <td><span class="p-price-plan--available">●</span>週１回</td>
-                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>週２回</td>
+                                        <td><span
+                                                class="p-price-plan--available p-price-plans__text--accent">●</span>週２回
+                                        </td>
                                         <td><span class="p-price-plan--available">●</span>無制限</td>
                                     </tr>
                                     <tr>
                                         <th class="p-price-plans__cell">ビジネス基本講座</th>
                                         <td><span class="p-price-plan--available">●</span></td>
-                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span></td>
+                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>
+                                        </td>
                                         <td><span class="p-price-plan--available">●</span></td>
                                     </tr>
                                     <tr class="p-price-plans__row--shaded">
                                         <th class="p-price-plans__cell">練習ROOM利用</th>
                                         <td><span class="p-price-plan--available">●</span>月10時間</td>
-                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>月20時間</td>
+                                        <td><span
+                                                class="p-price-plan--available p-price-plans__text--accent">●</span>月20時間
+                                        </td>
                                         <td><span class="p-price-plan--available">●</span>無制限</td>
                                     </tr>
                                     <tr>
                                         <th class="p-price-plans__cell">ビジネスコンサル</th>
                                         <td><span class="p-price-plan--none"></span></td>
-                                        <td><span class="p-price-plan--available p-price-plans__text--accent">●</span>月２回</td>
+                                        <td><span
+                                                class="p-price-plan--available p-price-plans__text--accent">●</span>月２回
+                                        </td>
                                         <td><span class="p-price-plan--available">●</span>月３回</td>
                                     </tr>
                                     <tr class="p-price-plans__row--shaded p-price-plans__row--bordered">
@@ -245,11 +260,10 @@
         <!-- #endregion footer -->
 
     </div>
-    <!--スライド-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=2500"></script>
+    <script src="./js/main.js?v=3000"></script>
 </body>
 
 </html>

@@ -117,7 +117,7 @@
   }
 
   &__hb-btn.active {
-    span {
+    .p-header__hb-inner>span {
       &:nth-of-type(1) {
         top: 50%;
         transform: translateY(-50%) rotate(45deg);
@@ -152,7 +152,7 @@
     }
 
     @include pc {
-      position: static; 
+      position: static;
     }
 
     ul {
@@ -231,8 +231,13 @@
       justify-content: center;
       align-items: center;
       height: 8rem;
-      padding-left: 3.5rem;
       @include font(1.5rem, calc(33/15), $font-weight-bold);
+
+      a {
+        &::before {
+          display: none;
+        }
+      }
     }
   }
 

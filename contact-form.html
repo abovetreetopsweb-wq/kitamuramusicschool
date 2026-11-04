@@ -21,7 +21,7 @@
     <meta property="og:site_name" content="きたむらミュージックスクール">
     <meta property="og:locale" content="ja_JP">
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css?v=2500">
+    <link rel="stylesheet" href="./css/style.css?v=3000">
 </head>
 
 <body>
@@ -43,25 +43,27 @@
                 </div>
                 <!--ハンバーガー-->
                 <button type="button" class="p-header__hb-btn">
-                    <div class="p-header__hb-inner">
+                    <span class="p-header__hb-inner">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </span>
                 </button>
                 <nav class="p-header__nav">
                     <ul>
                         <li><a href="./plan.html">料金</a></li>
                         <li><a href="./blog-list.html">ブログ</a></li>
                         <li><a href="./result-list.html">卒業実績</a></li>
+                        <li>
+                            <div class="p-header__button">
+                                <div class="c-button p-header__button-inner">
+                                    <a href="./contact-form.html">
+                                        お問い合わせ
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                    <div class="p-header__button">
-                        <div class="c-button p-header__button-inner">
-                            <a href="./contact-form.html">
-                                お問い合わせ
-                            </a>
-                        </div>
-                    </div>
                 </nav>
             </div>
         </header>
@@ -103,35 +105,36 @@
                                         <label for="company">会社名</label>
                                     </dt>
                                     <dd>
-                                        <input type="text" name="company" id="company" class="p-contact__control p-contact__input"
-                                            placeholder="きたむらミュージックスクール">
+                                        <input type="text" name="company" id="company"
+                                            class="p-contact__control p-contact__input" placeholder="きたむらミュージックスクール">
                                     </dd>
                                 </dl>
-                                <dl class="p-contact__row--spaced">
+                                <dl>
                                     <dt class="p-contact__label-group">
                                         <label for="name">お名前</label>
                                     </dt>
                                     <dd>
-                                        <input type="text" name="name" id="name" class="p-contact__control p-contact__input"
-                                            placeholder="北村　翔平">
+                                        <input type="text" name="name" id="name"
+                                            class="p-contact__control p-contact__input" placeholder="北村　翔平">
                                     </dd>
                                 </dl>
-                                <dl class="p-contact__row--spaced">
+                                <dl>
                                     <dt class="p-contact__label-group">
                                         <label for="email">メールアドレス</label>
                                     </dt>
                                     <dd>
-                                        <input type="email" name="email" id="email" class="p-contact__control p-contact__input"
+                                        <input type="email" name="email" id="email"
+                                            class="p-contact__control p-contact__input"
                                             placeholder="info@kitamura.musicschool.jp">
                                     </dd>
                                 </dl>
-                                <dl class="p-contact__row--spaced">
+                                <dl>
                                     <dt class="p-contact__label-group">
                                         <label for="tel">電話番号</label>
                                     </dt>
                                     <dd>
-                                        <input type="tel" name="tel" id="tel" class="p-contact__control p-contact__input"
-                                            placeholder="090-1234-5678">
+                                        <input type="tel" name="tel" id="tel"
+                                            class="p-contact__control p-contact__input" placeholder="090-1234-5678">
                                     </dd>
                                 </dl>
                                 <dl class="p-contact__purpose-row">
@@ -140,19 +143,23 @@
                                     </dt>
                                     <dd class="p-contact__check">
                                         <label class="p-contact__check-item">
-                                            <input type="checkbox" name="purpose" value="plan" class="p-contact__check-input">
+                                            <input type="checkbox" name="purpose" value="plan"
+                                                class="p-contact__check-input">
                                             <span>プランについてのお問い合わせ</span>
                                         </label>
                                         <label class="p-contact__check-item">
-                                            <input type="checkbox" name="purpose" value="hearing" class="p-contact__check-input">
+                                            <input type="checkbox" name="purpose" value="hearing"
+                                                class="p-contact__check-input">
                                             <span>ヒアリングのご予約</span>
                                         </label>
                                         <label class="p-contact__check-item">
-                                            <input type="checkbox" name="purpose" value="document" class="p-contact__check-input">
+                                            <input type="checkbox" name="purpose" value="document"
+                                                class="p-contact__check-input">
                                             <span>資料請求</span>
                                         </label>
                                         <label class="p-contact__check-item">
-                                            <input type="checkbox" name="purpose" value="other" class="p-contact__check-input">
+                                            <input type="checkbox" name="purpose" value="other"
+                                                class="p-contact__check-input">
                                             <span>その他</span>
                                         </label>
                                     </dd>
@@ -162,7 +169,8 @@
                                         <label for="message" class="p-contact__message-label">内　容</label>
                                     </dt>
                                     <dd>
-                                        <textarea name="message" id="message" class="p-contact__control p-contact__textarea"
+                                        <textarea name="message" id="message"
+                                            class="p-contact__control p-contact__textarea"
                                             placeholder="内容に関する詳細や備考等をご入力ください。"></textarea>
                                     </dd>
                                 </dl>
@@ -246,11 +254,9 @@
         <!-- #endregion footer -->
 
     </div>
-    <!--スライド-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <!--ハンバーガー-->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="./js/main.js?v=2500"></script>
+    <script src="./js/main.js?v=3000"></script>
 </body>
 
 </html>
