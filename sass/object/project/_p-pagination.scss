@@ -3,14 +3,9 @@
 
 //ページ番号ナビゲーション
 .p-pagination {
-    /*margin-top: 5.5rem;*/
     width: 100%;
     display: flex;
     justify-content: center;
-
-    /* @include pc {
-        margin-top: 7.3rem;
-    }*/
 
     &__item {
         display: grid;

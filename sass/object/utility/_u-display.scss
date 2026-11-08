@@ -1,0 +1,20 @@
+@use "../../foundation/mixin" as *;
+@use "../../foundation/variable" as *;
+
+//pc,spの非表示
+
+@include sp {
+
+    //pcのみ表示
+    .u-pc-only {
+        display: none !important;
+    }
+}
+
+@include pc {
+
+    //spのみ表示
+    .u-sp-only {
+        display: none !important;
+    }
+}

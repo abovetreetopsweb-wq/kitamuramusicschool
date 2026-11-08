@@ -3,10 +3,10 @@
 
 .p-result {
     &__container {
-        padding-block: 4.5rem 21rem;
+        padding-block: 4.5rem 5.4rem;
 
         @include pc {
-            padding-block: 6.8rem 20.8rem;
+            padding-block: 6.8rem 5.2rem;
         }
     }
 
@@ -27,19 +27,6 @@
             column-gap: calc(105 / 880 * 100%); // 横方向10.5rem
         }
     }
-
-    &__item {
-
-        &:nth-child(4n+5),
-        &:nth-child(4n+6),
-        &:nth-child(4n+7),
-        &:nth-child(4n+8),
-        &:nth-child(4n+9),
-        &:nth-child(4n+10) {
-            margin-top: 0.65rem;
-        }
-    }
-
 
     &__thumbnail {
         position: relative;

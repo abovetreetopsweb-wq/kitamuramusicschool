@@ -16,31 +16,34 @@ $(".p-header__nav").on("transitionend", function () {
 
 
 //スライド
-const swiper = new Swiper('.p-voice__contents', {
-    slidesPerView: 1,
-    spaceBetween: 20,
-    loop: true,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+const swiperElement = document.querySelector(".p-voice__contents");
+if (swiperElement) {
+    const swiper = new Swiper('.p-voice__contents', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
-    },
-});
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+}
 
 //アコーディオン
-$(".qa-title").on('click', function () {
+$(".p-faq__question").on('click', function () {
     $(this).toggleClass('active');
     $(this).next().slideToggle();
 });
 
 //解答欄もクリックしたらしまう
-$(".qa-text").on('click', function () {
-    $(this).prev(".qa-title").toggleClass("active");
+$(".p-faq__answer").on('click', function () {
+    $(this).prev(".p-faq__question").toggleClass("active");
     $(this).slideToggle();
 });
 
@@ -48,13 +51,13 @@ $(".qa-text").on('click', function () {
 //topへ戻る
 
 var goTop = $(".c-fixed-buttons");//変数宣言と代入
-var footer = $(".l-footer");
 var fixarea = $(".p-fixarea");
 
 goTop.hide();//サイト上部ではボタンを非表示
 
 //fixareaを超えたらボタン表示・fixarea内ではボタン非表示
 $(window).on("scroll", function () {
+
     var scroll = $(this).scrollTop();
     var fixareaHeight = fixarea.outerHeight();
 
@@ -64,18 +67,6 @@ $(window).on("scroll", function () {
         goTop.fadeOut(300)
     }
 
-
-    // フッターとの衝突判定
-    goTop.css("bottom", "0px");
-
-    // 実際に表示されている位置を取得
-    var buttonBottom = goTop[0].getBoundingClientRect().bottom;
-    var footerTop = footer[0].getBoundingClientRect().top;
-
-    // フッターに重なる分だけ持ち上げる
-    var overlap = Math.max(0, buttonBottom - footerTop);
-
-    goTop.css("bottom", overlap + "px");
 });
 
 //ボタンがクリックされたら1秒でページトップへ戻る
@@ -96,6 +87,7 @@ if (contents && scrollbar && thumb) {
     // テーブルの位置に合わせてバーを動かす
     const updateThumb = () => {
         const maxScroll = contents.scrollWidth - contents.clientWidth;
+        scrollbar.style.display = maxScroll > 0 ? "" : "none";
         const maxMove = scrollbar.clientWidth - thumb.clientWidth;
 
         const ratio = maxScroll > 0

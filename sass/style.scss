@@ -8,6 +8,7 @@
 @use "layout/l-footer";
 
 //object
+@use "object/component/c-blog-card";
 @use "object/component/c-button";
 @use "object/component/c-inner";
 @use "object/component/c-text";
@@ -58,3 +59,8 @@
 @use "object/project/p-result-list";
 //result_detail
 @use "object/project/p-result-detail";
+
+
+@use "object/utility/u-bg-main";
+
+@use "object/utility/u-display";
