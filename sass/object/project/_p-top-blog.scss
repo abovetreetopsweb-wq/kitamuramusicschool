@@ -2,10 +2,10 @@
 @use "../../foundation/mixin" as *;
 
 .p-blog {
-    padding-block: 3.4rem 4.1rem;
+    padding-block: 3.4rem 4.3rem;
 
     @include pc {
-        padding-block: 3rem 4.6rem;
+        padding-block: 2.7rem 4.6rem;
     }
 
     &__contents {

@@ -11,9 +11,11 @@
         display: flex;
         column-gap: 5rem;
         flex-wrap: wrap;
+        padding-block: 0.7rem;
 
         @include pc {
             column-gap: 5rem;
+            padding-block: 0.9rem;
         }
 
         li {
@@ -28,11 +30,6 @@
                 right: -3.3rem;
                 transform: translateY((-50%));
                 color: #000;
-                padding-block: 0.7rem;
-
-                @include pc {
-                    padding-block: 0.85rem;
-                }
             }
 
             @include pc {
@@ -41,21 +38,10 @@
 
             a {
                 display: block;
-                padding-block: 0.7rem;
-
-                @include pc {
-                    padding-block: 0.85rem;
-                }
             }
 
             span {
                 display: block;
-                padding-block: 0.7rem;
-
-                @include pc {
-                    padding-block: 0.85rem;
-                }
-
             }
         }
 

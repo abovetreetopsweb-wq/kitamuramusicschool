@@ -87,48 +87,49 @@
 
     &__table {
         border-collapse: collapse;
-        border: 1px solid #707070;
+        border: 1px solid rgba(0, 0, 0, 0.5);
 
         @include pc {
-            border: 0.5px solid #707070;
+            border: 1px solid rgba(0, 0, 0, 0.5);
         }
 
         tr {
             th {
                 width: 14rem;
-                padding: 0.37rem 2rem 0.37rem 1rem;
+                padding:0.4rem 2rem 0.4rem 1rem;
                 background: #E5E5E5;
-                border: 1px solid #707070;
+                border: 1px solid rgba(0, 0, 0, 0.5);
                 vertical-align: middle;
+                font-weight: $font-weight-bold;
                 //vertical-alignは、inline、または、table-cellにのみ指定することができる垂直方向の配置を設定できるプロパティ（display:blockの要素には指定することができない。）。
 
                 @include pc {
-                    padding: 0.37rem 2rem 0.37rem 2rem;
-                    border: 0.5px solid #707070;
+                    padding: 0.4rem 2rem 0.4rem 2rem;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
                 }
             }
 
             td {
                 width: 26rem;
-                padding: 0.37rem 2rem 0.37rem 1rem;
-                border: 1px solid #707070;
+                padding: 0.4rem 2rem 0.4rem 1rem;
+                border: 1px solid rgba(0, 0, 0, 0.5);
                 vertical-align: middle;
                 
 
                 @include pc {
-                    padding: 0.37rem 2rem 0.37rem 2rem;
-                    border: 0.5px solid #707070;
+                    padding: 0.4rem 2rem 0.4rem 2rem;
+                    border: 1px solid rgba(0, 0, 0, 0.5);
                 }
             }
         }
     }
 
     &__pagination {
-        padding-top: 4rem;
+        padding-top: 3.5rem;
         column-gap: calc(23/335*100%);
 
         @include pc {
-            padding-top: 6rem;
+            padding-top: 5.6rem;
             column-gap: calc(200/880*100%);
         }
     }

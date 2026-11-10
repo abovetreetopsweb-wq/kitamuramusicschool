@@ -36,7 +36,7 @@
         row-gap: 1rem;
 
         @include pc {
-            row-gap: 2.95rem;
+            row-gap: 3rem;
         }
 
         dl {
@@ -184,7 +184,7 @@
             border-bottom: 0.3rem solid $color-main;
             position: absolute;
             top: 45%;
-            left: 0.1rem;
+            left: 0.5rem;
             transform: translateY(-50%) rotate(-55deg);
             display: none;
             ;
@@ -222,7 +222,7 @@
 
     &__submit-btn {
         margin-top: 3rem;
-        width: 100%;
+        width: 33.5rem;
         height: 5rem;
 
         @include pc {
@@ -244,7 +244,6 @@
 
 .p-contact__fixed-buttons {
     bottom: 3rem;
-    z-index: 9999;
 
     @include pc {
         bottom: 0;

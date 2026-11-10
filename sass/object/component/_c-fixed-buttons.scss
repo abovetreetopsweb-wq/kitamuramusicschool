@@ -34,6 +34,11 @@
         @include font(2rem, calc(33/20), $font-weight-bold);
         letter-spacing: 0.16em;
 
+        a {
+            /*0.16em → 20 × 0.16 = 3.2px*/
+            padding-left: 3.2px;
+        }
+
         /*
         20px × 6文字 = 120px
         136px − 120px = 16px

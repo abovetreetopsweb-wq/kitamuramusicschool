@@ -2,7 +2,7 @@
 @use "../../foundation/mixin" as *;
 
 .p-flow {
-    padding-block: 4.8rem 2.75rem;
+    padding-block: 4.8rem 2.8rem;
 
     @include pc {
         padding-block: 3.5rem 6.5rem;
@@ -129,7 +129,7 @@
     &::before {
         content: '';
         position: absolute;
-        width: 3.162rem;
+        width: 3.2rem;
         height: 2.5rem;
         bottom: 0.1rem;
         left: -0.6rem;

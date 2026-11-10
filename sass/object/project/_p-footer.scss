@@ -34,18 +34,18 @@
     }
 
     &__logo {
-        margin-top: 1.874rem;
-        width: 3.203rem;
+        margin-top: 1.9rem;
+        width: 3.2rem;
 
         @include pc {
-            margin-top: 2.174rem;
+            margin-top: 2.2rem;
         }
 
     }
 
     &__copyright {
         text-align: center;
-        margin-top: 2.891rem;
+        margin-top: 2.9rem;
         @include font(1.5rem, calc(20/15), $font-weight-medium);
 
         @include pc {

@@ -160,17 +160,11 @@
             content: "";
             position: absolute;
             width: 0.2rem;
-            height: 5rem;
+            height:  100%;
             background: $color-base;
             top: 50%;
             left: 0.1rem;
-            transform: translateY(-60%);
-
-            @include pc {
-                height: 2rem;
-                top: 50%;
-                transform: translateY(-65%);
-            }
+            transform: translateY(-50%);
         }
     }
 }
@@ -190,7 +184,7 @@
     aspect-ratio: 335/200;
 
     @include pc {
-        margin-top: 1.65rem;
+        margin-top: 1.7rem;
         width: 33.5rem;
 
     }
@@ -225,7 +219,7 @@
 .p-blog-detail__line {
     margin-top: 3.5rem;
     border: 0;
-    border-top: 0.5px solid $color-base;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
 
     @include pc {
         margin-top: 4rem;
@@ -247,7 +241,7 @@
     }
 
     &-image {
-        width: 2.704rem;
+        width: 2.7rem;
         margin-top: 0.5rem;
 
         @include pc {
@@ -312,7 +306,7 @@
 
     &__banner {
         padding: 1.8rem 2rem 2rem 2rem;
-        border: 1px solid $color-base;
+        border: 1px solid rgba(0, 0, 0, 0.5);
 
         @include pc {
             padding: 1.5rem;
@@ -333,7 +327,7 @@
 .p-sidebar-search {
     &__form {
         padding: 1.8rem 2rem 2rem 2rem;
-        border: 1px solid $color-base;
+        border: 1px solid rgba(0, 0, 0, 0.5);
         display: flex;
 
         @include pc {
@@ -430,7 +424,7 @@
         justify-content: center;
 
         li {
-            border-bottom: 1px solid $color-base;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 
             a {
                 padding-block: 0.8rem;
