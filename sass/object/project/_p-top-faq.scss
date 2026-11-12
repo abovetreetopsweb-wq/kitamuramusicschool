@@ -88,7 +88,8 @@
 
                 &::after {
                     content: 'Q';
-
+                    font-size: 2rem;
+                    font-weight: $font-weight-bold;
                 }
             }
 
@@ -112,7 +113,7 @@ p-faq__answer*/
         cursor: pointer;
 
         &.active {
-            display: flex;
+            display: block;
         }
 
         &-inner {
@@ -143,7 +144,8 @@ p-faq__answer*/
 
                 &::after {
                     content: 'A';
-
+                    font-size: 2rem;
+                    font-weight: $font-weight-bold;
                 }
             }
 
